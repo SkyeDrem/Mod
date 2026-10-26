@@ -5,7 +5,7 @@ SkyeDrem 的游戏 Mod 源码与发布文档。目前包含《戴森球计划》
 | 项目 | 版本 | 功能 | 玩家说明 |
 | --- | --- | --- | --- |
 | [FXDSP](DSPmod/FXDSP) | 0.20.2 | 物品本位杠杆交易、建筑币兑换、物流交付平台与成就 | [中文 / English](DSPmod/FXDSP/release/README.md) |
-| [VeinProtector](DSPmod/VeinProtector) | 0.5.1 | 保留有限固体矿点最后一个矿物，并提供保护状态产能详情 | [中文 / English](DSPmod/VeinProtector/README.md) |
+| [VeinProtector](DSPmod/VeinProtector) | 0.5.1 | 保留有限固体矿点最后一个矿物，并提供保护状态产能详情 | [中文 / English](DSPmod/VeinProtector/release/README.md) |
 
 ## 目录
 
