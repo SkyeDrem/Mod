@@ -38,14 +38,14 @@ UXAssist含有矿脉保护功能，若已安装UXAssist Mod则不再需要本Mod
 
 ## 安装
 推荐使用r2modman / Thunderstore Mod Manager，将BepInEx和VeinProtector安装到同一个文件夹，并通过Mod管理器启动游戏。
-手动安装时，将 `VeinProtector.dll` 放入：BepInEx/plugins/VeinProtector/VeinProtector.dll
+手动安装时，将 `VeinProtector.dll` 放入：`BepInEx/plugins/VeinProtector/VeinProtector.dll`
 标准发布ZIP已包含 `BepInEx/plugins/VeinProtector/` 目录结构，可按该结构解压。不要在同一Profile中同时安装管理器副本和另一个手动DLL副本。
 
-## 开发 / Building
-从源码构建需要本机安装的《戴森球计划》游戏程序集，以及 BepInEx/Harmony 引用。由于版权原因，这些 DLL 不包含在仓库中。将它们放入 `src/VeinProtector/AssemblyFromGame/` 和 `src/VeinProtector/AssemblyFromProfile/`（这两个目录已被 Git 忽略），然后运行 `scripts/build.ps1`。
+## 开发
+源码和构建说明请查看 [GitHub：SkyeDrem/Mod — VeinProtector](https://github.com/SkyeDrem/Mod/tree/main/DSPmod/VeinProtector)。
 
 ## 问题反馈
-反馈问题可至**bilibili@SkyeDrem**。
+反馈问题可至 [bilibili @SkyeDrem 视频评论区](https://www.bilibili.com/video/BV1uoHA67Ehu/)。
 
 ## 致谢
 感谢《戴森球计划》制作组带来并持续维护这款优秀的游戏。
@@ -115,12 +115,12 @@ For manual installation, place `VeinProtector.dll` at:
 
 The standard release ZIP already contains the `BepInEx/plugins/VeinProtector/` directory structure and can be extracted accordingly. Do not install both a mod-manager copy and a separate manually installed DLL in the same profile.
 
-## Building
-Building from source requires game assemblies from a local Dyson Sphere Program installation plus BepInEx/Harmony references. These DLLs are omitted from the repository for copyright reasons. Provide them under `src/VeinProtector/AssemblyFromGame/` and `src/VeinProtector/AssemblyFromProfile/` (both directories are Git-ignored), then run `scripts/build.ps1`.
+## Development
+Source code and build instructions are available on [GitHub: SkyeDrem/Mod — VeinProtector](https://github.com/SkyeDrem/Mod/tree/main/DSPmod/VeinProtector).
 
 ## Bug Reports
 
-For bug reports, contact **bilibili @SkyeDrem**.
+For bug reports, please use the [bilibili video comments (@SkyeDrem)](https://www.bilibili.com/video/BV1uoHA67Ehu/).
 
 ## Acknowledgements
 
