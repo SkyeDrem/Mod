@@ -5,7 +5,7 @@ SkyeDrem 的游戏 Mod 源码与发布文档。目前包含《戴森球计划》
 | 项目 | 版本 | 功能 | 玩家说明 |
 | --- | --- | --- | --- |
 | [FXDSP](DSPmod/FXDSP) | 0.20.2 | 物品本位杠杆交易、建筑币兑换、物流交付平台与成就 | [中文 / English](DSPmod/FXDSP/release/README.md) |
-| [VeinProtector](DSPmod/VeinProtector) | 0.5.1 | 保留有限固体矿点最后一个矿物，并提供保护状态产能详情 | [中文 / English](DSPmod/VeinProtector/release/README.md) |
+| [VeinProtector](DSPmod/VeinProtector) | 1.0.0 | 保留有限固体矿点最后一个矿物，并提供保护状态产能详情 | [中文 / English](DSPmod/VeinProtector/release/README.md) |
 
 ## 目录
 
@@ -21,7 +21,7 @@ VeinProtector 原独立仓库已合并到本仓库，提交历史和原有发布
 
 ## English
 
-Source code and release documentation for SkyeDrem's game mods. The repository currently contains two independent Dyson Sphere Program mods: **FXDSP 0.20.2** and **VeinProtector 0.5.1**.
+Source code and release documentation for SkyeDrem's game mods. The repository currently contains two independent Dyson Sphere Program mods: **FXDSP 0.20.2** and **VeinProtector 1.0.0**.
 
 Each project has its own build and packaging scripts. See the player documentation linked above and each project's README for development instructions. Local SDKs, caches, game/dependency binaries, personal configuration, saves and ZIP packages are excluded from Git.
 

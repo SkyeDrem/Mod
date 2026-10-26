@@ -1,5 +1,10 @@
 # 更新日志
 
+## 1.0.0
+
+- 发布 B 站视频：[观看视频](https://www.bilibili.com/video/BV1uoHA67Ehu/)。
+- Published the [bilibili video](https://www.bilibili.com/video/BV1uoHA67Ehu/).
+
 ## 0.5.1
 
 ### 调整

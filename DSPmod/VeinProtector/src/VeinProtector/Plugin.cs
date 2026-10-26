@@ -15,7 +15,7 @@ namespace VeinProtector
     {
         public const string PluginGuid = "skye.dsp.veinprotector";
         public const string PluginName = "VeinProtector";
-        public const string PluginVersion = "0.5.1";
+        public const string PluginVersion = "1.0.0";
 
         internal static ConfigEntry<bool> ProtectionEnabled;
         internal static ManualLogSource Log;

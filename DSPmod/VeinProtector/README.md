@@ -1,6 +1,6 @@
 # VeinProtector
 
-《戴森球计划》矿脉保护 Mod，当前版本 **0.5.1**。
+《戴森球计划》矿脉保护 Mod，当前版本 **1.0.0**。
 
 **玩家说明与发布文案请编辑 [release/README.md](release/README.md)。** 该文件会作为发布 ZIP 的 README，也用于展示中英文玩法、设置、安装说明和截图。
 
@@ -30,11 +30,11 @@
 .\scripts\package.ps1
 ```
 
-打包输出为 `dist/VeinProtector-0.5.1.zip`。修改玩家文档后重新运行打包命令即可更新 ZIP 内的 README；`package-local.ps1` 仍可使用。
+打包输出为 `dist/VeinProtector-1.0.0.zip`。修改玩家文档后重新运行打包命令即可更新 ZIP 内的 README；`package-local.ps1` 仍可使用。
 
 ## English
 
-Vein protection mod for Dyson Sphere Program, version **0.5.1**. Edit **[release/README.md](release/README.md)** for the player-facing Chinese/English description included in the release ZIP.
+Vein protection mod for Dyson Sphere Program, version **1.0.0**. Edit **[release/README.md](release/README.md)** for the player-facing Chinese/English description included in the release ZIP.
 
 Release metadata lives in `release/`, screenshots in `image/`, source in `src/`, checks in `tests/`, and build/package scripts in `scripts/`. Generated files in `dist/` are excluded from Git.
 

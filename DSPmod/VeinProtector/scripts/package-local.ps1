@@ -8,7 +8,7 @@ $license = Join-Path $repoRoot 'LICENSE'
 $icon = Join-Path $repoRoot 'release\icon.png'
 $images = Join-Path $repoRoot 'image'
 $candidateRoot = Join-Path $repoRoot 'dist'
-$expectedVersion = '0.5.1'
+$expectedVersion = '1.0.0'
 $stageRoot = Join-Path $candidateRoot "VeinProtector-$expectedVersion"
 $packagePath = Join-Path $candidateRoot "VeinProtector-$expectedVersion.zip"
 
