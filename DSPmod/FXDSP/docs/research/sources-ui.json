@@ -1,0 +1,134 @@
+{
+  "researched_date": "2026-10-25",
+  "scope": "Selected author-repository UI implementation files; original analysis, no source files added to compilation.",
+  "local_reference_assembly_sha256": "C43A484F6ADF8A9E4B956156047070891B46860D5B5C707BA1377B6A2AF25732",
+  "interface_checks_passed": 16,
+  "runtime_ui_verified": false,
+  "files": [
+    {
+      "repository": "soarqin/DSP_Mods",
+      "commit": "473c3c8fecb45ccb4df4cf158f8bcae3be007d58",
+      "license": "MIT",
+      "path": "UXAssist/UI/MyWindow.cs",
+      "source_url": "https://github.com/soarqin/DSP_Mods/blob/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/MyWindow.cs",
+      "raw_url": "https://raw.githubusercontent.com/soarqin/DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/MyWindow.cs",
+      "cached_path": "artifacts/references/ui/soarqin_DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/MyWindow.cs",
+      "sha256": "4F6EA86D85076202BA548F4CED4F81CDC83688735F25FBE7DD4CA81A8E8933D9"
+    },
+    {
+      "repository": "soarqin/DSP_Mods",
+      "commit": "473c3c8fecb45ccb4df4cf158f8bcae3be007d58",
+      "license": "MIT",
+      "path": "UXAssist/UI/Util.cs",
+      "source_url": "https://github.com/soarqin/DSP_Mods/blob/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/Util.cs",
+      "raw_url": "https://raw.githubusercontent.com/soarqin/DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/Util.cs",
+      "cached_path": "artifacts/references/ui/soarqin_DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/Util.cs",
+      "sha256": "BEF4F2EF4E72A5A5CC2030AFFED756827BE23D3D4A34A917866C47E9DB9A6DA9"
+    },
+    {
+      "repository": "soarqin/DSP_Mods",
+      "commit": "473c3c8fecb45ccb4df4cf158f8bcae3be007d58",
+      "license": "MIT",
+      "path": "UXAssist/UI/MyFlatButton.cs",
+      "source_url": "https://github.com/soarqin/DSP_Mods/blob/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/MyFlatButton.cs",
+      "raw_url": "https://raw.githubusercontent.com/soarqin/DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/MyFlatButton.cs",
+      "cached_path": "artifacts/references/ui/soarqin_DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/MyFlatButton.cs",
+      "sha256": "5B0909E1F14CCF543051E433363414031880C254F4CA0AC4DBE0AC50AE97933E"
+    },
+    {
+      "repository": "soarqin/DSP_Mods",
+      "commit": "473c3c8fecb45ccb4df4cf158f8bcae3be007d58",
+      "license": "MIT",
+      "path": "UXAssist/UI/MyConfigWindow.cs",
+      "source_url": "https://github.com/soarqin/DSP_Mods/blob/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/MyConfigWindow.cs",
+      "raw_url": "https://raw.githubusercontent.com/soarqin/DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/MyConfigWindow.cs",
+      "cached_path": "artifacts/references/ui/soarqin_DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/MyConfigWindow.cs",
+      "sha256": "1797B740418FB161105EBB8721CB0111E9CA01A455916CE84EF3A5AAD5F281AE"
+    },
+    {
+      "repository": "soarqin/DSP_Mods",
+      "commit": "473c3c8fecb45ccb4df4cf158f8bcae3be007d58",
+      "license": "MIT",
+      "path": "UXAssist/UI/LayoutHelper.cs",
+      "source_url": "https://github.com/soarqin/DSP_Mods/blob/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/LayoutHelper.cs",
+      "raw_url": "https://raw.githubusercontent.com/soarqin/DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/LayoutHelper.cs",
+      "cached_path": "artifacts/references/ui/soarqin_DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/UI/LayoutHelper.cs",
+      "sha256": "8F274704567005807B2F1BDAF83FAA74F556F7336F56886A01F5EB6ADEC9061E"
+    },
+    {
+      "repository": "soarqin/DSP_Mods",
+      "commit": "473c3c8fecb45ccb4df4cf158f8bcae3be007d58",
+      "license": "MIT",
+      "path": "UXAssist/Patches/UIPatch.cs",
+      "source_url": "https://github.com/soarqin/DSP_Mods/blob/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/Patches/UIPatch.cs",
+      "raw_url": "https://raw.githubusercontent.com/soarqin/DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/Patches/UIPatch.cs",
+      "cached_path": "artifacts/references/ui/soarqin_DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/UXAssist/Patches/UIPatch.cs",
+      "sha256": "24FA44A6D1CC8FC6984A01C609A1B54DC5B6917CC38BC9F0BE6858E2C887E0C6"
+    },
+    {
+      "repository": "soarqin/DSP_Mods",
+      "commit": "473c3c8fecb45ccb4df4cf158f8bcae3be007d58",
+      "license": "MIT",
+      "path": "LICENSE",
+      "source_url": "https://github.com/soarqin/DSP_Mods/blob/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/LICENSE",
+      "raw_url": "https://raw.githubusercontent.com/soarqin/DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/LICENSE",
+      "cached_path": "artifacts/references/ui/soarqin_DSP_Mods/473c3c8fecb45ccb4df4cf158f8bcae3be007d58/LICENSE",
+      "sha256": "B83744B9CB80939FDA91A20EFF9BE74E94FCEF8C3B6081387D2CD1CB783023BE"
+    },
+    {
+      "repository": "hetima/DSP_LSTM",
+      "commit": "06c7de35bd7d7a54e1eedc04534f71394f87ed34",
+      "license": "Unlicense",
+      "path": "LSTM/UIBalanceWindow.cs",
+      "source_url": "https://github.com/hetima/DSP_LSTM/blob/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/UIBalanceWindow.cs",
+      "raw_url": "https://raw.githubusercontent.com/hetima/DSP_LSTM/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/UIBalanceWindow.cs",
+      "cached_path": "artifacts/references/ui/hetima_DSP_LSTM/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/UIBalanceWindow.cs",
+      "sha256": "047C6B99819BFFABA0623CB95BCAD81F749D21076F94288A03487D9E2592D4B9"
+    },
+    {
+      "repository": "hetima/DSP_LSTM",
+      "commit": "06c7de35bd7d7a54e1eedc04534f71394f87ed34",
+      "license": "Unlicense",
+      "path": "LSTM/UIBalanceListEntry.cs",
+      "source_url": "https://github.com/hetima/DSP_LSTM/blob/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/UIBalanceListEntry.cs",
+      "raw_url": "https://raw.githubusercontent.com/hetima/DSP_LSTM/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/UIBalanceListEntry.cs",
+      "cached_path": "artifacts/references/ui/hetima_DSP_LSTM/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/UIBalanceListEntry.cs",
+      "sha256": "14E7D36E86CEE856D45F190BE352BC4BC85C1183C79AEC5EE90E3B5C6658570A"
+    },
+    {
+      "repository": "hetima/DSP_LSTM",
+      "commit": "06c7de35bd7d7a54e1eedc04534f71394f87ed34",
+      "license": "Unlicense",
+      "path": "LSTM/MyWindowCtl.cs",
+      "source_url": "https://github.com/hetima/DSP_LSTM/blob/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/MyWindowCtl.cs",
+      "raw_url": "https://raw.githubusercontent.com/hetima/DSP_LSTM/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/MyWindowCtl.cs",
+      "cached_path": "artifacts/references/ui/hetima_DSP_LSTM/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/MyWindowCtl.cs",
+      "sha256": "100F7438D03532A24CA8BBD259DBB0A17A67B19AC823B57EAE7B7EF93EECCDD4"
+    },
+    {
+      "repository": "hetima/DSP_LSTM",
+      "commit": "06c7de35bd7d7a54e1eedc04534f71394f87ed34",
+      "license": "Unlicense",
+      "path": "LSTM/Util.cs",
+      "source_url": "https://github.com/hetima/DSP_LSTM/blob/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/Util.cs",
+      "raw_url": "https://raw.githubusercontent.com/hetima/DSP_LSTM/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/Util.cs",
+      "cached_path": "artifacts/references/ui/hetima_DSP_LSTM/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LSTM/Util.cs",
+      "sha256": "EC6993ADDFC453484480A884E004B889720DA7FEA9D68BBBCC9385BA8FAE87CA"
+    },
+    {
+      "repository": "hetima/DSP_LSTM",
+      "commit": "06c7de35bd7d7a54e1eedc04534f71394f87ed34",
+      "license": "Unlicense",
+      "path": "LICENSE",
+      "source_url": "https://github.com/hetima/DSP_LSTM/blob/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LICENSE",
+      "raw_url": "https://raw.githubusercontent.com/hetima/DSP_LSTM/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LICENSE",
+      "cached_path": "artifacts/references/ui/hetima_DSP_LSTM/06c7de35bd7d7a54e1eedc04534f71394f87ed34/LICENSE",
+      "sha256": "6B0382B16279F26FF69014300541967A356A666EB0B91B422F6862F6B7DAD17E"
+    }
+  ],
+  "unity_reference_urls": [
+    "https://docs.unity3d.com/2022.3/Documentation/ScriptReference/Events.UnityEventBase.RemoveAllListeners.html",
+    "https://docs.unity3d.com/Packages/com.unity.ugui@1.0/api/UnityEngine.UI.Graphic.html",
+    "https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-CanvasScaler.html"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "FXDSP",
+  "version_number": "0.20.2",
+  "website_url": "https://github.com/SkyeDrem/Mod/tree/main/DSPmod/FXDSP",
+  "description": "DSP交易平台：物品本位杠杆交易、建筑币双向兑换、物流交付平台与成就。Item-backed trading, building exchange, logistics delivery platforms and achievements. Chinese / English.",
+  "dependencies": [
+    "xiaoye97-BepInEx-5.4.17",
+    "CommonAPI-DSPModSave-1.2.2",
+    "xiaoye97-LDBTool-3.0.3"
+  ]
+}

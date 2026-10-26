@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FXDSP", "src\FXDSP\FXDSP.csproj", "{F6649C61-1A08-4898-A151-0FA4DBEDB5D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FXDSP.DeliveryBootstrap", "src\FXDSP.DeliveryBootstrap\FXDSP.DeliveryBootstrap.csproj", "{CBA82DF7-EC08-4D42-A848-B47E3D71A20B}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {F6649C61-1A08-4898-A151-0FA4DBEDB5D1}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+        {F6649C61-1A08-4898-A151-0FA4DBEDB5D1}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+        {F6649C61-1A08-4898-A151-0FA4DBEDB5D1}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+        {F6649C61-1A08-4898-A151-0FA4DBEDB5D1}.Release|Any CPU.Build.0 = Release|AnyCPU
+        {CBA82DF7-EC08-4D42-A848-B47E3D71A20B}.Debug|Any CPU.ActiveCfg = Debug|AnyCPU
+        {CBA82DF7-EC08-4D42-A848-B47E3D71A20B}.Debug|Any CPU.Build.0 = Debug|AnyCPU
+        {CBA82DF7-EC08-4D42-A848-B47E3D71A20B}.Release|Any CPU.ActiveCfg = Release|AnyCPU
+        {CBA82DF7-EC08-4D42-A848-B47E3D71A20B}.Release|Any CPU.Build.0 = Release|AnyCPU
+    EndGlobalSection
+EndGlobal

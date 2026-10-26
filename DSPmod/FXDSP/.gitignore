@@ -1,0 +1,33 @@
+# Build outputs and local development state
+**/bin/
+**/obj/
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.cache
+*.log
+*.tmp
+*.bak
+artifacts/
+dist/
+build.local.json
+
+# Never commit game / mod-loader binaries, profiles, or saves
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.zip
+*.dsv
+*.moddsv
+AssemblyFromGame/
+AssemblyFromProfile/
+BepInEx/
+profiles/
+.env
+.env.*
+!.env.example
+Thumbs.db
+.DS_Store

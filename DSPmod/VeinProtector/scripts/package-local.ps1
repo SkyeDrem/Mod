@@ -7,10 +7,10 @@ $changelog = Join-Path $repoRoot 'CHANGELOG.md'
 $license = Join-Path $repoRoot 'LICENSE'
 $icon = Join-Path $repoRoot 'thunderstore\icon.png'
 $images = Join-Path $repoRoot 'image'
-$candidateRoot = Join-Path $repoRoot 'artifacts\release-candidate-final'
+$candidateRoot = Join-Path $repoRoot 'dist'
 $expectedVersion = '0.5.1'
-$stageRoot = Join-Path $candidateRoot "staging-$expectedVersion"
-$packagePath = Join-Path $candidateRoot "skyedrem-VeinProtector-$expectedVersion.zip"
+$stageRoot = Join-Path $candidateRoot "VeinProtector-$expectedVersion"
+$packagePath = Join-Path $candidateRoot "VeinProtector-$expectedVersion.zip"
 
 foreach ($file in @($pluginDll, $manifest, $readme, $changelog, $license, $icon)) {
     if (-not (Test-Path -LiteralPath $file -PathType Leaf)) {
@@ -27,10 +27,6 @@ if (Compare-Object -ReferenceObject $expectedImages -DifferenceObject $actualIma
     throw "Release image directory must contain exactly: $($expectedImages -join ', ')"
 }
 
-if (Test-Path -LiteralPath $packagePath) {
-    throw "Refusing to overwrite existing release-candidate package: $packagePath"
-}
-
 $manifestData = Get-Content -LiteralPath $manifest -Raw | ConvertFrom-Json
 if ($manifestData.version_number -ne $expectedVersion) {
     throw "Manifest version $($manifestData.version_number) does not match expected $expectedVersion"
@@ -41,10 +37,6 @@ if ($assemblyVersion -ne "$expectedVersion.0") {
 }
 
 New-Item -ItemType Directory -Path $candidateRoot -Force | Out-Null
-if (Test-Path -LiteralPath $stageRoot) {
-    throw "Refusing to overwrite existing staging directory: $stageRoot"
-}
-
 $pluginStage = Join-Path $stageRoot 'BepInEx\plugins\VeinProtector'
 New-Item -ItemType Directory -Path $pluginStage -Force | Out-Null
 Copy-Item -LiteralPath $manifest -Destination (Join-Path $stageRoot 'manifest.json')
@@ -64,7 +56,7 @@ try {
 }
 Copy-Item -LiteralPath $icon -Destination (Join-Path $stageRoot 'icon.png')
 
-Compress-Archive -Path (Join-Path $stageRoot '*') -DestinationPath $packagePath -CompressionLevel Optimal
+Compress-Archive -Path (Join-Path $stageRoot '*') -DestinationPath $packagePath -CompressionLevel Optimal -Force
 $packagedDll = Join-Path $pluginStage 'VeinProtector.dll'
 $sourceHash = (Get-FileHash -LiteralPath $pluginDll -Algorithm SHA256).Hash
 $packageDllHash = (Get-FileHash -LiteralPath $packagedDll -Algorithm SHA256).Hash

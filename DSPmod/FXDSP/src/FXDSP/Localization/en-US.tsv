@@ -1,0 +1,394 @@
+# Chinese source	English text. Escapes: \n \r \t \\. Runtime display only.
+请先研究“交易系统”：10 铁矿、10 铜矿。	Research Trading System first: 10 Iron Ore and 10 Copper Ore.
+交易窗口暂时无法创建，请查看日志后重试 F8。	The trading window could not be opened. Check the log, then try F8 again.
+更新失败，请查看 BepInEx 日志。	Update failed. Check the BepInEx log.
+请选择品种	Select a market
+游戏已暂停，交易与行情暂停。	Game paused. Trading and prices are paused.
+做多	Long
+做空	Short
+当前不能交易，请先进入存档并检查市场状态。	Trading is unavailable. Load a save and check the market status.
+请先启用该市场。	Enable this market first.
+持仓已平仓。	Position closed.
+该市场当前空仓。	There is no open position in this market.
+已平仓 	Closed 
+ 项持仓。	 positions.
+不支持该杠杆。	Unsupported leverage.
+未知交易指令。	Unknown trading command.
+数量或金额超出安全数值范围，本次操作取消。	The quantity or amount exceeds the supported range. Operation cancelled.
+操作异常，交易已停用，请保留日志。	An error occurred. Trading has been disabled; keep the log.
+市场尚未接入当前存档，请返回主菜单重新读档后再保存。	The market is not connected to this save. Return to the main menu and reload before saving.
+兑换金额或费率无效。	Invalid exchange amount or fee rate.
+该物品尚未设定建筑币兑换价值。	This item has no Building Coin exchange value.
+兑换数量无效。	Invalid exchange quantity.
+行星级交付平台	Planetary Delivery Platform
+在行星物流塔基础上改造而成的现货交付平台，具备原行星物流塔的全部功能，并拥有深不可测的储存容量以应对大单交割。平台槽位设置物品后即唯一绑定交易系统，可在交易面板中从平台中存入或提取物资，该物品不能再被第二个交付平台选中。	A spot delivery platform adapted from a Planetary Logistics Station. It retains all of the original station's functions, with unfathomable storage capacity for large deliveries. Selecting an item in a platform slot uniquely links it to the trading system. Use the trading panel to deposit items from the platform or withdraw them to it. That item cannot be selected in a second delivery platform.
+星际交付平台	Interstellar Delivery Platform
+在星际物流塔基础上改造而成的现货交付平台，具备原星际物流塔的全部功能，并拥有深不可测的储存容量以应对大单交割。平台槽位设置物品后即唯一绑定交易系统，可在交易面板中从平台存入或提取物资，该物品不能再被第二个交付平台选中。	A spot delivery platform adapted from an Interstellar Logistics Station. It retains all of the original station's functions, with unfathomable storage capacity for large deliveries. Selecting an item in a platform slot uniquely links it to the trading system. Use the trading panel to deposit items from the platform or withdraw them to it. That item cannot be selected in a second delivery platform.
+制作面板的建筑分页已满，无法放置交付平台配方。	The crafting menu's building page is full. Delivery platform recipes cannot be placed.
+物品数量或增产点数无效。	Invalid item count or proliferator points.
+数量无效。	Invalid quantity.
+该物品已在其它交付槽位中设置。	This item is already assigned to another delivery slot.
+交付库存版本无效，请使用本版新存档。	Unsupported delivery inventory version. Use a new save for this version.
+交付平台数量无效。	Invalid delivery platform count.
+交付平台身份无效。	Invalid delivery platform identity.
+交付平台实体重复。	Duplicate delivery platform entity.
+交付物品数量无效。	Invalid delivery item count.
+交付库存无效。	Invalid delivery inventory.
+交付标识无效。	Invalid delivery identifier.
+交付状态无效。	Invalid delivery state.
+交付数量编码无效。	Invalid delivery quantity encoding.
+交付数量不能为负。	Delivery quantity cannot be negative.
+存入数量或物品无效。	Invalid deposit quantity or item.
+平台可用物品不足。	Not enough items are available in the platform.
+请先取出平台内已喷涂的同类物品。	Remove proliferated items of this type from the platform first.
+平台库存已变化，请重新存入。	Platform inventory changed. Try depositing again.
+可用余额或提取数量无效。	Invalid available balance or withdrawal quantity.
+平台未设置该物品槽。	The platform has no slot assigned to this item.
+手续费率无效。	Invalid fee rate.
+仓位比例或杠杆无效。	Invalid position allocation or leverage.
+仓位方向无效。	Invalid position side.
+请先平掉现有仓位，再开新仓。	Close your existing position before opening a new one.
+可用余额不足以支付保证金和开仓费。	Insufficient available balance for the margin and opening fee.
+开多	Open long 
+开空	Open short 
+保证金	Margin
+当前没有可平仓的仓位。	There is no position to close.
+存入 	Deposited 
+可用余额不足。	Insufficient available balance.
+提取 	Withdrawn 
+建筑兑换金额无效。	Invalid building exchange amount.
+累计费用超出数值范围。	Accumulated fees exceed the supported range.
+可用建筑币不足。	Insufficient Building Coins.
+兑换物品 	Purchased items for 
+回收物品 	Sold items for 
+ 建筑币，手续费 	 Building Coins; fee 
+游戏时间不能为负。	Game time cannot be negative.
+持仓中的资源不能暂停行情。	A market with an open position cannot be paused.
+当前没有持仓。	No open position.
+爆仓结算	Liquidated
+已平仓	Closed
+：本次 	: Net P&L 
+账户读取器必须支持定位。	The account reader must support seeking.
+不支持的铜本位账户格式。	Unsupported copper account format.
+仓位数据无效。	Invalid position data.
+铜账户资产或行情字段无效。	Invalid copper account assets or market fields.
+日志数量无效。	Invalid log count.
+日志长度无效。	Invalid log length.
+铜账户存档损坏或包含无效数据。	The copper account save is corrupt or contains invalid data.
+旧现货账户已迁移：	Migrated the previous spot account: 
+ 铜余额；原行情保留。	 Copper balance; price history retained.
+保证金必须大于零。	Margin must be greater than zero.
+不支持该杠杆倍数。	Unsupported leverage multiplier.
+数量必须是正整数。	Quantity must be a positive integer.
+账户标志无效。	Invalid account flags.
+资源分类无效。	Invalid resource category.
+原料	Raw Materials
+材料	Materials
+武器	Weapons
+消耗品	Consumables
+矩阵	Matrices
+建筑币	Building Coin
+铜矿	Copper Ore
+塑料	Plastic
+电磁矩阵	Electromagnetic Matrix
+能量矩阵	Energy Matrix
+结构矩阵	Structure Matrix
+信息矩阵	Information Matrix
+引力矩阵	Gravity Matrix
+宇宙矩阵	Universe Matrix
+黑雾矩阵	Dark Fog Matrix
+硅基神经元	Silicon-based Neuron
+物质重组器	Matter Recombinator
+负熵奇点	Negentropy Singularity
+核心素	Core Element
+能量碎片	Energy Shard
+沙土	Soil Pile
+物品 	Item 
+请先选择并启用该市场。	Select and enable this market first.
+市场选择无效。	Invalid market selection.
+已达到可保留资源数量上限。	The maximum number of retained markets has been reached.
+请先平仓，再停用该品种。	Close the position before disabling this market.
+账户读取器无效。	Invalid account reader.
+旧账户物品无效。	Invalid legacy account item.
+市场账户标识无效。	Invalid market account identifier.
+市场账户版本或数量无效。	Invalid market account version or count.
+市场物品重复或未知。	Duplicate or unknown market item.
+资源启用状态无效。	Invalid resource enable state.
+建筑币或持仓账户不能停用。	Building Coin markets and accounts with open positions cannot be disabled.
+基础账户缺失。	A base account is missing.
+交易介绍状态无效。	Invalid introduction state.
+市场账户不完整。	The market account is incomplete.
+恢复行情时间无效。	Invalid market resume time.
+物品编号必须为正整数。	Item ID must be positive.
+手续费率必须大于等于0且小于1。	Fee rate must be at least zero and below one.
+行情随机种子不能为0。	The market random seed cannot be zero.
+该物品市场的结算额度不足（总价已含手续费）。	Insufficient settlement balance in this item market (fees included).
+买入 	Buy 
+，含费支出 	; cost including fees 
+ 额度。	 balance.
+可卖出的物品不足；现货交易不能卖空。	Insufficient items to sell; spot trading does not allow short selling.
+卖出 	Sell 
+，扣费到账 	; proceeds after fees 
+入库 	Deposited 
+ 个物品。	 items.
+可提取的物品库存不足。	Insufficient inventory for withdrawal.
+游戏逻辑时间不能为负数。	Game simulation time cannot be negative.
+游戏时间回退，行情已重新同步；账户资产保持不变。	Game time moved backwards. Prices have been resynchronized; account assets are unchanged.
+游戏时间跨度过大，行情已重新同步。	The game time gap was too large. Prices have been resynchronized.
+不是FXDSP市场存档。	Not an FXDSP market save.
+不支持的FXDSP市场存档版本。	Unsupported FXDSP market save version.
+市场存档包含负资产或负流水。	The market save contains negative assets or funding totals.
+市场存档的行情动量超出有效范围。	Market momentum in the save is outside the valid range.
+市场存档的逻辑时间无效。	Invalid simulation time in the market save.
+市场存档的行情时间锚点无效。	Invalid price time anchor in the market save.
+未初始化市场不应包含时间锚点。	An uninitialized market must not have a time anchor.
+行情历史	Price history
+市场时间锚点与行情历史不一致。	The market time anchor does not match its price history.
+行情历史的时间顺序无效。	Price history is not in chronological order.
+当前报价与行情历史不一致。	The current quote does not match the price history.
+交易日志	Trading log
+日志文本	Log text
+市场日志不能是空文本。	Market logs cannot be empty.
+FXDSP市场存档不完整。	The FXDSP market save is incomplete.
+FXDSP市场存档包含无效数据。	The FXDSP market save contains invalid data.
+物品数量必须为正整数。	Item quantity must be a positive integer.
+市场存档的报价超出有效范围。	The saved market price is outside the valid range.
+市场存档的布尔标志无效。	Invalid boolean flag in the market save.
+长度无效。	Invalid length.
+数量或金额超出支持的数值范围；账户未改变。	Quantity or amount exceeds the supported range; the account is unchanged.
+ 级	 level
+请先研究“交易系统”。	Research Trading System first.
+请先研究“建筑兑换（	Research Building Exchange (
+交易系统	Trading System
+开放DSP交易平台	Access the DSP Trading Platform
+老实拍工厂很枯燥吧？创建DSP交易账户，接入主脑交易平台，FX战士伊卡洛斯！	Building factories the honest way gets dull, doesn't it? Create a DSP trading account, connect to the Central Brain exchange, and become FX Warrior Icarus!
+建筑兑换	Building Exchange
+在建筑币市场中自由交易兑换各种建筑，或许也是一种建筑超市。	Buy and sell all kinds of buildings in the Building Coin market. Perhaps it is a building supermarket, too.
+开放建筑币市场	Unlock tier 
+级建筑交易	 building trading in the Building Coin market
+交易手续费降低至	Trading fee reduced to 
+%\n建筑兑换双向手续费降低至	%\nBuilding exchange fee in both directions reduced to 
+交易效率	Trading Efficiency
+感谢你对主脑作出的贡献，免除交易手续费！	Thank you for your contribution to the Central Brain. Trading fees are waived!
+为奖励伊卡洛斯上传矩阵提供的算力，降低交易佣金。	Trading commissions are reduced to reward the computing power Icarus contributes by uploading matrices.
+账户尚未载入，请返回主菜单重新读取存档。	The account has not been loaded. Return to the main menu and reload the save.
+当前无法更改资源选择。	Resource selection cannot be changed right now.
+等待进入游戏；账户仅属于刚才载入的存档。	Waiting for the game; this account belongs only to the previously loaded save.
+游戏会话或时间发生变化，请重新读取对应存档。	The game session or time changed. Reload the matching save.
+检测到游戏时间回退，已停止交易；请重新读取存档。	Game time moved backwards. Trading is locked; reload the save.
+游戏已暂停，行情与交易暂停。	Game paused. Prices and trading are paused.
+读取器为空。	The reader is null.
+交易账户已读取，正在核对游戏快照。	Trading account loaded. Checking the game snapshot.
+交易存档无法验证，已锁定交易：	Trading is locked because the account save could not be verified: 
+该存档没有 FXDSP 数据，等待建立零余额账户。	This save has no FXDSP data. Waiting to create an account with zero balance.
+交易旁档属于其它世界，已停止交易；请使用成对的游戏存档和旁档。	The trading sidecar belongs to another world. Trading is locked; use a matching game save and sidecar.
+游戏与交易旁档的保存时间不一致，已停止交易；请恢复匹配的存档。	Game and trading save times do not match. Trading is locked; restore a matching pair.
+交易账户与游戏快照核对通过。	The trading account matches the game snapshot.
+交易存档标识或版本不受支持。	Unsupported trading save identifier or version.
+交易存档版本不受支持。	Unsupported trading save version.
+世界标识或保存时间无效。	Invalid world identifier or save time.
+交易账户与保存快照不一致。	The trading account does not match the saved snapshot.
+交易账户包含多余数据。	The trading account contains trailing data.
+交易数据超出初版允许的大小；停止保存以保护原数据。	Trading data exceeds the supported size. Saving is stopped to protect the original data.
+热重载快照与当前世界或时间不一致。	The reload snapshot does not match the current world or time.
+热重载账户数据无效。	Invalid account data in the reload snapshot.
+热重载会话状态无效。	Invalid session state in the reload snapshot.
+账户状态已恢复。	Account state restored.
+热重载状态无法恢复，已锁定交易：	Trading is locked because the reload state could not be restored: 
+该物品不能兑换建筑币。	This item cannot be exchanged for Building Coins.
+重复设置	Duplicate item
+物品已绑定	Item already linked
+该物品	This item
+已在	 is already assigned at 
+的第 	, slot 
+ 个槽位设置。请先清空并移除原槽位。 	. Empty and remove the existing slot first. 
+槽位仍有库存	Slot still contains stock
+请先取出该槽位的全部物品，再更换或移除物品。	Withdraw all items from this slot before changing or removing its item.
+知道了	OK
+星球 	Planet 
+未设置该物品的交付槽位	No delivery slot is assigned to this item
+请先在交付物流塔中选择该物品。	Select this item in a delivery platform first.
+已	
+交付平台绑定已变化。	The delivery platform link has changed.
+请在建筑兑换中获取建筑币。	Get Building Coins through building exchange.
+背包尚未准备好。	The inventory is not ready.
+背包物品不足。	Not enough items in the inventory.
+请先移出背包中已喷涂的同类物品。	Remove proliferated items of this type from the inventory first.
+背包未移出物品，入库取消。	No items were removed from the inventory. Deposit cancelled.
+已存入 	Deposited 
+请在建筑兑换中使用建筑币。	Use Building Coins through building exchange.
+背包已满。	The inventory is full.
+已提取 	Withdrawn 
+背包容量不足，已提取 	Inventory space is limited. Withdrawn 
+已兑换 	Exchanged for 
+ 件物品，使用 	 items, costing 
+ 建筑币。	 Building Coins.
+背包未移出物品。	No items were removed from the inventory.
+已换得 	Received 
+沙土尚未准备好。	The soil pile is not ready.
+沙土数量无效。	Invalid soil quantity.
+沙土不足。	Not enough soil.
+沙土数量已达上限。	The soil pile has reached its limit.
+ 沙土。	 soil.
+兑换须使用建筑币账户。	Building exchange requires a Building Coin account.
+该品种不在可选市场中。	This item is not available in the market selection.
+全部持仓	All Positions
+一键全部平仓	Close All
+市场	Market
+方向 / 杠杆	Side / Leverage
+入场价	Entry Price
+最新价	Last Price
+爆仓价	Liq. Price
+浮动盈亏	Unrealized P&L
+上一页	Previous
+下一页	Next
+详情	Details
+平仓	Close
+全部持仓 · 当前空仓	All Positions - No open positions
+全部持仓  	All Positions  
+欢迎接入 DSP 交易平台	Welcome to the DSP Trading Platform
+伊卡洛斯，老实铺产线很枯燥吧！除了扩大生产，你现在还可以通过交易获取物资。\n\n	Icarus, laying out production lines the honest way gets dull, doesn't it? Alongside expanding production, you can now obtain supplies through trading.\n\n
+选择交易品种、存入对应物品，即可使用该物品作为保证金，<color=#D45954>开多</color>(预测<color=#D45954>上涨</color>)或<color=#52BA80>开空</color>(预测<color=#52BA80>下跌</color>)。各品种账户<color=#69CCD6>独立</color>，收益可直接提取为同种物资。\n\n	Select a market and deposit its item as collateral. Open a <color=#D45954>long</color> position if you expect prices to <color=#D45954>rise</color>, or a <color=#52BA80>short</color> if you expect them to <color=#52BA80>fall</color>. Each item account is <color=#69CCD6>independent</color>, and profits can be withdrawn as the same item.\n\n
+<color=#69CCD6>仓位</color>比例决定投入的保证金，<color=#69CCD6>杠杆</color>放大收益与亏损。判断失误、亏损过大超过爆仓线时，持仓将被强制平仓。\n\n	Your <color=#69CCD6>position allocation</color> determines the margin you commit. <color=#69CCD6>Leverage</color> magnifies both gains and losses. If losses cross the liquidation threshold, your position is automatically closed.\n\n
+特殊的<color=#D9B76B>建筑币</color>可按固定价格双向兑换各种建筑与运输、战斗单位，如果你足够厉害或幸运，或许可以实现建筑自由。如果不想投机，可能也可以寻找一个性价比高的建筑量产建筑币，并兑换其它建筑作为超市使用。\n\n	Special <color=#D9B76B>Building Coins</color> can be exchanged at fixed prices for buildings, logistics units and combat units, in both directions. With enough skill or luck, you might achieve building freedom. If speculation is not your thing, try mass-producing a cost-effective building for coins, then exchange them for other buildings to run your own supermarket.\n\n
+按 <color=#69CCD6>F8</color> 打开或关闭交易界面，右上角持仓面板可随时查看浮动盈亏、平仓或进入兑换。\n\n	Press <color=#69CCD6>F8</color> to open or close the trading interface. The top-right positions panel lets you monitor unrealized P&L, close positions, or open building exchange.\n\n
+解锁科技建造<color=#69CCD6>物流塔交付平台</color>绑定物品，可将交易账户连接到工厂物流网络，让盈利物资直接投入生产。\n\n	Research and build <color=#69CCD6>logistics delivery platforms</color>, then assign items to connect your trading accounts to the factory logistics network. Put your trading profits straight into production.\n\n
+研究相关<color=#69CCD6>科技升级</color>，可以解锁更高等级的建筑兑换并降低交易和兑换手续费。\n\n	Research <color=#69CCD6>technology upgrades</color> to unlock higher building exchange tiers and reduce trading and exchange fees.\n\n
+你可以选择不同的交易风格，满仓百倍杠杆梭哈短线擒龙，或是在低估泡沫时耐心价值投资等待估值回归。\n\n	Choose your trading style: go all-in at 100x leverage to chase a short-term rally, or patiently invest at low valuations and wait for prices to return to fair value.\n\n
+<color=#D9B76B>FX战士伊卡洛斯</color>，祝你交易顺利，期待在主脑交易龙虎榜上看到你的名字！	<color=#D9B76B>FX Warrior Icarus</color>, may your trades prosper! We look forward to seeing your name on the Central Brain's trading leaderboard!
+DSP 交易平台	DSP Trading Platform
+说明	Help
+交易	Trade
+选择资源	Select Resources
+行情交易	Market Trading
+一级兑换	Tier 1 Exchange
+二级兑换	Tier 2 Exchange
+三级兑换	Tier 3 Exchange
+四级兑换	Tier 4 Exchange
+五级兑换	Tier 5 Exchange
+当前持仓	Current Position
+账户	Account
+做多 / 开多	Open Long
+做空 / 开空	Open Short
+背包	Inventory
+交付平台	Delivery Platform
+背包可用	In Inventory
+可提取	Withdrawable
+存入	Deposit
+提取	Withdraw
+可用建筑币	Available Building Coins
+前往建筑兑换	Open Building Exchange
+操作记录	Activity Log
+兑换数量	Quantity
+建筑币 → 物品	Coins > Items
+物品 → 建筑币	Items > Coins
+读取失败：	Read failed: 
+市场尚未载入	The market has not been loaded
+存取	 Transfers
+选择	Select 
+可用　　	Available  
+\n总权益　	\nEquity      
+浮动盈亏    	Unrealized P&L  
+累计盈亏    	Cumulative P&L  
+收益率    	Return  
+     卖出 	     Sell 
+     费率 	     Fee 
+仓位比例   	Allocation  
+杠杆   	Leverage  
+保证金  	Margin  
+开仓费 	Opening fee 
+×   入场 	x   Entry 
+\n保证金 	\nMargin 
+    爆仓价 	    Liq. 
+空仓	No open position
+沙土可用	Available Soil
+平台可用 · 	In Platform - 
+请在交付塔中设置该物品	Assign this item in a delivery platform
+最新 	Last 
+爆仓价 	Liq. 
+兑换数量须为正整数	Exchange quantity must be a positive integer
+存取数量须为正整数	Transfer quantity must be a positive integer
+操作未完成：	Operation failed: 
+进入交易平台	Start Trading
+持仓已爆仓	Position Liquidated
+平仓结算	Position Closed
+爆仓净损益	Net Liquidation P&L
+本次净盈亏	Net P&L
+费用合计	Total Fees
+返还余额	Returned Balance
+ 建筑币	 Building Coins
+可用建筑币\n	Available Building Coins\n
+背包可用  	In Inventory  
+1 件 = 	1 item = 
+需研究：建筑兑换（	Research required: Building Exchange (
+请输入兑换数量	Enter a quantity
+手续费 	Fee 
+\n买入需 	\nBuy for 
+ 建筑币\n回收得 	 Building Coins\nSell for 
+兑换数量过大	Exchange quantity is too large
+请先进入游戏，再打开 FXDSP。	Enter the game before opening FXDSP.
+原版窗口模板尚未就绪。	The native window templates are not ready.
+无法取得原版字体。	The native font is unavailable.
+持仓	Positions
+隐藏	Hide
+币	BC
+兑换	Exchange
+项	
+持仓  	Positions  
+返回行情	Back to Market
+    已启用 	    Enabled 
+持仓中	Position Open
+已启用  ·  点击停用	Enabled - Click to disable
+点击启用	Click to enable
+）”。	).
+（	(
+）	)
+“	"
+”	"
+。	.
+，	, 
+：	: 
+收益率	Return
+持有时间	Holding Time
+持有时间 	Holding Time 
+收益率 	Return 
+成就	Achievements
+成就达成 · 	Achievement Unlocked - 
+已达成	Achieved
+未达成	Not Achieved
+交易新人	Rookie Trader
+开仓第一笔交易	Open your first position
+第一桶金	First Pot of Gold
+从一笔交易中获利	Make a profit on a trade
+浮亏不算亏	It Is Only a Paper Loss
+某笔持仓达到10%浮亏	Reach a 10% unrealized loss on a position
+韭卡洛斯	Icarus Gets Rekt
+满仓100x杠杆交易	Open a position with 100% allocation and 100x leverage
+短线擒龙	Scalping the Dragon
+开仓后2根k线内平仓并获利	Close a position at a profit within 2 candlesticks of opening it
+耐心资本	Patient Capital
+某笔持仓超过1000根k线	Hold a position for more than 1000 candlesticks
+价值投资	Value Investing
+在0.8及以下价格开仓做多并以1及以上价格平仓	Open a long position at 0.8 or below and close it at 1 or above
+血本无归	Wiped Out
+满仓爆仓	Get liquidated on a position opened with 100% allocation
+盈亏同源	Easy Come, Easy Go
+某物品累计收益达到100%及以上后全部亏损(不能提取过该物品)	Reach a cumulative return of at least 100% on an item, then lose it all (no prior withdrawals of that item)
+开超市	Open for Business
+同时具有10笔或以上持仓	Hold 10 or more positions at once
+炒币	Crypto Trader
+首次在建筑币市场开仓	Open your first position in the Building Coin market
+逛超市	Shopping Spree
+累计换取10种不同的建筑	Exchange for 10 different types of buildings
+进货	Stocking Up
+一次性兑换超过100个同类建筑	Exchange for more than 100 buildings of the same type in one order
+A9	A9
+持有超过100,000,000建筑币	Hold more than 100,000,000 Building Coins
+建筑自由	Building Freedom
+赚取1,000,000,000建筑币	Earn 1,000,000,000 Building Coins
+工厂？不需要了！	A Factory? Not Anymore!
+累计收益100000宇宙矩阵	Earn a cumulative profit of 100,000 Universe Matrices
+龙虎榜一	Top of the Leaderboard
+某物品累计收益率超过10000%(不能提取过该物品)	Exceed a cumulative return of 10,000% on an item (no prior withdrawals of that item)
+投资达人	Master Investor
+完成其余全部成就	Complete all other achievements

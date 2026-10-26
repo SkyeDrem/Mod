@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <polygon points="16,2 240,2 254,16 254,240 240,254 16,254 2,240 2,16" fill="#0B1B25" stroke="#4F8795" stroke-width="3"/>
+  <line x1="29" y1="88" x2="227" y2="88" stroke="#243C47" stroke-width="1"/>
+  <line x1="29" y1="136" x2="227" y2="136" stroke="#243C47" stroke-width="1"/>
+  <line x1="29" y1="184" x2="227" y2="184" stroke="#243C47" stroke-width="1"/>
+  <polyline points="29,190 29,43 227,43" fill="none" stroke="#41616C" stroke-width="2"/>
+  <line x1="57" y1="119" x2="57" y2="181" stroke="#52BA80" stroke-width="4"/>
+  <rect x="47" y="140" width="20" height="27" fill="#52BA80"/>
+  <line x1="101" y1="92" x2="101" y2="170" stroke="#D45954" stroke-width="4"/>
+  <rect x="91" y="108" width="20" height="45" fill="#D45954"/>
+  <line x1="145" y1="89" x2="145" y2="147" stroke="#52BA80" stroke-width="4"/>
+  <rect x="135" y="108" width="20" height="25" fill="#52BA80"/>
+  <line x1="189" y1="54" x2="189" y2="143" stroke="#D45954" stroke-width="4"/>
+  <rect x="179" y="71" width="20" height="51" fill="#D45954"/>
+  <text x="128" y="231" font-family="Arial" font-size="31" font-weight="bold" text-anchor="middle" fill="#C7D9DE">FXDSP</text>
+</svg>

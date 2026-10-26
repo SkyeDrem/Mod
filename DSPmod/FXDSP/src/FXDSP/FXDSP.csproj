@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <RootNamespace>FXDSP</RootNamespace>
+    <AssemblyName>FXDSP</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugType>portable</DebugType>
+    <UseSharedCompilation>false</UseSharedCompilation>
+    <RestoreConfigFile>$(MSBuildThisFileDirectory)..\..\NuGet.Config</RestoreConfigFile>
+    <NuGetAudit>false</NuGetAudit>
+    <DspManagedDir Condition="'$(DspManagedDir)' == ''">$(MSBuildThisFileDirectory)AssemblyFromGame</DspManagedDir>
+    <BepInExCoreDir Condition="'$(BepInExCoreDir)' == ''">$(MSBuildThisFileDirectory)AssemblyFromProfile</BepInExCoreDir>
+    <ModSavePath Condition="'$(ModSavePath)' == ''">$(MSBuildThisFileDirectory)..\..\artifacts\dependencies\DSPModSave\DSPModSave.dll</ModSavePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Localization/en-US.tsv" LogicalName="FXDSP.Localization.en-US.tsv" />
+    <Reference Include="Assembly-CSharp"><HintPath>$(DspManagedDir)\Assembly-CSharp.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="BepInEx"><HintPath>$(BepInExCoreDir)\BepInEx.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(BepInExCoreDir)\0Harmony.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(DspManagedDir)\UnityEngine.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(DspManagedDir)\UnityEngine.CoreModule.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(DspManagedDir)\UnityEngine.UI.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.UIModule"><HintPath>$(DspManagedDir)\UnityEngine.UIModule.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(DspManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(DspManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="DSPModSave"><HintPath>$(ModSavePath)</HintPath><Private>False</Private></Reference>
+  </ItemGroup>
+  <Target Name="CheckLocalReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(DspManagedDir)\Assembly-CSharp.dll')" Text="Game assemblies missing. Run scripts\setup-local.ps1 or set DspManagedDir." />
+    <Error Condition="!Exists('$(BepInExCoreDir)\BepInEx.dll')" Text="BepInEx assemblies missing. Run scripts\setup-local.ps1 or set BepInExCoreDir." />
+    <Error Condition="!Exists('$(BepInExCoreDir)\0Harmony.dll')" Text="Harmony assembly missing from BepInExCoreDir." />
+    <Error Condition="!Exists('$(ModSavePath)')" Text="DSPModSave 1.2.2 is missing. Run scripts\setup-modsave.ps1 or set ModSavePath." />
+  </Target>
+</Project>

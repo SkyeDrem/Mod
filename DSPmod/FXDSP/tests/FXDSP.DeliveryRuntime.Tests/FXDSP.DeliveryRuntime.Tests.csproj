@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><UseSharedCompilation>false</UseSharedCompilation>
+    <RestoreConfigFile>$(MSBuildThisFileDirectory)../../NuGet.Config</RestoreConfigFile><NuGetAudit>false</NuGetAudit></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/FXDSP/Core/*.cs" Link="Core/%(Filename)%(Extension)" />
+    <Compile Include="../../src/FXDSP/Persistence/MarketSession.cs" Link="MarketSession.cs" />
+    <Compile Include="../../src/FXDSP/Runtime/DeliveryService.cs" Link="DeliveryService.cs" />
+    <Compile Include="../../src/FXDSP/Runtime/ResearchProgression.cs" Link="ResearchProgression.cs" />
+    <Compile Include="../../src/FXDSP/Runtime/TradeTechnologyTextPatch.cs" Link="TradeTechnologyTextPatch.cs" />
+  </ItemGroup>
+</Project>

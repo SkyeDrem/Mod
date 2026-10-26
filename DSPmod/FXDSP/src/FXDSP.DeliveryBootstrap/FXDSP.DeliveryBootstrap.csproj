@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework><LangVersion>7.3</LangVersion><AssemblyName>FXDSP.DeliveryBootstrap</AssemblyName><Version>0.20.2</Version>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath><UseSharedCompilation>false</UseSharedCompilation>
+    <RestoreConfigFile>$(MSBuildThisFileDirectory)../../NuGet.Config</RestoreConfigFile><NuGetAudit>false</NuGetAudit>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets/technology-icons.png" LogicalName="FXDSP.DeliveryBootstrap.Assets.technology-icons.png" />
+    <EmbeddedResource Include="../FXDSP/Localization/en-US.tsv" LogicalName="FXDSP.Localization.en-US.tsv" />
+    <Compile Include="../FXDSP/Core/DeliveryRecipes.cs" Link="DeliveryRecipes.cs" />
+    <Compile Include="../FXDSP/Core/TradeResearch.cs" Link="TradeResearch.cs" />
+    <Compile Include="../FXDSP/Core/PrototypeOwnership.cs" Link="PrototypeOwnership.cs" />
+    <Compile Include="../FXDSP/Core/TextLocalization.cs" Link="TextLocalization.cs" />
+    <Reference Include="0Harmony"><HintPath>$(BepInExCoreDir)/0Harmony.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(DspManagedDir)/UnityEngine.UI.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(DspManagedDir)/Assembly-CSharp.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="BepInEx"><HintPath>$(BepInExCoreDir)/BepInEx.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(DspManagedDir)/UnityEngine.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(DspManagedDir)/UnityEngine.CoreModule.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="UnityEngine.ImageConversionModule"><HintPath>$(DspManagedDir)/UnityEngine.ImageConversionModule.dll</HintPath><Private>False</Private></Reference>
+    <Reference Include="LDBTool"><HintPath>../../artifacts/dependencies/LDBTool-3.0.3/LDBTool.dll</HintPath><Private>False</Private></Reference>
+  </ItemGroup>
+</Project>

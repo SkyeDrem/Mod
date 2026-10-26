@@ -1,0 +1,6264 @@
+{
+  "Status": "historical-comparison",
+  "AppliedScheme": "one_half_plus_half",
+  "RecipeFactsSha256": "3d7cad461888b3f51a86fd574384c1b52fdc6af54a3c321edf6ce2d1eb8e45bd",
+  "CurrentRuntimePricesSha256": "af67b79845535c36a0a9c243ce17b0c5a1124de69b48f389db3a1a6c19f1d698",
+  "Rules": {
+    "TimeSpendTicksPerSecond": 60,
+    "TimeDenominatorSeconds": 60,
+    "CoproductAllocation": "total output counts; shared with current scheme",
+    "FullAccumulatorChargingSeconds": null,
+    "FullAccumulatorTimeFactor": "1",
+    "Rounding": "exact fractions recursively; ceiling exchange prices only"
+  },
+  "Schemes": [
+    {
+      "Key": "current",
+      "Name": "原方案：每道加工乘二",
+      "IngredientFactor": false,
+      "TimeFactor": false
+    },
+    {
+      "Key": "ingredients",
+      "Name": "方案一：仅材料种类",
+      "IngredientFactor": true,
+      "TimeFactor": false
+    },
+    {
+      "Key": "time",
+      "Name": "方案二：仅加工时间",
+      "IngredientFactor": false,
+      "TimeFactor": true
+    },
+    {
+      "Key": "combined",
+      "Name": "方案三：材料种类与时间",
+      "IngredientFactor": true,
+      "TimeFactor": true
+    }
+  ],
+  "Items": [
+    {
+      "ID": 1000,
+      "Name": "水",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1001,
+      "Name": "铁矿",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1002,
+      "Name": "铜矿",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1003,
+      "Name": "硅石",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1004,
+      "Name": "钛石",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1005,
+      "Name": "石矿",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1006,
+      "Name": "煤矿",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1007,
+      "Name": "原油",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1011,
+      "Name": "可燃冰",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1012,
+      "Name": "金伯利矿石",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1013,
+      "Name": "分形硅石",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1014,
+      "Name": "光栅石",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1015,
+      "Name": "刺笋结晶",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1016,
+      "Name": "单极磁石",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1030,
+      "Name": "木材",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1031,
+      "Name": "植物燃料",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1099,
+      "Name": "沙土",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1101,
+      "Name": "铁块",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "2",
+        "ingredients": "2",
+        "time": "61/30",
+        "combined": "61/30"
+      },
+      "Recipe": {
+        "ID": 1,
+        "Type": 1,
+        "TimeSpend": 60,
+        "Items": [
+          1001
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1101
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "铁块"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 1102,
+      "Name": "磁铁",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "2",
+        "ingredients": "2",
+        "time": "41/20",
+        "combined": "41/20"
+      },
+      "Recipe": {
+        "ID": 2,
+        "Type": 1,
+        "TimeSpend": 90,
+        "Items": [
+          1001
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1102
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "磁铁"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3/2",
+      "TimeMultiplier": "41/40"
+    },
+    {
+      "ID": 1103,
+      "Name": "钢材",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "12",
+        "ingredients": "12",
+        "time": "1281/100",
+        "combined": "1281/100"
+      },
+      "Recipe": {
+        "ID": 63,
+        "Type": 1,
+        "TimeSpend": 180,
+        "Items": [
+          1101
+        ],
+        "ItemCounts": [
+          3
+        ],
+        "Results": [
+          1103
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "钢材"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1104,
+      "Name": "铜块",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "2",
+        "ingredients": "2",
+        "time": "61/30",
+        "combined": "61/30"
+      },
+      "Recipe": {
+        "ID": 3,
+        "Type": 1,
+        "TimeSpend": 60,
+        "Items": [
+          1002
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1104
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "铜块"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 1105,
+      "Name": "高纯硅块",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "4",
+        "ingredients": "4",
+        "time": "62/15",
+        "combined": "62/15"
+      },
+      "Recipe": {
+        "ID": 59,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1003
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1105
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "高纯硅块"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1106,
+      "Name": "钛块",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "4",
+        "ingredients": "4",
+        "time": "62/15",
+        "combined": "62/15"
+      },
+      "Recipe": {
+        "ID": 65,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1004
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1106
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "钛块"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1107,
+      "Name": "钛合金",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "72",
+        "ingredients": "224",
+        "time": "237041/3000",
+        "combined": "367339/1500"
+      },
+      "Recipe": {
+        "ID": 66,
+        "Type": 1,
+        "TimeSpend": 720,
+        "Items": [
+          1106,
+          1103,
+          1116
+        ],
+        "ItemCounts": [
+          4,
+          4,
+          8
+        ],
+        "Results": [
+          1107
+        ],
+        "ResultCounts": [
+          4
+        ],
+        "Name": "钛合金"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 4,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1108,
+      "Name": "石材",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "2",
+        "ingredients": "2",
+        "time": "61/30",
+        "combined": "61/30"
+      },
+      "Recipe": {
+        "ID": 4,
+        "Type": 1,
+        "TimeSpend": 60,
+        "Items": [
+          1005
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1108
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "石材"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 1109,
+      "Name": "高能石墨",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "4",
+        "ingredients": "4",
+        "time": "62/15",
+        "combined": "62/15"
+      },
+      "Recipe": {
+        "ID": 17,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1006
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1109
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "高能石墨"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1110,
+      "Name": "玻璃",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "4",
+        "ingredients": "4",
+        "time": "62/15",
+        "combined": "62/15"
+      },
+      "Recipe": {
+        "ID": 57,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1005
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1110
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "玻璃"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1111,
+      "Name": "棱镜",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "12",
+        "ingredients": "12",
+        "time": "1891/150",
+        "combined": "1891/150"
+      },
+      "Recipe": {
+        "ID": 11,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1110
+        ],
+        "ItemCounts": [
+          3
+        ],
+        "Results": [
+          1111
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "棱镜"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 2,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 1112,
+      "Name": "金刚石",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "8",
+        "ingredients": "8",
+        "time": "1922/225",
+        "combined": "1922/225"
+      },
+      "Recipe": {
+        "ID": 60,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1109
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1112
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "金刚石"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1113,
+      "Name": "晶格硅",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "8",
+        "ingredients": "8",
+        "time": "1922/225",
+        "combined": "1922/225"
+      },
+      "Recipe": {
+        "ID": 37,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1105
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1113
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "晶格硅"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1114,
+      "Name": "精炼油",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "4/3",
+        "ingredients": "4/3",
+        "time": "184/135",
+        "combined": "184/135"
+      },
+      "Recipe": {
+        "ID": 16,
+        "Type": 3,
+        "TimeSpend": 240,
+        "Items": [
+          1007
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1120,
+          1114
+        ],
+        "ResultCounts": [
+          1,
+          2
+        ],
+        "Name": "等离子精炼"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 3,
+      "SecondsPerItem": "4/3",
+      "TimeMultiplier": "46/45"
+    },
+    {
+      "ID": 1115,
+      "Name": "塑料",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "40/3",
+        "ingredients": "20",
+        "time": "3241/225",
+        "combined": "3241/150"
+      },
+      "Recipe": {
+        "ID": 23,
+        "Type": 2,
+        "TimeSpend": 180,
+        "Items": [
+          1114,
+          1109
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1115
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "塑料"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1116,
+      "Name": "硫酸",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "10",
+        "ingredients": "20",
+        "time": "9307/900",
+        "combined": "9307/450"
+      },
+      "Recipe": {
+        "ID": 24,
+        "Type": 2,
+        "TimeSpend": 360,
+        "Items": [
+          1114,
+          1005,
+          1000
+        ],
+        "ItemCounts": [
+          6,
+          8,
+          4
+        ],
+        "Results": [
+          1116
+        ],
+        "ResultCounts": [
+          4
+        ],
+        "Name": "硫酸"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 4,
+      "SecondsPerItem": "3/2",
+      "TimeMultiplier": "41/40"
+    },
+    {
+      "ID": 1117,
+      "Name": "有机晶体",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "58",
+        "ingredients": "508/3",
+        "time": "231451/3375",
+        "combined": "676808/3375"
+      },
+      "Recipe": {
+        "ID": 25,
+        "Type": 2,
+        "TimeSpend": 360,
+        "Items": [
+          1115,
+          1114,
+          1000
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          1
+        ],
+        "Results": [
+          1117
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "有机晶体"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 1118,
+      "Name": "钛晶石",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "140",
+        "ingredients": "544",
+        "time": "8745632/50625",
+        "combined": "11498528/16875"
+      },
+      "Recipe": {
+        "ID": 26,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1117,
+          1106
+        ],
+        "ItemCounts": [
+          1,
+          3
+        ],
+        "Results": [
+          1118
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "钛晶石"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 1119,
+      "Name": "钛化玻璃",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "18",
+        "ingredients": "36",
+        "time": "695/36",
+        "combined": "695/18"
+      },
+      "Recipe": {
+        "ID": 30,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1110,
+          1106,
+          1000
+        ],
+        "ItemCounts": [
+          2,
+          2,
+          2
+        ],
+        "Results": [
+          1119
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "钛化玻璃"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 2,
+      "SecondsPerItem": "5/2",
+      "TimeMultiplier": "25/24"
+    },
+    {
+      "ID": 1120,
+      "Name": "氢",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "可从气态行星直接采集的氢"
+    },
+    {
+      "ID": 1121,
+      "Name": "重氢",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "4",
+        "ingredients": "4",
+        "time": "121/30",
+        "combined": "121/30"
+      },
+      "Recipe": {
+        "ID": 40,
+        "Type": 5,
+        "TimeSpend": 150,
+        "Items": [
+          1120
+        ],
+        "ItemCounts": [
+          10
+        ],
+        "Results": [
+          1121
+        ],
+        "ResultCounts": [
+          5
+        ],
+        "Name": "重氢"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 5,
+      "SecondsPerItem": "1/2",
+      "TimeMultiplier": "121/120"
+    },
+    {
+      "ID": 1122,
+      "Name": "反物质",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "121/120",
+        "combined": "121/120"
+      },
+      "Recipe": {
+        "ID": 74,
+        "Type": 5,
+        "TimeSpend": 120,
+        "Items": [
+          1208
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1122,
+          1120
+        ],
+        "ResultCounts": [
+          2,
+          2
+        ],
+        "Name": "质能储存"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 4,
+      "SecondsPerItem": "1/2",
+      "TimeMultiplier": "121/120"
+    },
+    {
+      "ID": 1123,
+      "Name": "石墨烯",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "22",
+        "ingredients": "48",
+        "time": "839147/36000",
+        "combined": "610367/12000"
+      },
+      "Recipe": {
+        "ID": 31,
+        "Type": 2,
+        "TimeSpend": 180,
+        "Items": [
+          1109,
+          1116
+        ],
+        "ItemCounts": [
+          3,
+          1
+        ],
+        "Results": [
+          1123
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "石墨烯"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 2,
+      "SecondsPerItem": "3/2",
+      "TimeMultiplier": "41/40"
+    },
+    {
+      "ID": 1124,
+      "Name": "碳纳米管",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "70",
+        "ingredients": "222",
+        "time": "9183719/120000",
+        "combined": "58301731/240000"
+      },
+      "Recipe": {
+        "ID": 33,
+        "Type": 2,
+        "TimeSpend": 240,
+        "Items": [
+          1123,
+          1106
+        ],
+        "ItemCounts": [
+          3,
+          1
+        ],
+        "Results": [
+          1124
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "碳纳米管"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 2,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1125,
+      "Name": "框架材料",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "712",
+        "ingredients": "4464",
+        "time": "128459419/150000",
+        "combined": "805676201/150000"
+      },
+      "Recipe": {
+        "ID": 80,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1124,
+          1107,
+          1105
+        ],
+        "ItemCounts": [
+          4,
+          1,
+          1
+        ],
+        "Results": [
+          1125
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "框架材料"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 1126,
+      "Name": "卡西米尔晶体",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "392",
+        "ingredients": "2608",
+        "time": "374823454/759375",
+        "combined": "858731852/253125"
+      },
+      "Recipe": {
+        "ID": 28,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1118,
+          1123,
+          1120
+        ],
+        "ItemCounts": [
+          1,
+          2,
+          12
+        ],
+        "Results": [
+          1126
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "卡西米尔晶体"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 1127,
+      "Name": "奇异物质",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "2648",
+        "ingredients": "32944",
+        "time": "39435755372/11390625",
+        "combined": "6590932504/151875"
+      },
+      "Recipe": {
+        "ID": 104,
+        "Type": 5,
+        "TimeSpend": 480,
+        "Items": [
+          1206,
+          1101,
+          1121
+        ],
+        "ItemCounts": [
+          2,
+          2,
+          10
+        ],
+        "Results": [
+          1127
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "奇异物质"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "8",
+      "TimeMultiplier": "17/15"
+    },
+    {
+      "ID": 1128,
+      "Name": "燃烧单元",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "6",
+        "ingredients": "6",
+        "time": "63/10",
+        "combined": "63/10"
+      },
+      "Recipe": {
+        "ID": 133,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1006
+        ],
+        "ItemCounts": [
+          3
+        ],
+        "Results": [
+          1128
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "燃烧单元"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1129,
+      "Name": "爆破单元",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "146/3",
+        "ingredients": "144",
+        "time": "4347/80",
+        "combined": "240961/1500"
+      },
+      "Recipe": {
+        "ID": 134,
+        "Type": 2,
+        "TimeSpend": 360,
+        "Items": [
+          1128,
+          1115,
+          1116
+        ],
+        "ItemCounts": [
+          2,
+          2,
+          1
+        ],
+        "Results": [
+          1129
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "爆破单元"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 2,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1130,
+      "Name": "晶石爆破单元",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "634/3",
+        "ingredients": "1912",
+        "time": "10595448731/40500000",
+        "combined": "4204645207/1687500"
+      },
+      "Recipe": {
+        "ID": 135,
+        "Type": 2,
+        "TimeSpend": 1440,
+        "Items": [
+          1129,
+          1126,
+          1113
+        ],
+        "ItemCounts": [
+          8,
+          1,
+          8
+        ],
+        "Results": [
+          1130
+        ],
+        "ResultCounts": [
+          8
+        ],
+        "Name": "晶石爆破单元"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 8,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1131,
+      "Name": "地基",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "36",
+        "ingredients": "54",
+        "time": "115351/3000",
+        "combined": "115351/2000"
+      },
+      "ExchangePrices": {
+        "current": 36,
+        "ingredients": 54,
+        "time": 39,
+        "combined": 58
+      },
+      "Recipe": {
+        "ID": 112,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1108,
+          1103
+        ],
+        "ItemCounts": [
+          3,
+          1
+        ],
+        "Results": [
+          1131
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "地基"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 1141,
+      "Name": "增产剂 Mk.I",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "2",
+        "ingredients": "2",
+        "time": "121/60",
+        "combined": "121/60"
+      },
+      "Recipe": {
+        "ID": 106,
+        "Type": 4,
+        "TimeSpend": 30,
+        "Items": [
+          1006
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1141
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "增产剂 Mk.I"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1/2",
+      "TimeMultiplier": "121/120"
+    },
+    {
+      "ID": 1142,
+      "Name": "增产剂 Mk.II",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "24",
+        "ingredients": "36",
+        "time": "345199/13500",
+        "combined": "345199/9000"
+      },
+      "Recipe": {
+        "ID": 107,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1141,
+          1112
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1142
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "增产剂 Mk.II"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 1143,
+      "Name": "增产剂 Mk.III",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "236",
+        "ingredients": "882",
+        "time": "4274444641/16200000",
+        "combined": "7134248023/7200000"
+      },
+      "Recipe": {
+        "ID": 108,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1142,
+          1124
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1143
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "增产剂 Mk.III"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1201,
+      "Name": "齿轮",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "4",
+        "ingredients": "4",
+        "time": "3721/900",
+        "combined": "3721/900"
+      },
+      "Recipe": {
+        "ID": 5,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1101
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1201
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "齿轮"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 1202,
+      "Name": "磁线圈",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "6",
+        "ingredients": "9",
+        "time": "2783/450",
+        "combined": "2783/300"
+      },
+      "Recipe": {
+        "ID": 6,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1102,
+          1104
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1202
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "磁线圈"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 2,
+      "SecondsPerItem": "1/2",
+      "TimeMultiplier": "121/120"
+    },
+    {
+      "ID": 1203,
+      "Name": "电动机",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "28",
+        "ingredients": "68",
+        "time": "401357/13500",
+        "combined": "48763/675"
+      },
+      "Recipe": {
+        "ID": 97,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1201,
+          1202
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          1
+        ],
+        "Results": [
+          1203
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电动机"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1204,
+      "Name": "电磁涡轮",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "136",
+        "ingredients": "462",
+        "time": "15030257/101250",
+        "combined": "6823069/13500"
+      },
+      "Recipe": {
+        "ID": 98,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1203,
+          1202
+        ],
+        "ItemCounts": [
+          2,
+          2
+        ],
+        "Results": [
+          1204
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电磁涡轮"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1205,
+      "Name": "超级磁场环",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "564",
+        "ingredients": "3736",
+        "time": "435423821/675000",
+        "combined": "96494741/22500"
+      },
+      "Recipe": {
+        "ID": 103,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1204,
+          1102,
+          1109
+        ],
+        "ItemCounts": [
+          2,
+          3,
+          1
+        ],
+        "Results": [
+          1205
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "超级磁场环"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1206,
+      "Name": "粒子容器",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "640",
+        "ingredients": "4096",
+        "time": "563079454/759375",
+        "combined": "48237964/10125"
+      },
+      "Recipe": {
+        "ID": 99,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1204,
+          1104,
+          1123
+        ],
+        "ItemCounts": [
+          2,
+          2,
+          2
+        ],
+        "Results": [
+          1206
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "粒子容器"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 1208,
+      "Name": "临界光子",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "仅消耗能量获取的临界光子，作为无物料来源基准"
+    },
+    {
+      "ID": 1209,
+      "Name": "引力透镜",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "5360",
+        "ingredients": "98928",
+        "time": "438074564092/56953125",
+        "combined": "36278670472/253125"
+      },
+      "Recipe": {
+        "ID": 101,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1112,
+          1127
+        ],
+        "ItemCounts": [
+          4,
+          1
+        ],
+        "Results": [
+          1209
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "引力透镜"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 1210,
+      "Name": "空间翘曲器",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "10720",
+        "ingredients": "197856",
+        "time": "3066521948644/170859375",
+        "combined": "253950693304/759375"
+      },
+      "Recipe": {
+        "ID": 78,
+        "Type": 4,
+        "TimeSpend": 600,
+        "Items": [
+          1209
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1210
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "空间翘曲器"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "10",
+      "TimeMultiplier": "7/6"
+    },
+    {
+      "ID": 1211,
+      "Name": "黑雾引力透镜",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "10744",
+        "ingredients": "296820",
+        "time": "4826338017512/284765625",
+        "combined": "199549393846/421875"
+      },
+      "Recipe": {
+        "ID": 162,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1209,
+          5201
+        ],
+        "ItemCounts": [
+          1,
+          12
+        ],
+        "Results": [
+          1211
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "黑雾引力透镜"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 1301,
+      "Name": "电路板",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "6",
+        "ingredients": "9",
+        "time": "7381/1200",
+        "combined": "7381/800"
+      },
+      "Recipe": {
+        "ID": 50,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1101,
+          1104
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1301
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "电路板"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 2,
+      "SecondsPerItem": "1/2",
+      "TimeMultiplier": "121/120"
+    },
+    {
+      "ID": 1302,
+      "Name": "微晶元件",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "20",
+        "ingredients": "30",
+        "time": "3193/150",
+        "combined": "3193/100"
+      },
+      "Recipe": {
+        "ID": 53,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1105,
+          1104
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1302
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "微晶元件"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1303,
+      "Name": "处理器",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "104",
+        "ingredients": "234",
+        "time": "9219/80",
+        "combined": "82971/320"
+      },
+      "Recipe": {
+        "ID": 51,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1301,
+          1302
+        ],
+        "ItemCounts": [
+          2,
+          2
+        ],
+        "Results": [
+          1303
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "处理器"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1304,
+      "Name": "位面过滤器",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "856",
+        "ingredients": "8040",
+        "time": "1616575066/1265625",
+        "combined": "1756557454/140625"
+      },
+      "Recipe": {
+        "ID": 38,
+        "Type": 4,
+        "TimeSpend": 720,
+        "Items": [
+          1126,
+          1119
+        ],
+        "ItemCounts": [
+          1,
+          2
+        ],
+        "Results": [
+          1304
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "位面过滤器"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "12",
+      "TimeMultiplier": "6/5"
+    },
+    {
+      "ID": 1305,
+      "Name": "量子芯片",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "3840",
+        "ingredients": "49644",
+        "time": "310186364741/50625000",
+        "combined": "1262285600741/15000000"
+      },
+      "Recipe": {
+        "ID": 52,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1303,
+          1304
+        ],
+        "ItemCounts": [
+          2,
+          2
+        ],
+        "Results": [
+          1305
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "量子芯片"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 1401,
+      "Name": "电浆激发器",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "96",
+        "ingredients": "180",
+        "time": "348409/3375",
+        "combined": "24149/125"
+      },
+      "Recipe": {
+        "ID": 12,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1202,
+          1111
+        ],
+        "ItemCounts": [
+          4,
+          2
+        ],
+        "Results": [
+          1401
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电浆激发器"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1402,
+      "Name": "粒子宽带",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1016/3",
+        "ingredients": "1920",
+        "time": "564725669/1350000",
+        "combined": "3210177881/1350000"
+      },
+      "Recipe": {
+        "ID": 36,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1124,
+          1113,
+          1115
+        ],
+        "ItemCounts": [
+          2,
+          2,
+          1
+        ],
+        "Results": [
+          1402
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "粒子宽带"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "8",
+      "TimeMultiplier": "17/15"
+    },
+    {
+      "ID": 1403,
+      "Name": "湮灭约束球",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1488",
+        "ingredients": "12990",
+        "time": "10409406889/4556250",
+        "combined": "3255245971/162000"
+      },
+      "Recipe": {
+        "ID": 42,
+        "Type": 4,
+        "TimeSpend": 1200,
+        "Items": [
+          1206,
+          1303
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          1403
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "湮灭约束球"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "20",
+      "TimeMultiplier": "4/3"
+    },
+    {
+      "ID": 1404,
+      "Name": "光子合并器",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "60",
+        "ingredients": "99",
+        "time": "263459/4000",
+        "combined": "347151/3200"
+      },
+      "Recipe": {
+        "ID": 68,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1111,
+          1301
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1404
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "光子合并器"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1405,
+      "Name": "推进器",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "60",
+        "ingredients": "90",
+        "time": "25376/375",
+        "combined": "12688/125"
+      },
+      "Recipe": {
+        "ID": 20,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1103,
+          1104
+        ],
+        "ItemCounts": [
+          2,
+          3
+        ],
+        "Results": [
+          1405
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "推进器"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 1406,
+      "Name": "加力推进器",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "2080",
+        "ingredients": "10290",
+        "time": "1013337193/405000",
+        "combined": "2785508/225"
+      },
+      "Recipe": {
+        "ID": 21,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1107,
+          1204
+        ],
+        "ItemCounts": [
+          5,
+          5
+        ],
+        "Results": [
+          1406
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "加力推进器"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 1407,
+      "Name": "动力引擎",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "20",
+        "ingredients": "39",
+        "time": "32291/1500",
+        "combined": "84063/2000"
+      },
+      "Recipe": {
+        "ID": 105,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1202,
+          1104
+        ],
+        "ItemCounts": [
+          1,
+          2
+        ],
+        "Results": [
+          1407
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "动力引擎"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1501,
+      "Name": "太阳帆",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "82",
+        "ingredients": "441/2",
+        "time": "49759309/540000",
+        "combined": "237110723/960000"
+      },
+      "Recipe": {
+        "ID": 70,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1123,
+          1404
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          1501
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "太阳帆"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 2,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1502,
+      "Name": "戴森球组件",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "5388",
+        "ingredients": "59022",
+        "time": "48827524729/6750000",
+        "combined": "479599869799/6000000"
+      },
+      "Recipe": {
+        "ID": 81,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1125,
+          1501,
+          1303
+        ],
+        "ItemCounts": [
+          3,
+          3,
+          3
+        ],
+        "Results": [
+          1502
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "戴森球组件"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "8",
+      "TimeMultiplier": "17/15"
+    },
+    {
+      "ID": 1503,
+      "Name": "小型运载火箭",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "42640",
+        "ingredients": "998608",
+        "time": "16852486811567/253125000",
+        "combined": "182544346479341/112500000"
+      },
+      "Recipe": {
+        "ID": 83,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1502,
+          1802,
+          1305
+        ],
+        "ItemCounts": [
+          2,
+          4,
+          2
+        ],
+        "Results": [
+          1503
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "小型运载火箭"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 1601,
+      "Name": "机枪弹箱",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "12",
+        "ingredients": "12",
+        "time": "3721/300",
+        "combined": "3721/300"
+      },
+      "Recipe": {
+        "ID": 136,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1104
+        ],
+        "ItemCounts": [
+          3
+        ],
+        "Results": [
+          1601
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "机枪弹箱"
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 1602,
+      "Name": "钛化弹箱",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "40",
+        "ingredients": "60",
+        "time": "21359/500",
+        "combined": "64077/1000"
+      },
+      "Recipe": {
+        "ID": 137,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1601,
+          1106
+        ],
+        "ItemCounts": [
+          1,
+          2
+        ],
+        "Results": [
+          1602
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "钛化弹箱"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1603,
+      "Name": "超合金弹箱",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "224",
+        "ingredients": "852",
+        "time": "511273/2000",
+        "combined": "19465089/20000"
+      },
+      "Recipe": {
+        "ID": 138,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1602,
+          1107
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          1603
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "超合金弹箱"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1604,
+      "Name": "炮弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "60",
+        "ingredients": "90",
+        "time": "12669/200",
+        "combined": "38007/400"
+      },
+      "Recipe": {
+        "ID": 139,
+        "Type": 4,
+        "TimeSpend": 90,
+        "Items": [
+          1104,
+          1128
+        ],
+        "ItemCounts": [
+          9,
+          2
+        ],
+        "Results": [
+          1604
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "炮弹组"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3/2",
+      "TimeMultiplier": "41/40"
+    },
+    {
+      "ID": 1605,
+      "Name": "高爆炮弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1088/3",
+        "ingredients": "1608",
+        "time": "206661/500",
+        "combined": "18526151/10000"
+      },
+      "Recipe": {
+        "ID": 140,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1604,
+          1106,
+          1129
+        ],
+        "ItemCounts": [
+          1,
+          6,
+          2
+        ],
+        "Results": [
+          1605
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "高爆炮弹组"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1606,
+      "Name": "晶石炮弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "6008/3",
+        "ingredients": "24416",
+        "time": "261418294291/101250000",
+        "combined": "562115290891/16875000"
+      },
+      "Recipe": {
+        "ID": 141,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1605,
+          1107,
+          1130
+        ],
+        "ItemCounts": [
+          1,
+          3,
+          2
+        ],
+        "Results": [
+          1606
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "晶石炮弹组"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 1607,
+      "Name": "等离子胶囊",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "132",
+        "ingredients": "368",
+        "time": "75601157/540000",
+        "combined": "3938953/10000"
+      },
+      "Recipe": {
+        "ID": 142,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1123,
+          1102,
+          1121
+        ],
+        "ItemCounts": [
+          1,
+          2,
+          10
+        ],
+        "Results": [
+          1607
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "等离子胶囊"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1608,
+      "Name": "反物质胶囊",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1584",
+        "ingredients": "22420",
+        "time": "679167207383/364500000",
+        "combined": "130025154203/4860000"
+      },
+      "Recipe": {
+        "ID": 143,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1607,
+          1206,
+          1120,
+          1122
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          10,
+          10
+        ],
+        "Results": [
+          1608
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "反物质胶囊"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1609,
+      "Name": "导弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "124",
+        "ingredients": "450",
+        "time": "12049049/90000",
+        "combined": "11719271/24000"
+      },
+      "Recipe": {
+        "ID": 144,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1104,
+          1301,
+          1128,
+          1407
+        ],
+        "ItemCounts": [
+          6,
+          3,
+          2,
+          1
+        ],
+        "Results": [
+          1609
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "导弹组"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1610,
+      "Name": "超音速导弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "2936/3",
+        "ingredients": "6480",
+        "time": "1508546459/1350000",
+        "combined": "1063664839/144000"
+      },
+      "Recipe": {
+        "ID": 145,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1609,
+          1303,
+          1129,
+          1405
+        ],
+        "ItemCounts": [
+          2,
+          4,
+          4,
+          2
+        ],
+        "Results": [
+          1610
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "超音速导弹组"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 2,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1611,
+      "Name": "引力导弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "24296/3",
+        "ingredients": "172992",
+        "time": "1801845736961/170859375",
+        "combined": "840184582993367/3645000000"
+      },
+      "Recipe": {
+        "ID": 146,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1610,
+          1130,
+          1127
+        ],
+        "ItemCounts": [
+          3,
+          6,
+          3
+        ],
+        "Results": [
+          1611
+        ],
+        "ResultCounts": [
+          3
+        ],
+        "Name": "引力导弹组"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 3,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1612,
+      "Name": "干扰胶囊",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "470",
+        "ingredients": "2580",
+        "time": "799374587/1518750",
+        "combined": "293621491/101250"
+      },
+      "Recipe": {
+        "ID": 158,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1204,
+          1401,
+          1120
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          3
+        ],
+        "Results": [
+          1612
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "干扰胶囊"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 1613,
+      "Name": "压制胶囊",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1540",
+        "ingredients": "17936",
+        "time": "4219349434/2278125",
+        "combined": "16468609064/759375"
+      },
+      "Recipe": {
+        "ID": 159,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1612,
+          1205,
+          1119
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          2
+        ],
+        "Results": [
+          1613
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "压制胶囊"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 2,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 1801,
+      "Name": "液氢燃料棒",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "14",
+        "ingredients": "21",
+        "time": "371/25",
+        "combined": "1113/50"
+      },
+      "Recipe": {
+        "ID": 19,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1106,
+          1120
+        ],
+        "ItemCounts": [
+          1,
+          10
+        ],
+        "Results": [
+          1801
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "液氢燃料棒"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 2,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 1802,
+      "Name": "氘核燃料棒",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "716",
+        "ingredients": "8080",
+        "time": "2987644253/3375000",
+        "combined": "571009043/56250"
+      },
+      "Recipe": {
+        "ID": 41,
+        "Type": 4,
+        "TimeSpend": 720,
+        "Items": [
+          1107,
+          1121,
+          1205
+        ],
+        "ItemCounts": [
+          1,
+          20,
+          1
+        ],
+        "Results": [
+          1802
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "氘核燃料棒"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 2,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 1803,
+      "Name": "反物质燃料棒",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1584",
+        "ingredients": "33095",
+        "time": "43516874131/15187500",
+        "combined": "3298822783/54000"
+      },
+      "Recipe": {
+        "ID": 44,
+        "Type": 4,
+        "TimeSpend": 1440,
+        "Items": [
+          1122,
+          1120,
+          1403,
+          1107
+        ],
+        "ItemCounts": [
+          12,
+          12,
+          1,
+          1
+        ],
+        "Results": [
+          1803
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "反物质燃料棒"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 2,
+      "SecondsPerItem": "12",
+      "TimeMultiplier": "6/5"
+    },
+    {
+      "ID": 1804,
+      "Name": "奇异湮灭燃料棒",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "37362",
+        "ingredients": "1675565",
+        "time": "25740792849799/273375000",
+        "combined": "162327149043383/36450000"
+      },
+      "Recipe": {
+        "ID": 156,
+        "Type": 4,
+        "TimeSpend": 1920,
+        "Items": [
+          1803,
+          5205,
+          1127,
+          1125
+        ],
+        "ItemCounts": [
+          8,
+          1,
+          2,
+          1
+        ],
+        "Results": [
+          1804
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "奇异湮灭燃料棒"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "32",
+      "TimeMultiplier": "23/15"
+    },
+    {
+      "ID": 2001,
+      "Name": "传送带",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "16/3",
+        "ingredients": "8",
+        "time": "1335961/243000",
+        "combined": "1335961/162000"
+      },
+      "ExchangePrices": {
+        "current": 6,
+        "ingredients": 8,
+        "time": 6,
+        "combined": 9
+      },
+      "Recipe": {
+        "ID": 84,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1101,
+          1201
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          2001
+        ],
+        "ResultCounts": [
+          3
+        ],
+        "Name": "传送带"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 3,
+      "SecondsPerItem": "1/3",
+      "TimeMultiplier": "181/180"
+    },
+    {
+      "ID": 2002,
+      "Name": "高速传送带",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "304/3",
+        "ingredients": "486",
+        "time": "12090950773/109350000",
+        "combined": "5181710897/9720000"
+      },
+      "ExchangePrices": {
+        "current": 102,
+        "ingredients": 486,
+        "time": 111,
+        "combined": 534
+      },
+      "Recipe": {
+        "ID": 89,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          2001,
+          1204
+        ],
+        "ItemCounts": [
+          3,
+          1
+        ],
+        "Results": [
+          2002
+        ],
+        "ResultCounts": [
+          3
+        ],
+        "Name": "高速传送带"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 3,
+      "SecondsPerItem": "1/3",
+      "TimeMultiplier": "181/180"
+    },
+    {
+      "ID": 2003,
+      "Name": "极速传送带",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "1780/3",
+        "ingredients": "20968/3",
+        "time": "13196157386909/19683000000",
+        "combined": "3482757237071/437400000"
+      },
+      "ExchangePrices": {
+        "current": 594,
+        "ingredients": 6990,
+        "time": 671,
+        "combined": 7963
+      },
+      "Recipe": {
+        "ID": 92,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          2002,
+          1205,
+          1123
+        ],
+        "ItemCounts": [
+          3,
+          1,
+          1
+        ],
+        "Results": [
+          2003
+        ],
+        "ResultCounts": [
+          3
+        ],
+        "Name": "极速传送带"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 3,
+      "SecondsPerItem": "1/3",
+      "TimeMultiplier": "181/180"
+    },
+    {
+      "ID": 2011,
+      "Name": "分拣器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "16",
+        "ingredients": "33",
+        "time": "599081/36000",
+        "combined": "1648403/48000"
+      },
+      "ExchangePrices": {
+        "current": 16,
+        "ingredients": 33,
+        "time": 17,
+        "combined": 35
+      },
+      "Recipe": {
+        "ID": 85,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1101,
+          1301
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          2011
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "分拣器"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 2012,
+      "Name": "高速分拣器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "60",
+        "ingredients": "201",
+        "time": "411723191/6480000",
+        "combined": "3683214227/17280000"
+      },
+      "ExchangePrices": {
+        "current": 60,
+        "ingredients": 201,
+        "time": 64,
+        "combined": 214
+      },
+      "Recipe": {
+        "ID": 88,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          2011,
+          1203
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          2012
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "高速分拣器"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 2,
+      "SecondsPerItem": "1/2",
+      "TimeMultiplier": "121/120"
+    },
+    {
+      "ID": 2013,
+      "Name": "极速分拣器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "256",
+        "ingredients": "1296",
+        "time": "800116009/2880000",
+        "combined": "108227487203/76800000"
+      },
+      "ExchangePrices": {
+        "current": 256,
+        "ingredients": 1296,
+        "time": 278,
+        "combined": 1410
+      },
+      "Recipe": {
+        "ID": 90,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          2012,
+          1204
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          2013
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "极速分拣器"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 2,
+      "SecondsPerItem": "1/2",
+      "TimeMultiplier": "121/120"
+    },
+    {
+      "ID": 2014,
+      "Name": "集装分拣器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "2360",
+        "ingredients": "26248",
+        "time": "1733890376827/648000000",
+        "combined": "51764910827269/1728000000"
+      },
+      "ExchangePrices": {
+        "current": 2360,
+        "ingredients": 26248,
+        "time": 2676,
+        "combined": 29957
+      },
+      "Recipe": {
+        "ID": 160,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          2013,
+          1205,
+          1303
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          1
+        ],
+        "Results": [
+          2014
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "集装分拣器"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 2020,
+      "Name": "四向分流器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "40",
+        "ingredients": "92",
+        "time": "2290001/54000",
+        "combined": "1053287/10800"
+      },
+      "ExchangePrices": {
+        "current": 40,
+        "ingredients": 92,
+        "time": 43,
+        "combined": 98
+      },
+      "Recipe": {
+        "ID": 87,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1201,
+          1301
+        ],
+        "ItemCounts": [
+          3,
+          2,
+          1
+        ],
+        "Results": [
+          2020
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "四向分流器"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 2030,
+      "Name": "流速监测器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "60",
+        "ingredients": "180",
+        "time": "1718857/27000",
+        "combined": "4124147/21600"
+      },
+      "ExchangePrices": {
+        "current": 60,
+        "ingredients": 180,
+        "time": 64,
+        "combined": 191
+      },
+      "Recipe": {
+        "ID": 117,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1201,
+          1110,
+          1301
+        ],
+        "ItemCounts": [
+          3,
+          2,
+          1,
+          2
+        ],
+        "Results": [
+          2030
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "流速监测器"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 2040,
+      "Name": "自动集装机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "1648",
+        "ingredients": "21280",
+        "time": "2512390784/1265625",
+        "combined": "291731501/11250"
+      },
+      "ExchangePrices": {
+        "current": 1648,
+        "ingredients": 21280,
+        "time": 1986,
+        "combined": 25932
+      },
+      "Recipe": {
+        "ID": 120,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1103,
+          1201,
+          1205,
+          1303
+        ],
+        "ItemCounts": [
+          3,
+          4,
+          1,
+          2
+        ],
+        "Results": [
+          2040
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "自动集装机"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 2101,
+      "Name": "小型储物仓",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "32",
+        "ingredients": "48",
+        "time": "7564/225",
+        "combined": "3782/75"
+      },
+      "ExchangePrices": {
+        "current": 32,
+        "ingredients": 48,
+        "time": 34,
+        "combined": 51
+      },
+      "Recipe": {
+        "ID": 86,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1108
+        ],
+        "ItemCounts": [
+          4,
+          4
+        ],
+        "Results": [
+          2101
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "小型储物仓"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 2102,
+      "Name": "大型储物仓",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "224",
+        "ingredients": "336",
+        "time": "284992/1125",
+        "combined": "142496/375"
+      },
+      "ExchangePrices": {
+        "current": 224,
+        "ingredients": 336,
+        "time": 254,
+        "combined": 380
+      },
+      "Recipe": {
+        "ID": 91,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1103,
+          1108
+        ],
+        "ItemCounts": [
+          8,
+          8
+        ],
+        "Results": [
+          2102
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "大型储物仓"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 2103,
+      "Name": "行星内物流运输站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "35200",
+        "ingredients": "459600",
+        "time": "24442531028/455625",
+        "combined": "1722610403/2430"
+      },
+      "ExchangePrices": {
+        "current": 35200,
+        "ingredients": 459600,
+        "time": 53647,
+        "combined": 708894
+      },
+      "Recipe": {
+        "ID": 93,
+        "Type": 4,
+        "TimeSpend": 1200,
+        "Items": [
+          1103,
+          1106,
+          1303,
+          1206
+        ],
+        "ItemCounts": [
+          40,
+          40,
+          40,
+          20
+        ],
+        "Results": [
+          2103
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "行星内物流运输站"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "20",
+      "TimeMultiplier": "4/3"
+    },
+    {
+      "ID": 2104,
+      "Name": "星际物流运输站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "101760",
+        "ingredients": "2201920",
+        "time": "32639508551/151875",
+        "combined": "9889780987/2025"
+      },
+      "ExchangePrices": {
+        "current": 101760,
+        "ingredients": 2201920,
+        "time": 214911,
+        "combined": 4883843
+      },
+      "Recipe": {
+        "ID": 95,
+        "Type": 4,
+        "TimeSpend": 1800,
+        "Items": [
+          2103,
+          1107,
+          1206
+        ],
+        "ItemCounts": [
+          1,
+          40,
+          20
+        ],
+        "Results": [
+          2104
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "星际物流运输站"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "30",
+      "TimeMultiplier": "3/2"
+    },
+    {
+      "ID": 2105,
+      "Name": "轨道采集器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "439120",
+        "ingredients": "15990200",
+        "time": "1077002788033/1012500",
+        "combined": "614863393871/13500"
+      },
+      "ExchangePrices": {
+        "current": 439120,
+        "ingredients": 15990200,
+        "time": 1063707,
+        "combined": 45545437
+      },
+      "Recipe": {
+        "ID": 111,
+        "Type": 4,
+        "TimeSpend": 1800,
+        "Items": [
+          2104,
+          1205,
+          1406,
+          2207
+        ],
+        "ItemCounts": [
+          1,
+          50,
+          20,
+          20
+        ],
+        "Results": [
+          2105
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "轨道采集器"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "30",
+      "TimeMultiplier": "3/2"
+    },
+    {
+      "ID": 2106,
+      "Name": "储液罐",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "80",
+        "ingredients": "160",
+        "time": "19034/225",
+        "combined": "38068/225"
+      },
+      "ExchangePrices": {
+        "current": 80,
+        "ingredients": 160,
+        "time": 85,
+        "combined": 170
+      },
+      "Recipe": {
+        "ID": 114,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1108,
+          1110
+        ],
+        "ItemCounts": [
+          8,
+          4,
+          4
+        ],
+        "Results": [
+          2106
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "储液罐"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 2107,
+      "Name": "物流配送器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "1632",
+        "ingredients": "6688",
+        "time": "204288473/101250",
+        "combined": "186269561/22500"
+      },
+      "ExchangePrices": {
+        "current": 1632,
+        "ingredients": 6688,
+        "time": 2018,
+        "combined": 8279
+      },
+      "Recipe": {
+        "ID": 122,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1101,
+          1401,
+          1303
+        ],
+        "ItemCounts": [
+          8,
+          4,
+          4
+        ],
+        "Results": [
+          2107
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "物流配送器"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "8",
+      "TimeMultiplier": "17/15"
+    },
+    {
+      "ID": 2201,
+      "Name": "电力感应塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "20",
+        "ingredients": "39",
+        "time": "281393/13500",
+        "combined": "244183/6000"
+      },
+      "ExchangePrices": {
+        "current": 20,
+        "ingredients": 39,
+        "time": 21,
+        "combined": 41
+      },
+      "Recipe": {
+        "ID": 8,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1101,
+          1202
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          2201
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电力感应塔"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "1",
+      "TimeMultiplier": "61/60"
+    },
+    {
+      "ID": 2202,
+      "Name": "无线输电塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "616",
+        "ingredients": "1737",
+        "time": "31236107/45000",
+        "combined": "78154419/40000"
+      },
+      "ExchangePrices": {
+        "current": 616,
+        "ingredients": 1737,
+        "time": 695,
+        "combined": 1954
+      },
+      "Recipe": {
+        "ID": 13,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          2201,
+          1401
+        ],
+        "ItemCounts": [
+          1,
+          3
+        ],
+        "Results": [
+          2202
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "无线输电塔"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 2203,
+      "Name": "风力涡轮机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "68",
+        "ingredients": "172",
+        "time": "251192/3375",
+        "combined": "635968/3375"
+      },
+      "ExchangePrices": {
+        "current": 68,
+        "ingredients": 172,
+        "time": 75,
+        "combined": 189
+      },
+      "Recipe": {
+        "ID": 7,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1101,
+          1201,
+          1202
+        ],
+        "ItemCounts": [
+          6,
+          1,
+          3
+        ],
+        "Results": [
+          2203
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "风力涡轮机"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 2204,
+      "Name": "火力发电厂",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "136",
+        "ingredients": "400",
+        "time": "101998/675",
+        "combined": "48035/108"
+      },
+      "ExchangePrices": {
+        "current": 136,
+        "ingredients": 400,
+        "time": 152,
+        "combined": 445
+      },
+      "Recipe": {
+        "ID": 64,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1101,
+          1108,
+          1201,
+          1202
+        ],
+        "ItemCounts": [
+          10,
+          4,
+          4,
+          4
+        ],
+        "Results": [
+          2204
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "火力发电厂"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "5",
+      "TimeMultiplier": "13/12"
+    },
+    {
+      "ID": 2205,
+      "Name": "太阳能板",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "180",
+        "ingredients": "420",
+        "time": "243991/1200",
+        "combined": "569173/1200"
+      },
+      "ExchangePrices": {
+        "current": 180,
+        "ingredients": 420,
+        "time": 204,
+        "combined": 475
+      },
+      "Recipe": {
+        "ID": 67,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1104,
+          1105,
+          1301
+        ],
+        "ItemCounts": [
+          10,
+          10,
+          5
+        ],
+        "Results": [
+          2205
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "太阳能板"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 2206,
+      "Name": "蓄电器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "1200",
+        "ingredients": "15088",
+        "time": "3226697747/2250000",
+        "combined": "681420887/37500"
+      },
+      "ExchangePrices": {
+        "current": 1200,
+        "ingredients": 15088,
+        "time": 1435,
+        "combined": 18172
+      },
+      "Recipe": {
+        "ID": 76,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1101,
+          1205,
+          1113
+        ],
+        "ItemCounts": [
+          6,
+          1,
+          3
+        ],
+        "Results": [
+          2206
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "蓄电器"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 2207,
+      "Name": "蓄电器（满）",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "2400",
+        "ingredients": "30176",
+        "time": "3226697747/1125000",
+        "combined": "681420887/18750"
+      },
+      "ExchangePrices": {
+        "current": 2400,
+        "ingredients": 30176,
+        "time": 2869,
+        "combined": 36343
+      },
+      "Recipe": {
+        "ID": 0,
+        "TimeSpend": 0,
+        "Items": [
+          2206
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          2207
+        ],
+        "ResultCounts": [
+          1
+        ]
+      },
+      "IngredientKinds": 1,
+      "BatchOutput": 1,
+      "SecondsPerItem": "0",
+      "TimeMultiplier": "1"
+    },
+    {
+      "ID": 2208,
+      "Name": "射线接收站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "25440",
+        "ingredients": "463200",
+        "time": "33220465153/1012500",
+        "combined": "54157861979/90000"
+      },
+      "ExchangePrices": {
+        "current": 25440,
+        "ingredients": 463200,
+        "time": 32811,
+        "combined": 601755
+      },
+      "Recipe": {
+        "ID": 72,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1103,
+          1105,
+          1404,
+          1303,
+          1205
+        ],
+        "ItemCounts": [
+          20,
+          20,
+          10,
+          5,
+          20
+        ],
+        "Results": [
+          2208
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "射线接收站"
+      },
+      "IngredientKinds": 5,
+      "BatchOutput": 1,
+      "SecondsPerItem": "8",
+      "TimeMultiplier": "17/15"
+    },
+    {
+      "ID": 2209,
+      "Name": "能量枢纽",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "25280",
+        "ingredients": "257840",
+        "time": "21588237139/607500",
+        "combined": "4762267711/12960"
+      },
+      "ExchangePrices": {
+        "current": 25280,
+        "ingredients": 257840,
+        "time": 35537,
+        "combined": 367459
+      },
+      "Recipe": {
+        "ID": 77,
+        "Type": 4,
+        "TimeSpend": 900,
+        "Items": [
+          1107,
+          1103,
+          1303,
+          1206
+        ],
+        "ItemCounts": [
+          40,
+          40,
+          40,
+          8
+        ],
+        "Results": [
+          2209
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "能量枢纽"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "15",
+      "TimeMultiplier": "5/4"
+    },
+    {
+      "ID": 2210,
+      "Name": "人造恒星",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "137920",
+        "ingredients": "3600500",
+        "time": "1171252536436/3796875",
+        "combined": "46768840692907/5400000"
+      },
+      "ExchangePrices": {
+        "current": 137920,
+        "ingredients": 3600500,
+        "time": 308479,
+        "combined": 8660897
+      },
+      "Recipe": {
+        "ID": 43,
+        "Type": 4,
+        "TimeSpend": 1800,
+        "Items": [
+          1107,
+          1125,
+          1403,
+          1305
+        ],
+        "ItemCounts": [
+          20,
+          20,
+          10,
+          10
+        ],
+        "Results": [
+          2210
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "人造恒星"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "30",
+      "TimeMultiplier": "3/2"
+    },
+    {
+      "ID": 2211,
+      "Name": "微型聚变发电站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "14960",
+        "ingredients": "213800",
+        "time": "8006120521/405000",
+        "combined": "3843456127/13500"
+      },
+      "ExchangePrices": {
+        "current": 14960,
+        "ingredients": 213800,
+        "time": 19769,
+        "combined": 284701
+      },
+      "Recipe": {
+        "ID": 113,
+        "Type": 4,
+        "TimeSpend": 600,
+        "Items": [
+          1107,
+          1205,
+          1124,
+          1303
+        ],
+        "ItemCounts": [
+          12,
+          10,
+          8,
+          4
+        ],
+        "Results": [
+          2211
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "微型聚变发电站"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "10",
+      "TimeMultiplier": "7/6"
+    },
+    {
+      "ID": 2212,
+      "Name": "卫星配电站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "15360",
+        "ingredients": "192100",
+        "time": "38862944809/2025000",
+        "combined": "1300636616227/5400000"
+      },
+      "ExchangePrices": {
+        "current": 15360,
+        "ingredients": 192100,
+        "time": 19192,
+        "combined": 240859
+      },
+      "Recipe": {
+        "ID": 73,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          2202,
+          1205,
+          1125
+        ],
+        "ItemCounts": [
+          1,
+          10,
+          2
+        ],
+        "Results": [
+          2212
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "卫星配电站"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "5",
+      "TimeMultiplier": "13/12"
+    },
+    {
+      "ID": 2213,
+      "Name": "地热发电站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "2048",
+        "ingredients": "21760",
+        "time": "1059313607/421875",
+        "combined": "9811712933/360000"
+      },
+      "ExchangePrices": {
+        "current": 2048,
+        "ingredients": 21760,
+        "time": 2511,
+        "combined": 27255
+      },
+      "Recipe": {
+        "ID": 118,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1104,
+          1404,
+          1205
+        ],
+        "ItemCounts": [
+          15,
+          20,
+          4,
+          1
+        ],
+        "Results": [
+          2213
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "地热发电站"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 2301,
+      "Name": "采矿机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "80",
+        "ingredients": "260",
+        "time": "517517/6000",
+        "combined": "1345883/4800"
+      },
+      "ExchangePrices": {
+        "current": 80,
+        "ingredients": 260,
+        "time": 87,
+        "combined": 281
+      },
+      "Recipe": {
+        "ID": 48,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1101,
+          1301,
+          1202,
+          1201
+        ],
+        "ItemCounts": [
+          4,
+          2,
+          2,
+          2
+        ],
+        "Results": [
+          2301
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "采矿机"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 2302,
+      "Name": "电弧熔炉",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "96",
+        "ingredients": "330",
+        "time": "61957/600",
+        "combined": "56833/160"
+      },
+      "ExchangePrices": {
+        "current": 96,
+        "ingredients": 330,
+        "time": 104,
+        "combined": 356
+      },
+      "Recipe": {
+        "ID": 56,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1101,
+          1108,
+          1301,
+          1202
+        ],
+        "ItemCounts": [
+          4,
+          2,
+          4,
+          2
+        ],
+        "Results": [
+          2302
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电弧熔炉"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 2303,
+      "Name": "制造台 Mk.I",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "128",
+        "ingredients": "304",
+        "time": "1836161/13500",
+        "combined": "871751/2700"
+      },
+      "ExchangePrices": {
+        "current": 128,
+        "ingredients": 304,
+        "time": 137,
+        "combined": 323
+      },
+      "Recipe": {
+        "ID": 45,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1201,
+          1301
+        ],
+        "ItemCounts": [
+          4,
+          8,
+          4
+        ],
+        "Results": [
+          2303
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "制造台 Mk.I"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 2304,
+      "Name": "制造台 Mk.II",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "1440",
+        "ingredients": "6496",
+        "time": "74034989/45000",
+        "combined": "667895599/90000"
+      },
+      "ExchangePrices": {
+        "current": 1440,
+        "ingredients": 6496,
+        "time": 1646,
+        "combined": 7422
+      },
+      "Recipe": {
+        "ID": 46,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          2303,
+          1123,
+          1303
+        ],
+        "ItemCounts": [
+          1,
+          8,
+          4
+        ],
+        "Results": [
+          2304
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "制造台 Mk.II"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 2305,
+      "Name": "制造台 Mk.III",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "70976/3",
+        "ingredients": "484576",
+        "time": "3492319171228/94921875",
+        "combined": "26291126516638/31640625"
+      },
+      "ExchangePrices": {
+        "current": 23659,
+        "ingredients": 484576,
+        "time": 36792,
+        "combined": 830930
+      },
+      "Recipe": {
+        "ID": 47,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          2304,
+          1402,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          8,
+          2
+        ],
+        "Results": [
+          2305
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "制造台 Mk.III"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 2306,
+      "Name": "抽水站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "296",
+        "ingredients": "1570",
+        "time": "16807204/50625",
+        "combined": "3583639/2025"
+      },
+      "ExchangePrices": {
+        "current": 296,
+        "ingredients": 1570,
+        "time": 332,
+        "combined": 1770
+      },
+      "Recipe": {
+        "ID": 49,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1101,
+          1108,
+          1203,
+          1301
+        ],
+        "ItemCounts": [
+          8,
+          4,
+          4,
+          2
+        ],
+        "Results": [
+          2306
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "抽水站"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 2307,
+      "Name": "原油萃取站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "1176",
+        "ingredients": "4710",
+        "time": "288230971/202500",
+        "combined": "34212347/6000"
+      },
+      "ExchangePrices": {
+        "current": 1176,
+        "ingredients": 4710,
+        "time": 1424,
+        "combined": 5703
+      },
+      "Recipe": {
+        "ID": 14,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1103,
+          1108,
+          1301,
+          1401
+        ],
+        "ItemCounts": [
+          12,
+          12,
+          6,
+          4
+        ],
+        "Results": [
+          2307
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "原油萃取站"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "8",
+      "TimeMultiplier": "17/15"
+    },
+    {
+      "ID": 2308,
+      "Name": "原油精炼厂",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "1504",
+        "ingredients": "6370",
+        "time": "79668479/45000",
+        "combined": "89954227/12000"
+      },
+      "ExchangePrices": {
+        "current": 1504,
+        "ingredients": 6370,
+        "time": 1771,
+        "combined": 7497
+      },
+      "Recipe": {
+        "ID": 15,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1108,
+          1301,
+          1401
+        ],
+        "ItemCounts": [
+          10,
+          10,
+          6,
+          6
+        ],
+        "Results": [
+          2308
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "原油精炼厂"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 2309,
+      "Name": "化工厂",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "312",
+        "ingredients": "810",
+        "time": "142233/400",
+        "combined": "2656147/2880"
+      },
+      "ExchangePrices": {
+        "current": 312,
+        "ingredients": 810,
+        "time": 356,
+        "combined": 923
+      },
+      "Recipe": {
+        "ID": 22,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1103,
+          1108,
+          1110,
+          1301
+        ],
+        "ItemCounts": [
+          8,
+          8,
+          8,
+          2
+        ],
+        "Results": [
+          2309
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "化工厂"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "5",
+      "TimeMultiplier": "13/12"
+    },
+    {
+      "ID": 2310,
+      "Name": "微型粒子对撞机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "61664",
+        "ingredients": "1137072",
+        "time": "9717300119/108000",
+        "combined": "19990857587/12000"
+      },
+      "ExchangePrices": {
+        "current": 61664,
+        "ingredients": 1137072,
+        "time": 89976,
+        "combined": 1665905
+      },
+      "Recipe": {
+        "ID": 39,
+        "Type": 4,
+        "TimeSpend": 900,
+        "Items": [
+          1107,
+          1125,
+          1205,
+          1123,
+          1303
+        ],
+        "ItemCounts": [
+          20,
+          20,
+          25,
+          10,
+          8
+        ],
+        "Results": [
+          2310
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "微型粒子对撞机"
+      },
+      "IngredientKinds": 5,
+      "BatchOutput": 1,
+      "SecondsPerItem": "15",
+      "TimeMultiplier": "5/4"
+    },
+    {
+      "ID": 2311,
+      "Name": "电磁轨道弹射器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "12960",
+        "ingredients": "194250",
+        "time": "21876424999/1350000",
+        "combined": "35261314957/144000"
+      },
+      "ExchangePrices": {
+        "current": 12960,
+        "ingredients": 194250,
+        "time": 16205,
+        "combined": 244871
+      },
+      "Recipe": {
+        "ID": 71,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1201,
+          1303,
+          1205
+        ],
+        "ItemCounts": [
+          20,
+          20,
+          5,
+          10
+        ],
+        "Results": [
+          2311
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电磁轨道弹射器"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 2312,
+      "Name": "垂直发射井",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "345440",
+        "ingredients": "13134200",
+        "time": "22518923157557/30375000",
+        "combined": "157492886198507/5400000"
+      },
+      "ExchangePrices": {
+        "current": 345440,
+        "ingredients": 13134200,
+        "time": 741364,
+        "combined": 29165350
+      },
+      "Recipe": {
+        "ID": 82,
+        "Type": 4,
+        "TimeSpend": 1800,
+        "Items": [
+          1107,
+          1125,
+          1209,
+          1305
+        ],
+        "ItemCounts": [
+          80,
+          30,
+          20,
+          10
+        ],
+        "Results": [
+          2312
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "垂直发射井"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "30",
+      "TimeMultiplier": "3/2"
+    },
+    {
+      "ID": 2313,
+      "Name": "喷涂机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "584",
+        "ingredients": "2430",
+        "time": "59077543/90000",
+        "combined": "21837333/8000"
+      },
+      "ExchangePrices": {
+        "current": 584,
+        "ingredients": 2430,
+        "time": 657,
+        "combined": 2730
+      },
+      "Recipe": {
+        "ID": 109,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1103,
+          1401,
+          1301,
+          1302
+        ],
+        "ItemCounts": [
+          4,
+          2,
+          2,
+          2
+        ],
+        "Results": [
+          2313
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "喷涂机"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 2314,
+      "Name": "分馏塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "448",
+        "ingredients": "1770",
+        "time": "2036027/4000",
+        "combined": "12984083/6400"
+      },
+      "ExchangePrices": {
+        "current": 448,
+        "ingredients": 1770,
+        "time": 510,
+        "combined": 2029
+      },
+      "Recipe": {
+        "ID": 110,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1103,
+          1108,
+          1110,
+          1303
+        ],
+        "ItemCounts": [
+          8,
+          4,
+          4,
+          1
+        ],
+        "Results": [
+          2314
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "分馏塔"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 2315,
+      "Name": "位面熔炉",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "14190",
+        "ingredients": "274125",
+        "time": "2503354240387/121500000",
+        "combined": "4515637261031/10800000"
+      },
+      "ExchangePrices": {
+        "current": 14190,
+        "ingredients": 274125,
+        "time": 20604,
+        "combined": 418115
+      },
+      "Recipe": {
+        "ID": 116,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          2302,
+          1125,
+          1304,
+          1016
+        ],
+        "ItemCounts": [
+          1,
+          5,
+          4,
+          15
+        ],
+        "Results": [
+          2315
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "位面熔炉"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "5",
+      "TimeMultiplier": "13/12"
+    },
+    {
+      "ID": 2316,
+      "Name": "大型采矿机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "59200",
+        "ingredients": "1710576",
+        "time": "2082890201339/18984375",
+        "combined": "4929138507973/1406250"
+      },
+      "ExchangePrices": {
+        "current": 59200,
+        "ingredients": 1710576,
+        "time": 109717,
+        "combined": 3505166
+      },
+      "Recipe": {
+        "ID": 119,
+        "Type": 4,
+        "TimeSpend": 1200,
+        "Items": [
+          1107,
+          1125,
+          1205,
+          1305,
+          1014
+        ],
+        "ItemCounts": [
+          20,
+          10,
+          10,
+          4,
+          40
+        ],
+        "Results": [
+          2316
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "大型采矿机"
+      },
+      "IngredientKinds": 5,
+      "BatchOutput": 1,
+      "SecondsPerItem": "20",
+      "TimeMultiplier": "4/3"
+    },
+    {
+      "ID": 2317,
+      "Name": "量子化工厂",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "39912",
+        "ingredients": "1244670",
+        "time": "62334046631311/911250000",
+        "combined": "136064678193409/60750000"
+      },
+      "ExchangePrices": {
+        "current": 39912,
+        "ingredients": 1244670,
+        "time": 68405,
+        "combined": 2239748
+      },
+      "Recipe": {
+        "ID": 124,
+        "Type": 4,
+        "TimeSpend": 600,
+        "Items": [
+          2309,
+          1119,
+          1127,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          10,
+          3,
+          3
+        ],
+        "Results": [
+          2317
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "量子化工厂"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "10",
+      "TimeMultiplier": "7/6"
+    },
+    {
+      "ID": 2318,
+      "Name": "重组式制造台",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "234352/3",
+        "ingredients": "3415960",
+        "time": "151385358326423/1139062500",
+        "combined": "7684128794761159/1215000000"
+      },
+      "ExchangePrices": {
+        "current": 78118,
+        "ingredients": 3415960,
+        "time": 132904,
+        "combined": 6324386
+      },
+      "Recipe": {
+        "ID": 154,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          2305,
+          5203,
+          5206,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          10,
+          30,
+          4
+        ],
+        "Results": [
+          2318
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "重组式制造台"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "5",
+      "TimeMultiplier": "13/12"
+    },
+    {
+      "ID": 2319,
+      "Name": "负熵熔炉",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "59180",
+        "ingredients": "2363705",
+        "time": "301730183804533/3037500000",
+        "combined": "2241649242570397/540000000"
+      },
+      "ExchangePrices": {
+        "current": 59180,
+        "ingredients": 2363705,
+        "time": 99336,
+        "combined": 4151203
+      },
+      "Recipe": {
+        "ID": 155,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          2315,
+          5204,
+          5206,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          10,
+          30,
+          4
+        ],
+        "Results": [
+          2319
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "负熵熔炉"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 2401,
+      "Name": "全息信标",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "516",
+        "ingredients": "2160",
+        "time": "29731636/50625",
+        "combined": "2768179/1125"
+      },
+      "ExchangePrices": {
+        "current": 516,
+        "ingredients": 2160,
+        "time": 588,
+        "combined": 2461
+      },
+      "Recipe": {
+        "ID": 161,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1101,
+          1111,
+          1401,
+          1301
+        ],
+        "ItemCounts": [
+          3,
+          4,
+          2,
+          2
+        ],
+        "Results": [
+          2401
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "全息信标"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 2901,
+      "Name": "矩阵研究站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "160",
+        "ingredients": "520",
+        "time": "517489/3000",
+        "combined": "448609/800"
+      },
+      "ExchangePrices": {
+        "current": 160,
+        "ingredients": 520,
+        "time": 173,
+        "combined": 561
+      },
+      "Recipe": {
+        "ID": 10,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1101,
+          1110,
+          1301,
+          1202
+        ],
+        "ItemCounts": [
+          8,
+          4,
+          4,
+          4
+        ],
+        "Results": [
+          2901
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "矩阵研究站"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 2902,
+      "Name": "自演化研究站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "31100",
+        "ingredients": "995630",
+        "time": "5003987343356/94921875",
+        "combined": "2529001910857/1406250"
+      },
+      "ExchangePrices": {
+        "current": 31100,
+        "ingredients": 995630,
+        "time": 52717,
+        "combined": 1798402
+      },
+      "Recipe": {
+        "ID": 153,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          2901,
+          5202,
+          5201,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          10,
+          20,
+          4
+        ],
+        "Results": [
+          2902
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "自演化研究站"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 3001,
+      "Name": "高斯机枪塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "168",
+        "ingredients": "510",
+        "time": "207316/1125",
+        "combined": "75529/135"
+      },
+      "ExchangePrices": {
+        "current": 168,
+        "ingredients": 510,
+        "time": 185,
+        "combined": 560
+      },
+      "Recipe": {
+        "ID": 125,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1101,
+          1201,
+          1301,
+          1202
+        ],
+        "ItemCounts": [
+          8,
+          8,
+          2,
+          4
+        ],
+        "Results": [
+          3001
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "高斯机枪塔"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 3002,
+      "Name": "高频激光塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "2520",
+        "ingredients": "10665",
+        "time": "4322329/1440",
+        "combined": "405884457/32000"
+      },
+      "ExchangePrices": {
+        "current": 2520,
+        "ingredients": 10665,
+        "time": 3002,
+        "combined": 12684
+      },
+      "Recipe": {
+        "ID": 126,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1401,
+          1301,
+          1404
+        ],
+        "ItemCounts": [
+          9,
+          6,
+          6,
+          9
+        ],
+        "Results": [
+          3002
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "高频激光塔"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 3003,
+      "Name": "聚爆加农炮",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "3064",
+        "ingredients": "41130",
+        "time": "1674654319/450000",
+        "combined": "32908372367/648000"
+      },
+      "ExchangePrices": {
+        "current": 3064,
+        "ingredients": 41130,
+        "time": 3722,
+        "combined": 50785
+      },
+      "Recipe": {
+        "ID": 127,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1103,
+          1203,
+          1301,
+          1205
+        ],
+        "ItemCounts": [
+          10,
+          8,
+          10,
+          2
+        ],
+        "Results": [
+          3003
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "聚爆加农炮"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "5",
+      "TimeMultiplier": "13/12"
+    },
+    {
+      "ID": 3004,
+      "Name": "磁化电浆炮",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "16520",
+        "ingredients": "265620",
+        "time": "5869332721/270000",
+        "combined": "2824242281/8000"
+      },
+      "ExchangePrices": {
+        "current": 16520,
+        "ingredients": 265620,
+        "time": 21739,
+        "combined": 353031
+      },
+      "Recipe": {
+        "ID": 128,
+        "Type": 4,
+        "TimeSpend": 600,
+        "Items": [
+          1107,
+          1119,
+          1205,
+          1401,
+          1303
+        ],
+        "ItemCounts": [
+          20,
+          10,
+          10,
+          5,
+          5
+        ],
+        "Results": [
+          3004
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "磁化电浆炮"
+      },
+      "IngredientKinds": 5,
+      "BatchOutput": 1,
+      "SecondsPerItem": "10",
+      "TimeMultiplier": "7/6"
+    },
+    {
+      "ID": 3005,
+      "Name": "导弹防御塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "912",
+        "ingredients": "4230",
+        "time": "23949827/22500",
+        "combined": "11123057/2250"
+      },
+      "ExchangePrices": {
+        "current": 912,
+        "ingredients": 4230,
+        "time": 1065,
+        "combined": 4944
+      },
+      "Recipe": {
+        "ID": 129,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1203,
+          1301,
+          1407
+        ],
+        "ItemCounts": [
+          8,
+          6,
+          12,
+          6
+        ],
+        "Results": [
+          3005
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "导弹防御塔"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 3006,
+      "Name": "干扰塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "2496",
+        "ingredients": "11970",
+        "time": "35111869/12000",
+        "combined": "808777151/57600"
+      },
+      "ExchangePrices": {
+        "current": 2496,
+        "ingredients": 11970,
+        "time": 2926,
+        "combined": 14042
+      },
+      "Recipe": {
+        "ID": 130,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1104,
+          1401,
+          1112,
+          1303
+        ],
+        "ItemCounts": [
+          12,
+          9,
+          6,
+          3
+        ],
+        "Results": [
+          3006
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "干扰塔"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "5",
+      "TimeMultiplier": "13/12"
+    },
+    {
+      "ID": 3007,
+      "Name": "信号塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "2848",
+        "ingredients": "14664",
+        "time": "394328077/112500",
+        "combined": "2714378227/150000"
+      },
+      "ExchangePrices": {
+        "current": 2848,
+        "ingredients": 14664,
+        "time": 3506,
+        "combined": 18096
+      },
+      "Recipe": {
+        "ID": 131,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          2202,
+          1103,
+          1113
+        ],
+        "ItemCounts": [
+          2,
+          12,
+          6
+        ],
+        "Results": [
+          3007
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "信号塔"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 3008,
+      "Name": "行星护盾发生器",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "17960",
+        "ingredients": "243200",
+        "time": "86393962907/3645000",
+        "combined": "15770805323/48600"
+      },
+      "ExchangePrices": {
+        "current": 17960,
+        "ingredients": 243200,
+        "time": 23703,
+        "combined": 324503
+      },
+      "Recipe": {
+        "ID": 132,
+        "Type": 4,
+        "TimeSpend": 600,
+        "Items": [
+          1103,
+          1204,
+          1205,
+          1206
+        ],
+        "ItemCounts": [
+          20,
+          20,
+          5,
+          5
+        ],
+        "Results": [
+          3008
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "行星护盾发生器"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "10",
+      "TimeMultiplier": "7/6"
+    },
+    {
+      "ID": 3009,
+      "Name": "战场分析基站",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "1224",
+        "ingredients": "4770",
+        "time": "7155313/5000",
+        "combined": "22346511/4000"
+      },
+      "ExchangePrices": {
+        "current": 1224,
+        "ingredients": 4770,
+        "time": 1432,
+        "combined": 5587
+      },
+      "Recipe": {
+        "ID": 152,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1301,
+          1302,
+          1407
+        ],
+        "ItemCounts": [
+          12,
+          18,
+          6,
+          12
+        ],
+        "Results": [
+          3009
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "战场分析基站"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 3010,
+      "Name": "近程电浆塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "8000",
+        "ingredients": "104650",
+        "time": "20700260239/2025000",
+        "combined": "29250916567/216000"
+      },
+      "ExchangePrices": {
+        "current": 8000,
+        "ingredients": 104650,
+        "time": 10223,
+        "combined": 135421
+      },
+      "Recipe": {
+        "ID": 157,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1103,
+          1205,
+          1401,
+          1303
+        ],
+        "ItemCounts": [
+          15,
+          5,
+          5,
+          5
+        ],
+        "Results": [
+          3010
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "近程电浆塔"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "8",
+      "TimeMultiplier": "17/15"
+    },
+    {
+      "ID": 5001,
+      "Name": "物流运输机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "676",
+        "ingredients": "2632",
+        "time": "4511764/5625",
+        "combined": "17561842/5625"
+      },
+      "ExchangePrices": {
+        "current": 676,
+        "ingredients": 2632,
+        "time": 803,
+        "combined": 3123
+      },
+      "Recipe": {
+        "ID": 94,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1101,
+          1303,
+          1405
+        ],
+        "ItemCounts": [
+          5,
+          2,
+          2
+        ],
+        "Results": [
+          5001
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "物流运输机"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 5002,
+      "Name": "星际物流运输船",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "11840",
+        "ingredients": "100640",
+        "time": "30947307721/2025000",
+        "combined": "2360305849/18000"
+      },
+      "ExchangePrices": {
+        "current": 11840,
+        "ingredients": 100640,
+        "time": 15283,
+        "combined": 131129
+      },
+      "Recipe": {
+        "ID": 96,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1107,
+          1303,
+          1406
+        ],
+        "ItemCounts": [
+          10,
+          10,
+          2
+        ],
+        "Results": [
+          5002
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "星际物流运输船"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 5003,
+      "Name": "配送运输机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "256",
+        "ingredients": "1108",
+        "time": "8731553/30000",
+        "combined": "227204611/180000"
+      },
+      "ExchangePrices": {
+        "current": 256,
+        "ingredients": 1108,
+        "time": 292,
+        "combined": 1263
+      },
+      "Recipe": {
+        "ID": 123,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1407,
+          1303
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          1
+        ],
+        "Results": [
+          5003
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "配送运输机"
+      },
+      "IngredientKinds": 3,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 5101,
+      "Name": "原型机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "268",
+        "ingredients": "1215",
+        "time": "23965201/81000",
+        "combined": "167772/125"
+      },
+      "ExchangePrices": {
+        "current": 268,
+        "ingredients": 1215,
+        "time": 296,
+        "combined": 1343
+      },
+      "Recipe": {
+        "ID": 147,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1407,
+          1301,
+          1401
+        ],
+        "ItemCounts": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "Results": [
+          5101
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "原型机"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "2",
+      "TimeMultiplier": "31/30"
+    },
+    {
+      "ID": 5102,
+      "Name": "精准无人机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "1072",
+        "ingredients": "9465",
+        "time": "953118622/759375",
+        "combined": "89986049/8100"
+      },
+      "ExchangePrices": {
+        "current": 1072,
+        "ingredients": 9465,
+        "time": 1256,
+        "combined": 11110
+      },
+      "Recipe": {
+        "ID": 148,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          5101,
+          1204,
+          1301,
+          1404
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "Results": [
+          5102
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "精准无人机"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 5103,
+      "Name": "攻击无人机",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "2296",
+        "ingredients": "30035",
+        "time": "31615635758/11390625",
+        "combined": "4452483331/121500"
+      },
+      "ExchangePrices": {
+        "current": 2296,
+        "ingredients": 30035,
+        "time": 2776,
+        "combined": 36646
+      },
+      "Recipe": {
+        "ID": 149,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          5101,
+          1204,
+          1303,
+          1206
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "Results": [
+          5103
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "攻击无人机"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "4",
+      "TimeMultiplier": "16/15"
+    },
+    {
+      "ID": 5111,
+      "Name": "护卫舰",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "9136",
+        "ingredients": "120830",
+        "time": "140894609011/12150000",
+        "combined": "39895779989/259200"
+      },
+      "ExchangePrices": {
+        "current": 9136,
+        "ingredients": 120830,
+        "time": 11597,
+        "combined": 153919
+      },
+      "Recipe": {
+        "ID": 150,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1107,
+          1406,
+          1303,
+          1206
+        ],
+        "ItemCounts": [
+          5,
+          1,
+          2,
+          3
+        ],
+        "Results": [
+          5111
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "护卫舰"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "5",
+      "TimeMultiplier": "13/12"
+    },
+    {
+      "ID": 5112,
+      "Name": "驱逐舰",
+      "ExchangeEligible": true,
+      "Values": {
+        "current": "51248",
+        "ingredients": "821600",
+        "time": "12028670986673/170859375",
+        "combined": "8318919381521/7290000"
+      },
+      "ExchangePrices": {
+        "current": 51248,
+        "ingredients": 821600,
+        "time": 70402,
+        "combined": 1141142
+      },
+      "Recipe": {
+        "ID": 151,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1125,
+          1406,
+          1303,
+          1127
+        ],
+        "ItemCounts": [
+          20,
+          4,
+          4,
+          1
+        ],
+        "Results": [
+          5112
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "驱逐舰"
+      },
+      "IngredientKinds": 4,
+      "BatchOutput": 1,
+      "SecondsPerItem": "8",
+      "TimeMultiplier": "17/15"
+    },
+    {
+      "ID": 5201,
+      "Name": "黑雾矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 5202,
+      "Name": "硅基神经元",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 5203,
+      "Name": "物质重组器",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 5204,
+      "Name": "负熵奇点",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 5205,
+      "Name": "核心素",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 5206,
+      "Name": "能量碎片",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "1",
+        "ingredients": "1",
+        "time": "1",
+        "combined": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 6001,
+      "Name": "电磁矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "24",
+        "ingredients": "54",
+        "time": "310849/12000",
+        "combined": "932547/16000"
+      },
+      "Recipe": {
+        "ID": 9,
+        "Type": 15,
+        "TimeSpend": 180,
+        "Items": [
+          1202,
+          1301
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          6001
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电磁矩阵"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "3",
+      "TimeMultiplier": "21/20"
+    },
+    {
+      "ID": 6002,
+      "Name": "能量矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "20",
+        "ingredients": "30",
+        "time": "1694/75",
+        "combined": "847/25"
+      },
+      "Recipe": {
+        "ID": 18,
+        "Type": 15,
+        "TimeSpend": 360,
+        "Items": [
+          1109,
+          1120
+        ],
+        "ItemCounts": [
+          2,
+          2
+        ],
+        "Results": [
+          6002
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "能量矩阵"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "6",
+      "TimeMultiplier": "11/10"
+    },
+    {
+      "ID": 6003,
+      "Name": "结构矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "296",
+        "ingredients": "1656",
+        "time": "312054788/759375",
+        "combined": "197925526/84375"
+      },
+      "Recipe": {
+        "ID": 27,
+        "Type": 15,
+        "TimeSpend": 480,
+        "Items": [
+          1112,
+          1118
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          6003
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "结构矩阵"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "8",
+      "TimeMultiplier": "17/15"
+    },
+    {
+      "ID": 6004,
+      "Name": "信息矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "3280/3",
+        "ingredients": "7164",
+        "time": "6131068433/4050000",
+        "combined": "54743439709/5400000"
+      },
+      "Recipe": {
+        "ID": 55,
+        "Type": 15,
+        "TimeSpend": 600,
+        "Items": [
+          1303,
+          1402
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          6004
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "信息矩阵"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 1,
+      "SecondsPerItem": "10",
+      "TimeMultiplier": "7/6"
+    },
+    {
+      "ID": 6005,
+      "Name": "引力矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "9200",
+        "ingredients": "222858",
+        "time": "1259254759081/75937500",
+        "combined": "92127583975207/225000000"
+      },
+      "Recipe": {
+        "ID": 102,
+        "Type": 15,
+        "TimeSpend": 1440,
+        "Items": [
+          1209,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          6005
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "引力矩阵"
+      },
+      "IngredientKinds": 2,
+      "BatchOutput": 2,
+      "SecondsPerItem": "12",
+      "TimeMultiplier": "6/5"
+    },
+    {
+      "ID": 6006,
+      "Name": "宇宙矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "current": "63806/3",
+        "ingredients": "1622341",
+        "time": "3757804287041/81000000",
+        "combined": "3988207685683319/1080000000"
+      },
+      "Recipe": {
+        "ID": 75,
+        "Type": 15,
+        "TimeSpend": 900,
+        "Items": [
+          6001,
+          6002,
+          6003,
+          6004,
+          6005,
+          1122
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Results": [
+          6006
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "宇宙矩阵"
+      },
+      "IngredientKinds": 6,
+      "BatchOutput": 1,
+      "SecondsPerItem": "15",
+      "TimeMultiplier": "5/4"
+    }
+  ]
+}

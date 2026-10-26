@@ -1,0 +1,53 @@
+{
+  "researchedOn": "2026-10-25",
+  "scope": "Source-level research; not runtime compatibility validation.",
+  "localSnapshots": "artifacts/references/progression (Git-ignored)",
+  "sources": [
+    {
+      "id": "commonapi",
+      "repository": "https://github.com/limoka/CommonAPI",
+      "commit": "4a5d7c21c0e2a5f91b639e4d710fa5bb5dcb928a",
+      "license": "GPL-3.0 (repository LICENSE)",
+      "files": [
+        "CommonAPI/Systems/ProtoRegistrySystem/ProtoRegistry.cs",
+        "CommonAPI/Systems/ComponentSystem/FactoryComponent.cs",
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "genesis",
+      "repository": "https://github.com/Awbugl/ProjectGenesis",
+      "commit": "8d6b8abb786323ca0e362f9132da230b968227a9",
+      "license": "GPL-3.0-only for source/data; assets separately licensed",
+      "files": [
+        "data/techs.json",
+        "src/Patches/Hooks/QuantumStorage/InternalFunctions.cs",
+        "src/Patches/Hooks/QuantumStorage/QuantumStoragePatches.cs",
+        "LICENSE"
+      ]
+    },
+    {
+      "id": "more-mega-structures",
+      "repository": "https://github.com/jinxOAO/DSPmod_MoreMegaStructures",
+      "commit": "429d8f0e61c9a1eb9f416269113c89580931db81",
+      "license": "No explicit license identified in inspected repository metadata/tree; no redistribution permission assumed",
+      "files": [
+        "MoreMegaStructure/MoreMegaStructure/MMSProtos.cs",
+        "MoreMegaStructure/MoreMegaStructure/StarAssembly.cs"
+      ]
+    },
+    {
+      "id": "dspmodsave",
+      "repository": "https://github.com/limoka/DSP-Mods",
+      "commit": "f7a0c964ccfc72a96a5d96f56938b1f71aab3c19",
+      "license": "Apache-2.0 (Mods/DSPModSave/LICENSE, takes precedence over repository summary)",
+      "files": [
+        "Mods/DSPModSave/src/DSPModSave/IModCanSave.cs",
+        "Mods/DSPModSave/src/DSPModSave/DSPModSavePlugin.cs",
+        "Mods/DSPModSave/src/DSPModSave/Patches/GameSave_Patch.cs",
+        "Mods/DSPModSave/src/DSPModSave/Patches/GameData_Patch.cs",
+        "Mods/DSPModSave/LICENSE"
+      ]
+    }
+  ]
+}

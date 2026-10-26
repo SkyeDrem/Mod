@@ -1,0 +1,5908 @@
+{
+  "Status": "offline-only",
+  "AppliedScheme": "one_half_plus_half",
+  "RecipeFactsSha256": "3d7cad461888b3f51a86fd574384c1b52fdc6af54a3c321edf6ce2d1eb8e45bd",
+  "RuntimePricesSha256": "af67b79845535c36a0a9c243ce17b0c5a1124de69b48f389db3a1a6c19f1d698",
+  "Schemes": [
+    {
+      "Key": "double",
+      "Name": "原 ×2",
+      "Constant": "2",
+      "CoefficientOfIngredientKinds": "0"
+    },
+    {
+      "Key": "ingredients",
+      "Name": "1+k",
+      "Constant": "1",
+      "CoefficientOfIngredientKinds": "1"
+    },
+    {
+      "Key": "ingredients_half",
+      "Name": "1+k/2",
+      "Constant": "1",
+      "CoefficientOfIngredientKinds": "1/2"
+    },
+    {
+      "Key": "one_half_plus_half",
+      "Name": "1.5+k/2（现行）",
+      "Constant": "3/2",
+      "CoefficientOfIngredientKinds": "1/2"
+    },
+    {
+      "Key": "two_plus_half",
+      "Name": "2+k/2",
+      "Constant": "2",
+      "CoefficientOfIngredientKinds": "1/2"
+    }
+  ],
+  "Items": [
+    {
+      "ID": 1000,
+      "Name": "水",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1001,
+      "Name": "铁矿",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1002,
+      "Name": "铜矿",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1003,
+      "Name": "硅石",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1004,
+      "Name": "钛石",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1005,
+      "Name": "石矿",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1006,
+      "Name": "煤矿",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1007,
+      "Name": "原油",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1011,
+      "Name": "可燃冰",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1012,
+      "Name": "金伯利矿石",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1013,
+      "Name": "分形硅石",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1014,
+      "Name": "光栅石",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1015,
+      "Name": "刺笋结晶",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1016,
+      "Name": "单极磁石",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1030,
+      "Name": "木材",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1031,
+      "Name": "植物燃料",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1099,
+      "Name": "沙土",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "原矿/水/木材等直接采集物"
+    },
+    {
+      "ID": 1101,
+      "Name": "铁块",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "2",
+        "ingredients": "2",
+        "ingredients_half": "3/2",
+        "one_half_plus_half": "2",
+        "two_plus_half": "5/2"
+      },
+      "Recipe": {
+        "ID": 1,
+        "Type": 1,
+        "TimeSpend": 60,
+        "Items": [
+          1001
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1101
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "铁块"
+      }
+    },
+    {
+      "ID": 1102,
+      "Name": "磁铁",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "2",
+        "ingredients": "2",
+        "ingredients_half": "3/2",
+        "one_half_plus_half": "2",
+        "two_plus_half": "5/2"
+      },
+      "Recipe": {
+        "ID": 2,
+        "Type": 1,
+        "TimeSpend": 90,
+        "Items": [
+          1001
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1102
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "磁铁"
+      }
+    },
+    {
+      "ID": 1103,
+      "Name": "钢材",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "12",
+        "ingredients": "12",
+        "ingredients_half": "27/4",
+        "one_half_plus_half": "12",
+        "two_plus_half": "75/4"
+      },
+      "Recipe": {
+        "ID": 63,
+        "Type": 1,
+        "TimeSpend": 180,
+        "Items": [
+          1101
+        ],
+        "ItemCounts": [
+          3
+        ],
+        "Results": [
+          1103
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "钢材"
+      }
+    },
+    {
+      "ID": 1104,
+      "Name": "铜块",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "2",
+        "ingredients": "2",
+        "ingredients_half": "3/2",
+        "one_half_plus_half": "2",
+        "two_plus_half": "5/2"
+      },
+      "Recipe": {
+        "ID": 3,
+        "Type": 1,
+        "TimeSpend": 60,
+        "Items": [
+          1002
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1104
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "铜块"
+      }
+    },
+    {
+      "ID": 1105,
+      "Name": "高纯硅块",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "4",
+        "ingredients": "4",
+        "ingredients_half": "3",
+        "one_half_plus_half": "4",
+        "two_plus_half": "5"
+      },
+      "Recipe": {
+        "ID": 59,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1003
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1105
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "高纯硅块"
+      }
+    },
+    {
+      "ID": 1106,
+      "Name": "钛块",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "4",
+        "ingredients": "4",
+        "ingredients_half": "3",
+        "one_half_plus_half": "4",
+        "two_plus_half": "5"
+      },
+      "Recipe": {
+        "ID": 65,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1004
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1106
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "钛块"
+      }
+    },
+    {
+      "ID": 1107,
+      "Name": "钛合金",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "72",
+        "ingredients": "224",
+        "ingredients_half": "645/8",
+        "one_half_plus_half": "138",
+        "two_plus_half": "1743/8"
+      },
+      "Recipe": {
+        "ID": 66,
+        "Type": 1,
+        "TimeSpend": 720,
+        "Items": [
+          1106,
+          1103,
+          1116
+        ],
+        "ItemCounts": [
+          4,
+          4,
+          8
+        ],
+        "Results": [
+          1107
+        ],
+        "ResultCounts": [
+          4
+        ],
+        "Name": "钛合金"
+      }
+    },
+    {
+      "ID": 1108,
+      "Name": "石材",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "2",
+        "ingredients": "2",
+        "ingredients_half": "3/2",
+        "one_half_plus_half": "2",
+        "two_plus_half": "5/2"
+      },
+      "Recipe": {
+        "ID": 4,
+        "Type": 1,
+        "TimeSpend": 60,
+        "Items": [
+          1005
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1108
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "石材"
+      }
+    },
+    {
+      "ID": 1109,
+      "Name": "高能石墨",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "4",
+        "ingredients": "4",
+        "ingredients_half": "3",
+        "one_half_plus_half": "4",
+        "two_plus_half": "5"
+      },
+      "Recipe": {
+        "ID": 17,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1006
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1109
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "高能石墨"
+      }
+    },
+    {
+      "ID": 1110,
+      "Name": "玻璃",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "4",
+        "ingredients": "4",
+        "ingredients_half": "3",
+        "one_half_plus_half": "4",
+        "two_plus_half": "5"
+      },
+      "Recipe": {
+        "ID": 57,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1005
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1110
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "玻璃"
+      }
+    },
+    {
+      "ID": 1111,
+      "Name": "棱镜",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "12",
+        "ingredients": "12",
+        "ingredients_half": "27/4",
+        "one_half_plus_half": "12",
+        "two_plus_half": "75/4"
+      },
+      "Recipe": {
+        "ID": 11,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1110
+        ],
+        "ItemCounts": [
+          3
+        ],
+        "Results": [
+          1111
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "棱镜"
+      }
+    },
+    {
+      "ID": 1112,
+      "Name": "金刚石",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "8",
+        "ingredients": "8",
+        "ingredients_half": "9/2",
+        "one_half_plus_half": "8",
+        "two_plus_half": "25/2"
+      },
+      "Recipe": {
+        "ID": 60,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1109
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1112
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "金刚石"
+      }
+    },
+    {
+      "ID": 1113,
+      "Name": "晶格硅",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "8",
+        "ingredients": "8",
+        "ingredients_half": "9/2",
+        "one_half_plus_half": "8",
+        "two_plus_half": "25/2"
+      },
+      "Recipe": {
+        "ID": 37,
+        "Type": 1,
+        "TimeSpend": 120,
+        "Items": [
+          1105
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1113
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "晶格硅"
+      }
+    },
+    {
+      "ID": 1114,
+      "Name": "精炼油",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "4/3",
+        "ingredients": "4/3",
+        "ingredients_half": "1",
+        "one_half_plus_half": "4/3",
+        "two_plus_half": "5/3"
+      },
+      "Recipe": {
+        "ID": 16,
+        "Type": 3,
+        "TimeSpend": 240,
+        "Items": [
+          1007
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1120,
+          1114
+        ],
+        "ResultCounts": [
+          1,
+          2
+        ],
+        "Name": "等离子精炼"
+      }
+    },
+    {
+      "ID": 1115,
+      "Name": "塑料",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "40/3",
+        "ingredients": "20",
+        "ingredients_half": "10",
+        "one_half_plus_half": "50/3",
+        "two_plus_half": "25"
+      },
+      "Recipe": {
+        "ID": 23,
+        "Type": 2,
+        "TimeSpend": 180,
+        "Items": [
+          1114,
+          1109
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1115
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "塑料"
+      }
+    },
+    {
+      "ID": 1116,
+      "Name": "硫酸",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "10",
+        "ingredients": "20",
+        "ingredients_half": "45/4",
+        "one_half_plus_half": "15",
+        "two_plus_half": "77/4"
+      },
+      "Recipe": {
+        "ID": 24,
+        "Type": 2,
+        "TimeSpend": 360,
+        "Items": [
+          1114,
+          1005,
+          1000
+        ],
+        "ItemCounts": [
+          6,
+          8,
+          4
+        ],
+        "Results": [
+          1116
+        ],
+        "ResultCounts": [
+          4
+        ],
+        "Name": "硫酸"
+      }
+    },
+    {
+      "ID": 1117,
+      "Name": "有机晶体",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "58",
+        "ingredients": "508/3",
+        "ingredients_half": "55",
+        "one_half_plus_half": "107",
+        "two_plus_half": "553/3"
+      },
+      "Recipe": {
+        "ID": 25,
+        "Type": 2,
+        "TimeSpend": 360,
+        "Items": [
+          1115,
+          1114,
+          1000
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          1
+        ],
+        "Results": [
+          1117
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "有机晶体"
+      }
+    },
+    {
+      "ID": 1118,
+      "Name": "钛晶石",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "140",
+        "ingredients": "544",
+        "ingredients_half": "128",
+        "one_half_plus_half": "595/2",
+        "two_plus_half": "598"
+      },
+      "Recipe": {
+        "ID": 26,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1117,
+          1106
+        ],
+        "ItemCounts": [
+          1,
+          3
+        ],
+        "Results": [
+          1118
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "钛晶石"
+      }
+    },
+    {
+      "ID": 1119,
+      "Name": "钛化玻璃",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "18",
+        "ingredients": "36",
+        "ingredients_half": "35/2",
+        "one_half_plus_half": "27",
+        "two_plus_half": "77/2"
+      },
+      "Recipe": {
+        "ID": 30,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1110,
+          1106,
+          1000
+        ],
+        "ItemCounts": [
+          2,
+          2,
+          2
+        ],
+        "Results": [
+          1119
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "钛化玻璃"
+      }
+    },
+    {
+      "ID": 1120,
+      "Name": "氢",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "可从气态行星直接采集的氢"
+    },
+    {
+      "ID": 1121,
+      "Name": "重氢",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "4",
+        "ingredients": "4",
+        "ingredients_half": "3",
+        "one_half_plus_half": "4",
+        "two_plus_half": "5"
+      },
+      "Recipe": {
+        "ID": 40,
+        "Type": 5,
+        "TimeSpend": 150,
+        "Items": [
+          1120
+        ],
+        "ItemCounts": [
+          10
+        ],
+        "Results": [
+          1121
+        ],
+        "ResultCounts": [
+          5
+        ],
+        "Name": "重氢"
+      }
+    },
+    {
+      "ID": 1122,
+      "Name": "反物质",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "3/4",
+        "one_half_plus_half": "1",
+        "two_plus_half": "5/4"
+      },
+      "Recipe": {
+        "ID": 74,
+        "Type": 5,
+        "TimeSpend": 120,
+        "Items": [
+          1208
+        ],
+        "ItemCounts": [
+          2
+        ],
+        "Results": [
+          1122,
+          1120
+        ],
+        "ResultCounts": [
+          2,
+          2
+        ],
+        "Name": "质能储存"
+      }
+    },
+    {
+      "ID": 1123,
+      "Name": "石墨烯",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "22",
+        "ingredients": "48",
+        "ingredients_half": "81/4",
+        "one_half_plus_half": "135/4",
+        "two_plus_half": "411/8"
+      },
+      "Recipe": {
+        "ID": 31,
+        "Type": 2,
+        "TimeSpend": 180,
+        "Items": [
+          1109,
+          1116
+        ],
+        "ItemCounts": [
+          3,
+          1
+        ],
+        "Results": [
+          1123
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "石墨烯"
+      }
+    },
+    {
+      "ID": 1124,
+      "Name": "碳纳米管",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "70",
+        "ingredients": "222",
+        "ingredients_half": "255/4",
+        "one_half_plus_half": "2105/16",
+        "two_plus_half": "3819/16"
+      },
+      "Recipe": {
+        "ID": 33,
+        "Type": 2,
+        "TimeSpend": 240,
+        "Items": [
+          1123,
+          1106
+        ],
+        "ItemCounts": [
+          3,
+          1
+        ],
+        "Results": [
+          1124
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "碳纳米管"
+      }
+    },
+    {
+      "ID": 1125,
+      "Name": "框架材料",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "712",
+        "ingredients": "4464",
+        "ingredients_half": "13545/16",
+        "one_half_plus_half": "8019/4",
+        "two_plus_half": "65947/16"
+      },
+      "Recipe": {
+        "ID": 80,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1124,
+          1107,
+          1105
+        ],
+        "ItemCounts": [
+          4,
+          1,
+          1
+        ],
+        "Results": [
+          1125
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "框架材料"
+      }
+    },
+    {
+      "ID": 1126,
+      "Name": "卡西米尔晶体",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "392",
+        "ingredients": "2608",
+        "ingredients_half": "1805/4",
+        "one_half_plus_half": "1131",
+        "two_plus_half": "19957/8"
+      },
+      "Recipe": {
+        "ID": 28,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1118,
+          1123,
+          1120
+        ],
+        "ItemCounts": [
+          1,
+          2,
+          12
+        ],
+        "Results": [
+          1126
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "卡西米尔晶体"
+      }
+    },
+    {
+      "ID": 1127,
+      "Name": "奇异物质",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "2648",
+        "ingredients": "32944",
+        "ingredients_half": "14055/4",
+        "one_half_plus_half": "11139",
+        "two_plus_half": "234339/8"
+      },
+      "Recipe": {
+        "ID": 104,
+        "Type": 5,
+        "TimeSpend": 480,
+        "Items": [
+          1206,
+          1101,
+          1121
+        ],
+        "ItemCounts": [
+          2,
+          2,
+          10
+        ],
+        "Results": [
+          1127
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "奇异物质"
+      }
+    },
+    {
+      "ID": 1128,
+      "Name": "燃烧单元",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "6",
+        "ingredients": "6",
+        "ingredients_half": "9/2",
+        "one_half_plus_half": "6",
+        "two_plus_half": "15/2"
+      },
+      "Recipe": {
+        "ID": 133,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1006
+        ],
+        "ItemCounts": [
+          3
+        ],
+        "Results": [
+          1128
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "燃烧单元"
+      }
+    },
+    {
+      "ID": 1129,
+      "Name": "爆破单元",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "146/3",
+        "ingredients": "144",
+        "ingredients_half": "805/16",
+        "one_half_plus_half": "181/2",
+        "two_plus_half": "2359/16"
+      },
+      "Recipe": {
+        "ID": 134,
+        "Type": 2,
+        "TimeSpend": 360,
+        "Items": [
+          1128,
+          1115,
+          1116
+        ],
+        "ItemCounts": [
+          2,
+          2,
+          1
+        ],
+        "Results": [
+          1129
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "爆破单元"
+      }
+    },
+    {
+      "ID": 1130,
+      "Name": "晶石爆破单元",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "634/3",
+        "ingredients": "1912",
+        "ingredients_half": "17795/64",
+        "one_half_plus_half": "5757/8",
+        "two_plus_half": "211351/128"
+      },
+      "Recipe": {
+        "ID": 135,
+        "Type": 2,
+        "TimeSpend": 1440,
+        "Items": [
+          1129,
+          1126,
+          1113
+        ],
+        "ItemCounts": [
+          8,
+          1,
+          8
+        ],
+        "Results": [
+          1130
+        ],
+        "ResultCounts": [
+          8
+        ],
+        "Name": "晶石爆破单元"
+      }
+    },
+    {
+      "ID": 1131,
+      "Name": "地基",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "36",
+        "ingredients": "54",
+        "ingredients_half": "45/2",
+        "one_half_plus_half": "45",
+        "two_plus_half": "315/4"
+      },
+      "ExchangePrices": {
+        "double": 36,
+        "ingredients": 54,
+        "ingredients_half": 23,
+        "one_half_plus_half": 45,
+        "two_plus_half": 79
+      },
+      "Recipe": {
+        "ID": 112,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1108,
+          1103
+        ],
+        "ItemCounts": [
+          3,
+          1
+        ],
+        "Results": [
+          1131
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "地基"
+      }
+    },
+    {
+      "ID": 1141,
+      "Name": "增产剂 Mk.I",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "2",
+        "ingredients": "2",
+        "ingredients_half": "3/2",
+        "one_half_plus_half": "2",
+        "two_plus_half": "5/2"
+      },
+      "Recipe": {
+        "ID": 106,
+        "Type": 4,
+        "TimeSpend": 30,
+        "Items": [
+          1006
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1141
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "增产剂 Mk.I"
+      }
+    },
+    {
+      "ID": 1142,
+      "Name": "增产剂 Mk.II",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "24",
+        "ingredients": "36",
+        "ingredients_half": "15",
+        "one_half_plus_half": "30",
+        "two_plus_half": "105/2"
+      },
+      "Recipe": {
+        "ID": 107,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1141,
+          1112
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1142
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "增产剂 Mk.II"
+      }
+    },
+    {
+      "ID": 1143,
+      "Name": "增产剂 Mk.III",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "236",
+        "ingredients": "882",
+        "ingredients_half": "375/2",
+        "one_half_plus_half": "15325/32",
+        "two_plus_half": "16497/16"
+      },
+      "Recipe": {
+        "ID": 108,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1142,
+          1124
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1143
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "增产剂 Mk.III"
+      }
+    },
+    {
+      "ID": 1201,
+      "Name": "齿轮",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "4",
+        "ingredients": "4",
+        "ingredients_half": "9/4",
+        "one_half_plus_half": "4",
+        "two_plus_half": "25/4"
+      },
+      "Recipe": {
+        "ID": 5,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1101
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1201
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "齿轮"
+      }
+    },
+    {
+      "ID": 1202,
+      "Name": "磁线圈",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "6",
+        "ingredients": "9",
+        "ingredients_half": "9/2",
+        "one_half_plus_half": "15/2",
+        "two_plus_half": "45/4"
+      },
+      "Recipe": {
+        "ID": 6,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1102,
+          1104
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1202
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "磁线圈"
+      }
+    },
+    {
+      "ID": 1203,
+      "Name": "电动机",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "28",
+        "ingredients": "68",
+        "ingredients_half": "195/8",
+        "one_half_plus_half": "93/2",
+        "two_plus_half": "315/4"
+      },
+      "Recipe": {
+        "ID": 97,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1201,
+          1202
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          1
+        ],
+        "Results": [
+          1203
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电动机"
+      }
+    },
+    {
+      "ID": 1204,
+      "Name": "电磁涡轮",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "136",
+        "ingredients": "462",
+        "ingredients_half": "231/2",
+        "one_half_plus_half": "270",
+        "two_plus_half": "540"
+      },
+      "Recipe": {
+        "ID": 98,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1203,
+          1202
+        ],
+        "ItemCounts": [
+          2,
+          2
+        ],
+        "Results": [
+          1204
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电磁涡轮"
+      }
+    },
+    {
+      "ID": 1205,
+      "Name": "超级磁场环",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "564",
+        "ingredients": "3736",
+        "ingredients_half": "2385/4",
+        "one_half_plus_half": "1650",
+        "two_plus_half": "15295/4"
+      },
+      "Recipe": {
+        "ID": 103,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1204,
+          1102,
+          1109
+        ],
+        "ItemCounts": [
+          2,
+          3,
+          1
+        ],
+        "Results": [
+          1205
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "超级磁场环"
+      }
+    },
+    {
+      "ID": 1206,
+      "Name": "粒子容器",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "640",
+        "ingredients": "4096",
+        "ingredients_half": "2745/4",
+        "one_half_plus_half": "3669/2",
+        "two_plus_half": "33257/8"
+      },
+      "Recipe": {
+        "ID": 99,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1204,
+          1104,
+          1123
+        ],
+        "ItemCounts": [
+          2,
+          2,
+          2
+        ],
+        "Results": [
+          1206
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "粒子容器"
+      }
+    },
+    {
+      "ID": 1208,
+      "Name": "临界光子",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "仅消耗能量获取的临界光子，作为无物料来源基准"
+    },
+    {
+      "ID": 1209,
+      "Name": "引力透镜",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "5360",
+        "ingredients": "98928",
+        "ingredients_half": "14127/2",
+        "one_half_plus_half": "55855/2",
+        "two_plus_half": "704217/8"
+      },
+      "Recipe": {
+        "ID": 101,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1112,
+          1127
+        ],
+        "ItemCounts": [
+          4,
+          1
+        ],
+        "Results": [
+          1209
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "引力透镜"
+      }
+    },
+    {
+      "ID": 1210,
+      "Name": "空间翘曲器",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "10720",
+        "ingredients": "197856",
+        "ingredients_half": "42381/4",
+        "one_half_plus_half": "55855",
+        "two_plus_half": "3521085/16"
+      },
+      "Recipe": {
+        "ID": 78,
+        "Type": 4,
+        "TimeSpend": 600,
+        "Items": [
+          1209
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          1210
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "空间翘曲器"
+      }
+    },
+    {
+      "ID": 1211,
+      "Name": "黑雾引力透镜",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "10744",
+        "ingredients": "296820",
+        "ingredients_half": "14151",
+        "one_half_plus_half": "279395/4",
+        "two_plus_half": "2112939/8"
+      },
+      "Recipe": {
+        "ID": 162,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1209,
+          5201
+        ],
+        "ItemCounts": [
+          1,
+          12
+        ],
+        "Results": [
+          1211
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "黑雾引力透镜"
+      }
+    },
+    {
+      "ID": 1301,
+      "Name": "电路板",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "6",
+        "ingredients": "9",
+        "ingredients_half": "9/2",
+        "one_half_plus_half": "15/2",
+        "two_plus_half": "45/4"
+      },
+      "Recipe": {
+        "ID": 50,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1101,
+          1104
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1301
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "电路板"
+      }
+    },
+    {
+      "ID": 1302,
+      "Name": "微晶元件",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "20",
+        "ingredients": "30",
+        "ingredients_half": "15",
+        "one_half_plus_half": "25",
+        "two_plus_half": "75/2"
+      },
+      "Recipe": {
+        "ID": 53,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1105,
+          1104
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1302
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "微晶元件"
+      }
+    },
+    {
+      "ID": 1303,
+      "Name": "处理器",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "104",
+        "ingredients": "234",
+        "ingredients_half": "78",
+        "one_half_plus_half": "325/2",
+        "two_plus_half": "585/2"
+      },
+      "Recipe": {
+        "ID": 51,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1301,
+          1302
+        ],
+        "ItemCounts": [
+          2,
+          2
+        ],
+        "Results": [
+          1303
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "处理器"
+      }
+    },
+    {
+      "ID": 1304,
+      "Name": "位面过滤器",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "856",
+        "ingredients": "8040",
+        "ingredients_half": "1945/2",
+        "one_half_plus_half": "5925/2",
+        "two_plus_half": "61719/8"
+      },
+      "Recipe": {
+        "ID": 38,
+        "Type": 4,
+        "TimeSpend": 720,
+        "Items": [
+          1126,
+          1119
+        ],
+        "ItemCounts": [
+          1,
+          2
+        ],
+        "Results": [
+          1304
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "位面过滤器"
+      }
+    },
+    {
+      "ID": 1305,
+      "Name": "量子芯片",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "3840",
+        "ingredients": "49644",
+        "ingredients_half": "4202",
+        "one_half_plus_half": "15625",
+        "two_plus_half": "192177/4"
+      },
+      "Recipe": {
+        "ID": 52,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1303,
+          1304
+        ],
+        "ItemCounts": [
+          2,
+          2
+        ],
+        "Results": [
+          1305
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "量子芯片"
+      }
+    },
+    {
+      "ID": 1401,
+      "Name": "电浆激发器",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "96",
+        "ingredients": "180",
+        "ingredients_half": "63",
+        "one_half_plus_half": "135",
+        "two_plus_half": "495/2"
+      },
+      "Recipe": {
+        "ID": 12,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1202,
+          1111
+        ],
+        "ItemCounts": [
+          4,
+          2
+        ],
+        "Results": [
+          1401
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电浆激发器"
+      }
+    },
+    {
+      "ID": 1402,
+      "Name": "粒子宽带",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1016/3",
+        "ingredients": "1920",
+        "ingredients_half": "1465/4",
+        "one_half_plus_half": "7099/8",
+        "two_plus_half": "29533/16"
+      },
+      "Recipe": {
+        "ID": 36,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1124,
+          1113,
+          1115
+        ],
+        "ItemCounts": [
+          2,
+          2,
+          1
+        ],
+        "Results": [
+          1402
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "粒子宽带"
+      }
+    },
+    {
+      "ID": 1403,
+      "Name": "湮灭约束球",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1488",
+        "ingredients": "12990",
+        "ingredients_half": "3057/2",
+        "one_half_plus_half": "9985/2",
+        "two_plus_half": "106791/8"
+      },
+      "Recipe": {
+        "ID": 42,
+        "Type": 4,
+        "TimeSpend": 1200,
+        "Items": [
+          1206,
+          1303
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          1403
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "湮灭约束球"
+      }
+    },
+    {
+      "ID": 1404,
+      "Name": "光子合并器",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "60",
+        "ingredients": "99",
+        "ingredients_half": "36",
+        "one_half_plus_half": "315/4",
+        "two_plus_half": "585/4"
+      },
+      "Recipe": {
+        "ID": 68,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1111,
+          1301
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          1404
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "光子合并器"
+      }
+    },
+    {
+      "ID": 1405,
+      "Name": "推进器",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "60",
+        "ingredients": "90",
+        "ingredients_half": "36",
+        "one_half_plus_half": "75",
+        "two_plus_half": "135"
+      },
+      "Recipe": {
+        "ID": 20,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1103,
+          1104
+        ],
+        "ItemCounts": [
+          2,
+          3
+        ],
+        "Results": [
+          1405
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "推进器"
+      }
+    },
+    {
+      "ID": 1406,
+      "Name": "加力推进器",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "2080",
+        "ingredients": "10290",
+        "ingredients_half": "7845/4",
+        "one_half_plus_half": "5100",
+        "two_plus_half": "90945/8"
+      },
+      "Recipe": {
+        "ID": 21,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1107,
+          1204
+        ],
+        "ItemCounts": [
+          5,
+          5
+        ],
+        "Results": [
+          1406
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "加力推进器"
+      }
+    },
+    {
+      "ID": 1407,
+      "Name": "动力引擎",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "20",
+        "ingredients": "39",
+        "ingredients_half": "15",
+        "one_half_plus_half": "115/4",
+        "two_plus_half": "195/4"
+      },
+      "Recipe": {
+        "ID": 105,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1202,
+          1104
+        ],
+        "ItemCounts": [
+          1,
+          2
+        ],
+        "Results": [
+          1407
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "动力引擎"
+      }
+    },
+    {
+      "ID": 1501,
+      "Name": "太阳帆",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "82",
+        "ingredients": "441/2",
+        "ingredients_half": "225/4",
+        "one_half_plus_half": "1125/8",
+        "two_plus_half": "4743/16"
+      },
+      "Recipe": {
+        "ID": 70,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1123,
+          1404
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          1501
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "太阳帆"
+      }
+    },
+    {
+      "ID": 1502,
+      "Name": "戴森球组件",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "5388",
+        "ingredients": "59022",
+        "ingredients_half": "235395/32",
+        "one_half_plus_half": "166167/8",
+        "two_plus_half": "791385/16"
+      },
+      "Recipe": {
+        "ID": 81,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1125,
+          1501,
+          1303
+        ],
+        "ItemCounts": [
+          3,
+          3,
+          3
+        ],
+        "Results": [
+          1502
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "戴森球组件"
+      }
+    },
+    {
+      "ID": 1503,
+      "Name": "小型运载火箭",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "42640",
+        "ingredients": "998608",
+        "ingredients_half": "2144045/32",
+        "one_half_plus_half": "1007997/4",
+        "two_plus_half": "1568021/2"
+      },
+      "Recipe": {
+        "ID": 83,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1502,
+          1802,
+          1305
+        ],
+        "ItemCounts": [
+          2,
+          4,
+          2
+        ],
+        "Results": [
+          1503
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "小型运载火箭"
+      }
+    },
+    {
+      "ID": 1601,
+      "Name": "机枪弹箱",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "12",
+        "ingredients": "12",
+        "ingredients_half": "27/4",
+        "one_half_plus_half": "12",
+        "two_plus_half": "75/4"
+      },
+      "Recipe": {
+        "ID": 136,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1104
+        ],
+        "ItemCounts": [
+          3
+        ],
+        "Results": [
+          1601
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "机枪弹箱"
+      }
+    },
+    {
+      "ID": 1602,
+      "Name": "钛化弹箱",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "40",
+        "ingredients": "60",
+        "ingredients_half": "51/2",
+        "one_half_plus_half": "50",
+        "two_plus_half": "345/4"
+      },
+      "Recipe": {
+        "ID": 137,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1601,
+          1106
+        ],
+        "ItemCounts": [
+          1,
+          2
+        ],
+        "Results": [
+          1602
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "钛化弹箱"
+      }
+    },
+    {
+      "ID": 1603,
+      "Name": "超合金弹箱",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "224",
+        "ingredients": "852",
+        "ingredients_half": "849/4",
+        "one_half_plus_half": "470",
+        "two_plus_half": "7299/8"
+      },
+      "Recipe": {
+        "ID": 138,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1602,
+          1107
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          1603
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "超合金弹箱"
+      }
+    },
+    {
+      "ID": 1604,
+      "Name": "炮弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "60",
+        "ingredients": "90",
+        "ingredients_half": "45",
+        "one_half_plus_half": "75",
+        "two_plus_half": "225/2"
+      },
+      "Recipe": {
+        "ID": 139,
+        "Type": 4,
+        "TimeSpend": 90,
+        "Items": [
+          1104,
+          1128
+        ],
+        "ItemCounts": [
+          9,
+          2
+        ],
+        "Results": [
+          1604
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "炮弹组"
+      }
+    },
+    {
+      "ID": 1605,
+      "Name": "高爆炮弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1088/3",
+        "ingredients": "1608",
+        "ingredients_half": "6545/16",
+        "one_half_plus_half": "840",
+        "two_plus_half": "24493/16"
+      },
+      "Recipe": {
+        "ID": 140,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1604,
+          1106,
+          1129
+        ],
+        "ItemCounts": [
+          1,
+          6,
+          2
+        ],
+        "Results": [
+          1605
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "高爆炮弹组"
+      }
+    },
+    {
+      "ID": 1606,
+      "Name": "晶石炮弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "6008/3",
+        "ingredients": "24416",
+        "ingredients_half": "193125/64",
+        "one_half_plus_half": "32319/4",
+        "two_plus_half": "2458085/128"
+      },
+      "Recipe": {
+        "ID": 141,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1605,
+          1107,
+          1130
+        ],
+        "ItemCounts": [
+          1,
+          3,
+          2
+        ],
+        "Results": [
+          1606
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "晶石炮弹组"
+      }
+    },
+    {
+      "ID": 1607,
+      "Name": "等离子胶囊",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "132",
+        "ingredients": "368",
+        "ingredients_half": "1065/8",
+        "one_half_plus_half": "933/4",
+        "two_plus_half": "5957/16"
+      },
+      "Recipe": {
+        "ID": 142,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1123,
+          1102,
+          1121
+        ],
+        "ItemCounts": [
+          1,
+          2,
+          10
+        ],
+        "Results": [
+          1607
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "等离子胶囊"
+      }
+    },
+    {
+      "ID": 1608,
+      "Name": "反物质胶囊",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1584",
+        "ingredients": "22420",
+        "ingredients_half": "20085/8",
+        "one_half_plus_half": "58457/8",
+        "two_plus_half": "72831/4"
+      },
+      "Recipe": {
+        "ID": 143,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1607,
+          1206,
+          1120,
+          1122
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          10,
+          10
+        ],
+        "Results": [
+          1608
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "反物质胶囊"
+      }
+    },
+    {
+      "ID": 1609,
+      "Name": "导弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "124",
+        "ingredients": "450",
+        "ingredients_half": "279/2",
+        "one_half_plus_half": "2107/8",
+        "two_plus_half": "450"
+      },
+      "Recipe": {
+        "ID": 144,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1104,
+          1301,
+          1128,
+          1407
+        ],
+        "ItemCounts": [
+          6,
+          3,
+          2,
+          1
+        ],
+        "Results": [
+          1609
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "导弹组"
+      }
+    },
+    {
+      "ID": 1610,
+      "Name": "超音速导弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "2936/3",
+        "ingredients": "6480",
+        "ingredients_half": "10371/8",
+        "one_half_plus_half": "47285/16",
+        "two_plus_half": "11719/2"
+      },
+      "Recipe": {
+        "ID": 145,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1609,
+          1303,
+          1129,
+          1405
+        ],
+        "ItemCounts": [
+          2,
+          4,
+          4,
+          2
+        ],
+        "Results": [
+          1610
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "超音速导弹组"
+      }
+    },
+    {
+      "ID": 1611,
+      "Name": "引力导弹组",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "24296/3",
+        "ingredients": "172992",
+        "ingredients_half": "858595/64",
+        "one_half_plus_half": "745611/16",
+        "two_plus_half": "17227497/128"
+      },
+      "Recipe": {
+        "ID": 146,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1610,
+          1130,
+          1127
+        ],
+        "ItemCounts": [
+          3,
+          6,
+          3
+        ],
+        "Results": [
+          1611
+        ],
+        "ResultCounts": [
+          3
+        ],
+        "Name": "引力导弹组"
+      }
+    },
+    {
+      "ID": 1612,
+      "Name": "干扰胶囊",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "470",
+        "ingredients": "2580",
+        "ingredients_half": "1815/4",
+        "one_half_plus_half": "1224",
+        "two_plus_half": "11067/4"
+      },
+      "Recipe": {
+        "ID": 158,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1204,
+          1401,
+          1120
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          3
+        ],
+        "Results": [
+          1612
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "干扰胶囊"
+      }
+    },
+    {
+      "ID": 1613,
+      "Name": "压制胶囊",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1540",
+        "ingredients": "17936",
+        "ingredients_half": "30775/16",
+        "one_half_plus_half": "6228",
+        "two_plus_half": "264159/16"
+      },
+      "Recipe": {
+        "ID": 159,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1612,
+          1205,
+          1119
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          2
+        ],
+        "Results": [
+          1613
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "压制胶囊"
+      }
+    },
+    {
+      "ID": 1801,
+      "Name": "液氢燃料棒",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "14",
+        "ingredients": "21",
+        "ingredients_half": "13",
+        "one_half_plus_half": "35/2",
+        "two_plus_half": "45/2"
+      },
+      "Recipe": {
+        "ID": 19,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1106,
+          1120
+        ],
+        "ItemCounts": [
+          1,
+          10
+        ],
+        "Results": [
+          1801
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "液氢燃料棒"
+      }
+    },
+    {
+      "ID": 1802,
+      "Name": "氘核燃料棒",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "716",
+        "ingredients": "8080",
+        "ingredients_half": "29475/32",
+        "one_half_plus_half": "2802",
+        "two_plus_half": "231931/32"
+      },
+      "Recipe": {
+        "ID": 41,
+        "Type": 4,
+        "TimeSpend": 720,
+        "Items": [
+          1107,
+          1121,
+          1205
+        ],
+        "ItemCounts": [
+          1,
+          20,
+          1
+        ],
+        "Results": [
+          1802
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "氘核燃料棒"
+      }
+    },
+    {
+      "ID": 1803,
+      "Name": "反物质燃料棒",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1584",
+        "ingredients": "33095",
+        "ingredients_half": "39123/16",
+        "one_half_plus_half": "72163/8",
+        "two_plus_half": "54375/2"
+      },
+      "Recipe": {
+        "ID": 44,
+        "Type": 4,
+        "TimeSpend": 1440,
+        "Items": [
+          1122,
+          1120,
+          1403,
+          1107
+        ],
+        "ItemCounts": [
+          12,
+          12,
+          1,
+          1
+        ],
+        "Results": [
+          1803
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "反物质燃料棒"
+      }
+    },
+    {
+      "ID": 1804,
+      "Name": "奇异湮灭燃料棒",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "37362",
+        "ingredients": "1675565",
+        "ingredients_half": "1316955/16",
+        "one_half_plus_half": "2700509/8",
+        "two_plus_half": "4483319/4"
+      },
+      "Recipe": {
+        "ID": 156,
+        "Type": 4,
+        "TimeSpend": 1920,
+        "Items": [
+          1803,
+          5205,
+          1127,
+          1125
+        ],
+        "ItemCounts": [
+          8,
+          1,
+          2,
+          1
+        ],
+        "Results": [
+          1804
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "奇异湮灭燃料棒"
+      }
+    },
+    {
+      "ID": 2001,
+      "Name": "传送带",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "16/3",
+        "ingredients": "8",
+        "ingredients_half": "7/2",
+        "one_half_plus_half": "20/3",
+        "two_plus_half": "45/4"
+      },
+      "ExchangePrices": {
+        "double": 6,
+        "ingredients": 8,
+        "ingredients_half": 4,
+        "one_half_plus_half": 7,
+        "two_plus_half": 12
+      },
+      "Recipe": {
+        "ID": 84,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1101,
+          1201
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          2001
+        ],
+        "ResultCounts": [
+          3
+        ],
+        "Name": "传送带"
+      }
+    },
+    {
+      "ID": 2002,
+      "Name": "高速传送带",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "304/3",
+        "ingredients": "486",
+        "ingredients_half": "84",
+        "one_half_plus_half": "725/3",
+        "two_plus_half": "2295/4"
+      },
+      "ExchangePrices": {
+        "double": 102,
+        "ingredients": 486,
+        "ingredients_half": 84,
+        "one_half_plus_half": 242,
+        "two_plus_half": 574
+      },
+      "Recipe": {
+        "ID": 89,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          2001,
+          1204
+        ],
+        "ItemCounts": [
+          3,
+          1
+        ],
+        "Results": [
+          2002
+        ],
+        "ResultCounts": [
+          3
+        ],
+        "Name": "高速传送带"
+      }
+    },
+    {
+      "ID": 2003,
+      "Name": "极速传送带",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "1780/3",
+        "ingredients": "20968/3",
+        "ingredients_half": "2895/4",
+        "one_half_plus_half": "9635/4",
+        "two_plus_half": "313397/48"
+      },
+      "ExchangePrices": {
+        "double": 594,
+        "ingredients": 6990,
+        "ingredients_half": 724,
+        "one_half_plus_half": 2409,
+        "two_plus_half": 6530
+      },
+      "Recipe": {
+        "ID": 92,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          2002,
+          1205,
+          1123
+        ],
+        "ItemCounts": [
+          3,
+          1,
+          1
+        ],
+        "Results": [
+          2003
+        ],
+        "ResultCounts": [
+          3
+        ],
+        "Name": "极速传送带"
+      }
+    },
+    {
+      "ID": 2011,
+      "Name": "分拣器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "16",
+        "ingredients": "33",
+        "ingredients_half": "12",
+        "one_half_plus_half": "95/4",
+        "two_plus_half": "165/4"
+      },
+      "ExchangePrices": {
+        "double": 16,
+        "ingredients": 33,
+        "ingredients_half": 12,
+        "one_half_plus_half": 24,
+        "two_plus_half": 42
+      },
+      "Recipe": {
+        "ID": 85,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1101,
+          1301
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          2011
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "分拣器"
+      }
+    },
+    {
+      "ID": 2012,
+      "Name": "高速分拣器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "60",
+        "ingredients": "201",
+        "ingredients_half": "387/8",
+        "one_half_plus_half": "235/2",
+        "two_plus_half": "1935/8"
+      },
+      "ExchangePrices": {
+        "double": 60,
+        "ingredients": 201,
+        "ingredients_half": 49,
+        "one_half_plus_half": 118,
+        "two_plus_half": 242
+      },
+      "Recipe": {
+        "ID": 88,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          2011,
+          1203
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          2012
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "高速分拣器"
+      }
+    },
+    {
+      "ID": 2013,
+      "Name": "极速分拣器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "256",
+        "ingredients": "1296",
+        "ingredients_half": "849/4",
+        "one_half_plus_half": "2525/4",
+        "two_plus_half": "12285/8"
+      },
+      "ExchangePrices": {
+        "double": 256,
+        "ingredients": 1296,
+        "ingredients_half": 213,
+        "one_half_plus_half": 632,
+        "two_plus_half": 1536
+      },
+      "Recipe": {
+        "ID": 90,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          2012,
+          1204
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          2013
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "极速分拣器"
+      }
+    },
+    {
+      "ID": 2014,
+      "Name": "集装分拣器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "2360",
+        "ingredients": "26248",
+        "ingredients_half": "21975/8",
+        "one_half_plus_half": "9225",
+        "two_plus_half": "100625/4"
+      },
+      "ExchangePrices": {
+        "double": 2360,
+        "ingredients": 26248,
+        "ingredients_half": 2747,
+        "one_half_plus_half": 9225,
+        "two_plus_half": 25157
+      },
+      "Recipe": {
+        "ID": 160,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          2013,
+          1205,
+          1303
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          1
+        ],
+        "Results": [
+          2014
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "集装分拣器"
+      }
+    },
+    {
+      "ID": 2020,
+      "Name": "四向分流器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "40",
+        "ingredients": "92",
+        "ingredients_half": "135/4",
+        "one_half_plus_half": "129/2",
+        "two_plus_half": "875/8"
+      },
+      "ExchangePrices": {
+        "double": 40,
+        "ingredients": 92,
+        "ingredients_half": 34,
+        "one_half_plus_half": 65,
+        "two_plus_half": 110
+      },
+      "Recipe": {
+        "ID": 87,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1201,
+          1301
+        ],
+        "ItemCounts": [
+          3,
+          2,
+          1
+        ],
+        "Results": [
+          2020
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "四向分流器"
+      }
+    },
+    {
+      "ID": 2030,
+      "Name": "流速监测器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "60",
+        "ingredients": "180",
+        "ingredients_half": "63",
+        "one_half_plus_half": "231/2",
+        "two_plus_half": "190"
+      },
+      "ExchangePrices": {
+        "double": 60,
+        "ingredients": 180,
+        "ingredients_half": 63,
+        "one_half_plus_half": 116,
+        "two_plus_half": 190
+      },
+      "Recipe": {
+        "ID": 117,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1201,
+          1110,
+          1301
+        ],
+        "ItemCounts": [
+          3,
+          2,
+          1,
+          2
+        ],
+        "Results": [
+          2030
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "流速监测器"
+      }
+    },
+    {
+      "ID": 2040,
+      "Name": "自动集装机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "1648",
+        "ingredients": "21280",
+        "ingredients_half": "4689/2",
+        "one_half_plus_half": "14189/2",
+        "two_plus_half": "17960"
+      },
+      "ExchangePrices": {
+        "double": 1648,
+        "ingredients": 21280,
+        "ingredients_half": 2345,
+        "one_half_plus_half": 7095,
+        "two_plus_half": 17960
+      },
+      "Recipe": {
+        "ID": 120,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1103,
+          1201,
+          1205,
+          1303
+        ],
+        "ItemCounts": [
+          3,
+          4,
+          1,
+          2
+        ],
+        "Results": [
+          2040
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "自动集装机"
+      }
+    },
+    {
+      "ID": 2101,
+      "Name": "小型储物仓",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "32",
+        "ingredients": "48",
+        "ingredients_half": "24",
+        "one_half_plus_half": "40",
+        "two_plus_half": "60"
+      },
+      "ExchangePrices": {
+        "double": 32,
+        "ingredients": 48,
+        "ingredients_half": 24,
+        "one_half_plus_half": 40,
+        "two_plus_half": 60
+      },
+      "Recipe": {
+        "ID": 86,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1108
+        ],
+        "ItemCounts": [
+          4,
+          4
+        ],
+        "Results": [
+          2101
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "小型储物仓"
+      }
+    },
+    {
+      "ID": 2102,
+      "Name": "大型储物仓",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "224",
+        "ingredients": "336",
+        "ingredients_half": "132",
+        "one_half_plus_half": "280",
+        "two_plus_half": "510"
+      },
+      "ExchangePrices": {
+        "double": 224,
+        "ingredients": 336,
+        "ingredients_half": 132,
+        "one_half_plus_half": 280,
+        "two_plus_half": 510
+      },
+      "Recipe": {
+        "ID": 91,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1103,
+          1108
+        ],
+        "ItemCounts": [
+          8,
+          8
+        ],
+        "Results": [
+          2102
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "大型储物仓"
+      }
+    },
+    {
+      "ID": 2103,
+      "Name": "行星内物流运输站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "35200",
+        "ingredients": "459600",
+        "ingredients_half": "51705",
+        "one_half_plus_half": "153405",
+        "two_plus_half": "383170"
+      },
+      "ExchangePrices": {
+        "double": 35200,
+        "ingredients": 459600,
+        "ingredients_half": 51705,
+        "one_half_plus_half": 153405,
+        "two_plus_half": 383170
+      },
+      "Recipe": {
+        "ID": 93,
+        "Type": 4,
+        "TimeSpend": 1200,
+        "Items": [
+          1103,
+          1106,
+          1303,
+          1206
+        ],
+        "ItemCounts": [
+          40,
+          40,
+          40,
+          20
+        ],
+        "Results": [
+          2103
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "行星内物流运输站"
+      }
+    },
+    {
+      "ID": 2104,
+      "Name": "星际物流运输站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "101760",
+        "ingredients": "2201920",
+        "ingredients_half": "343275/2",
+        "one_half_plus_half": "586845",
+        "two_plus_half": "6650385/4"
+      },
+      "ExchangePrices": {
+        "double": 101760,
+        "ingredients": 2201920,
+        "ingredients_half": 171638,
+        "one_half_plus_half": 586845,
+        "two_plus_half": 1662597
+      },
+      "Recipe": {
+        "ID": 95,
+        "Type": 4,
+        "TimeSpend": 1800,
+        "Items": [
+          2103,
+          1107,
+          1206
+        ],
+        "ItemCounts": [
+          1,
+          40,
+          20
+        ],
+        "Results": [
+          2104
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "星际物流运输站"
+      }
+    },
+    {
+      "ID": 2105,
+      "Name": "轨道采集器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "439120",
+        "ingredients": "15990200",
+        "ingredients_half": "3444975/4",
+        "one_half_plus_half": "6815655/2",
+        "two_plus_half": "11037960"
+      },
+      "ExchangePrices": {
+        "double": 439120,
+        "ingredients": 15990200,
+        "ingredients_half": 861244,
+        "one_half_plus_half": 3407828,
+        "two_plus_half": 11037960
+      },
+      "Recipe": {
+        "ID": 111,
+        "Type": 4,
+        "TimeSpend": 1800,
+        "Items": [
+          2104,
+          1205,
+          1406,
+          2207
+        ],
+        "ItemCounts": [
+          1,
+          50,
+          20,
+          20
+        ],
+        "Results": [
+          2105
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "轨道采集器"
+      }
+    },
+    {
+      "ID": 2106,
+      "Name": "储液罐",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "80",
+        "ingredients": "160",
+        "ingredients_half": "75",
+        "one_half_plus_half": "120",
+        "two_plus_half": "175"
+      },
+      "ExchangePrices": {
+        "double": 80,
+        "ingredients": 160,
+        "ingredients_half": 75,
+        "one_half_plus_half": 120,
+        "two_plus_half": 175
+      },
+      "Recipe": {
+        "ID": 114,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1108,
+          1110
+        ],
+        "ItemCounts": [
+          8,
+          4,
+          4
+        ],
+        "Results": [
+          2106
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "储液罐"
+      }
+    },
+    {
+      "ID": 2107,
+      "Name": "物流配送器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "1632",
+        "ingredients": "6688",
+        "ingredients_half": "1440",
+        "one_half_plus_half": "3618",
+        "two_plus_half": "7630"
+      },
+      "ExchangePrices": {
+        "double": 1632,
+        "ingredients": 6688,
+        "ingredients_half": 1440,
+        "one_half_plus_half": 3618,
+        "two_plus_half": 7630
+      },
+      "Recipe": {
+        "ID": 122,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1101,
+          1401,
+          1303
+        ],
+        "ItemCounts": [
+          8,
+          4,
+          4
+        ],
+        "Results": [
+          2107
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "物流配送器"
+      }
+    },
+    {
+      "ID": 2201,
+      "Name": "电力感应塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "20",
+        "ingredients": "39",
+        "ingredients_half": "15",
+        "one_half_plus_half": "115/4",
+        "two_plus_half": "195/4"
+      },
+      "ExchangePrices": {
+        "double": 20,
+        "ingredients": 39,
+        "ingredients_half": 15,
+        "one_half_plus_half": 29,
+        "two_plus_half": 49
+      },
+      "Recipe": {
+        "ID": 8,
+        "Type": 4,
+        "TimeSpend": 60,
+        "Items": [
+          1101,
+          1202
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          2201
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电力感应塔"
+      }
+    },
+    {
+      "ID": 2202,
+      "Name": "无线输电塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "616",
+        "ingredients": "1737",
+        "ingredients_half": "408",
+        "one_half_plus_half": "8675/8",
+        "two_plus_half": "9495/4"
+      },
+      "ExchangePrices": {
+        "double": 616,
+        "ingredients": 1737,
+        "ingredients_half": 408,
+        "one_half_plus_half": 1085,
+        "two_plus_half": 2374
+      },
+      "Recipe": {
+        "ID": 13,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          2201,
+          1401
+        ],
+        "ItemCounts": [
+          1,
+          3
+        ],
+        "Results": [
+          2202
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "无线输电塔"
+      }
+    },
+    {
+      "ID": 2203,
+      "Name": "风力涡轮机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "68",
+        "ingredients": "172",
+        "ingredients_half": "495/8",
+        "one_half_plus_half": "231/2",
+        "two_plus_half": "385/2"
+      },
+      "ExchangePrices": {
+        "double": 68,
+        "ingredients": 172,
+        "ingredients_half": 62,
+        "one_half_plus_half": 116,
+        "two_plus_half": 193
+      },
+      "Recipe": {
+        "ID": 7,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1101,
+          1201,
+          1202
+        ],
+        "ItemCounts": [
+          6,
+          1,
+          3
+        ],
+        "Results": [
+          2203
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "风力涡轮机"
+      }
+    },
+    {
+      "ID": 2204,
+      "Name": "火力发电厂",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "136",
+        "ingredients": "400",
+        "ingredients_half": "144",
+        "one_half_plus_half": "259",
+        "two_plus_half": "420"
+      },
+      "ExchangePrices": {
+        "double": 136,
+        "ingredients": 400,
+        "ingredients_half": 144,
+        "one_half_plus_half": 259,
+        "two_plus_half": 420
+      },
+      "Recipe": {
+        "ID": 64,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1101,
+          1108,
+          1201,
+          1202
+        ],
+        "ItemCounts": [
+          10,
+          4,
+          4,
+          4
+        ],
+        "Results": [
+          2204
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "火力发电厂"
+      }
+    },
+    {
+      "ID": 2205,
+      "Name": "太阳能板",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "180",
+        "ingredients": "420",
+        "ingredients_half": "675/4",
+        "one_half_plus_half": "585/2",
+        "two_plus_half": "3675/8"
+      },
+      "ExchangePrices": {
+        "double": 180,
+        "ingredients": 420,
+        "ingredients_half": 169,
+        "one_half_plus_half": 293,
+        "two_plus_half": 460
+      },
+      "Recipe": {
+        "ID": 67,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1104,
+          1105,
+          1301
+        ],
+        "ItemCounts": [
+          10,
+          10,
+          5
+        ],
+        "Results": [
+          2205
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "太阳能板"
+      }
+    },
+    {
+      "ID": 2206,
+      "Name": "蓄电器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "1200",
+        "ingredients": "15088",
+        "ingredients_half": "12375/8",
+        "one_half_plus_half": "5058",
+        "two_plus_half": "108535/8"
+      },
+      "ExchangePrices": {
+        "double": 1200,
+        "ingredients": 15088,
+        "ingredients_half": 1547,
+        "one_half_plus_half": 5058,
+        "two_plus_half": 13567
+      },
+      "Recipe": {
+        "ID": 76,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1101,
+          1205,
+          1113
+        ],
+        "ItemCounts": [
+          6,
+          1,
+          3
+        ],
+        "Results": [
+          2206
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "蓄电器"
+      }
+    },
+    {
+      "ID": 2207,
+      "Name": "蓄电器（满）",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "2400",
+        "ingredients": "30176",
+        "ingredients_half": "37125/16",
+        "one_half_plus_half": "10116",
+        "two_plus_half": "542675/16"
+      },
+      "ExchangePrices": {
+        "double": 2400,
+        "ingredients": 30176,
+        "ingredients_half": 2321,
+        "one_half_plus_half": 10116,
+        "two_plus_half": 33918
+      },
+      "Recipe": {
+        "ID": 0,
+        "TimeSpend": 0,
+        "Items": [
+          2206
+        ],
+        "ItemCounts": [
+          1
+        ],
+        "Results": [
+          2207
+        ],
+        "ResultCounts": [
+          1
+        ]
+      }
+    },
+    {
+      "ID": 2208,
+      "Name": "射线接收站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "25440",
+        "ingredients": "463200",
+        "ingredients_half": "45045",
+        "one_half_plus_half": "139680",
+        "two_plus_half": "718875/2"
+      },
+      "ExchangePrices": {
+        "double": 25440,
+        "ingredients": 463200,
+        "ingredients_half": 45045,
+        "one_half_plus_half": 139680,
+        "two_plus_half": 359438
+      },
+      "Recipe": {
+        "ID": 72,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1103,
+          1105,
+          1404,
+          1303,
+          1205
+        ],
+        "ItemCounts": [
+          20,
+          20,
+          10,
+          5,
+          20
+        ],
+        "Results": [
+          2208
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "射线接收站"
+      }
+    },
+    {
+      "ID": 2209,
+      "Name": "能量枢纽",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "25280",
+        "ingredients": "257840",
+        "ingredients_half": "36315",
+        "one_half_plus_half": "95116",
+        "two_plus_half": "217688"
+      },
+      "ExchangePrices": {
+        "double": 25280,
+        "ingredients": 257840,
+        "ingredients_half": 36315,
+        "one_half_plus_half": 95116,
+        "two_plus_half": 217688
+      },
+      "Recipe": {
+        "ID": 77,
+        "Type": 4,
+        "TimeSpend": 900,
+        "Items": [
+          1107,
+          1103,
+          1303,
+          1206
+        ],
+        "ItemCounts": [
+          40,
+          40,
+          40,
+          8
+        ],
+        "Results": [
+          2209
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "能量枢纽"
+      }
+    },
+    {
+      "ID": 2210,
+      "Name": "人造恒星",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "137920",
+        "ingredients": "3600500",
+        "ingredients_half": "910185/4",
+        "one_half_plus_half": "871605",
+        "two_plus_half": "2802890"
+      },
+      "ExchangePrices": {
+        "double": 137920,
+        "ingredients": 3600500,
+        "ingredients_half": 227547,
+        "one_half_plus_half": 871605,
+        "two_plus_half": 2802890
+      },
+      "Recipe": {
+        "ID": 43,
+        "Type": 4,
+        "TimeSpend": 1800,
+        "Items": [
+          1107,
+          1125,
+          1403,
+          1305
+        ],
+        "ItemCounts": [
+          20,
+          20,
+          10,
+          10
+        ],
+        "Results": [
+          2210
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "人造恒星"
+      }
+    },
+    {
+      "ID": 2211,
+      "Name": "微型聚变发电站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "14960",
+        "ingredients": "213800",
+        "ingredients_half": "23256",
+        "one_half_plus_half": "278019/4",
+        "two_plus_half": "175726"
+      },
+      "ExchangePrices": {
+        "double": 14960,
+        "ingredients": 213800,
+        "ingredients_half": 23256,
+        "one_half_plus_half": 69505,
+        "two_plus_half": 175726
+      },
+      "Recipe": {
+        "ID": 113,
+        "Type": 4,
+        "TimeSpend": 600,
+        "Items": [
+          1107,
+          1205,
+          1124,
+          1303
+        ],
+        "ItemCounts": [
+          12,
+          10,
+          8,
+          4
+        ],
+        "Results": [
+          2211
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "微型聚变发电站"
+      }
+    },
+    {
+      "ID": 2212,
+      "Name": "卫星配电站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "15360",
+        "ingredients": "192100",
+        "ingredients_half": "322545/16",
+        "one_half_plus_half": "518253/8",
+        "two_plus_half": "2735859/16"
+      },
+      "ExchangePrices": {
+        "double": 15360,
+        "ingredients": 192100,
+        "ingredients_half": 20160,
+        "one_half_plus_half": 64782,
+        "two_plus_half": 170992
+      },
+      "Recipe": {
+        "ID": 73,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          2202,
+          1205,
+          1125
+        ],
+        "ItemCounts": [
+          1,
+          10,
+          2
+        ],
+        "Results": [
+          2212
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "卫星配电站"
+      }
+    },
+    {
+      "ID": 2213,
+      "Name": "地热发电站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "2048",
+        "ingredients": "21760",
+        "ingredients_half": "5229/2",
+        "one_half_plus_half": "15295/2",
+        "two_plus_half": "18960"
+      },
+      "ExchangePrices": {
+        "double": 2048,
+        "ingredients": 21760,
+        "ingredients_half": 2615,
+        "one_half_plus_half": 7648,
+        "two_plus_half": 18960
+      },
+      "Recipe": {
+        "ID": 118,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1104,
+          1404,
+          1205
+        ],
+        "ItemCounts": [
+          15,
+          20,
+          4,
+          1
+        ],
+        "Results": [
+          2213
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "地热发电站"
+      }
+    },
+    {
+      "ID": 2301,
+      "Name": "采矿机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "80",
+        "ingredients": "260",
+        "ingredients_half": "171/2",
+        "one_half_plus_half": "161",
+        "two_plus_half": "270"
+      },
+      "ExchangePrices": {
+        "double": 80,
+        "ingredients": 260,
+        "ingredients_half": 86,
+        "one_half_plus_half": 161,
+        "two_plus_half": 270
+      },
+      "Recipe": {
+        "ID": 48,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1101,
+          1301,
+          1202,
+          1201
+        ],
+        "ItemCounts": [
+          4,
+          2,
+          2,
+          2
+        ],
+        "Results": [
+          2301
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "采矿机"
+      }
+    },
+    {
+      "ID": 2302,
+      "Name": "电弧熔炉",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "96",
+        "ingredients": "330",
+        "ingredients_half": "108",
+        "one_half_plus_half": "399/2",
+        "two_plus_half": "330"
+      },
+      "ExchangePrices": {
+        "double": 96,
+        "ingredients": 330,
+        "ingredients_half": 108,
+        "one_half_plus_half": 200,
+        "two_plus_half": 330
+      },
+      "Recipe": {
+        "ID": 56,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1101,
+          1108,
+          1301,
+          1202
+        ],
+        "ItemCounts": [
+          4,
+          2,
+          4,
+          2
+        ],
+        "Results": [
+          2302
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电弧熔炉"
+      }
+    },
+    {
+      "ID": 2303,
+      "Name": "制造台 Mk.I",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "128",
+        "ingredients": "304",
+        "ingredients_half": "105",
+        "one_half_plus_half": "210",
+        "two_plus_half": "735/2"
+      },
+      "ExchangePrices": {
+        "double": 128,
+        "ingredients": 304,
+        "ingredients_half": 105,
+        "one_half_plus_half": 210,
+        "two_plus_half": 368
+      },
+      "Recipe": {
+        "ID": 45,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1201,
+          1301
+        ],
+        "ItemCounts": [
+          4,
+          8,
+          4
+        ],
+        "Results": [
+          2303
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "制造台 Mk.I"
+      }
+    },
+    {
+      "ID": 2304,
+      "Name": "制造台 Mk.II",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "1440",
+        "ingredients": "6496",
+        "ingredients_half": "2895/2",
+        "one_half_plus_half": "3390",
+        "two_plus_half": "27279/4"
+      },
+      "ExchangePrices": {
+        "double": 1440,
+        "ingredients": 6496,
+        "ingredients_half": 1448,
+        "one_half_plus_half": 3390,
+        "two_plus_half": 6820
+      },
+      "Recipe": {
+        "ID": 46,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          2303,
+          1123,
+          1303
+        ],
+        "ItemCounts": [
+          1,
+          8,
+          4
+        ],
+        "Results": [
+          2304
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "制造台 Mk.II"
+      }
+    },
+    {
+      "ID": 2305,
+      "Name": "制造台 Mk.III",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "70976/3",
+        "ingredients": "484576",
+        "ingredients_half": "127815/4",
+        "one_half_plus_half": "125217",
+        "two_plus_half": "3294893/8"
+      },
+      "ExchangePrices": {
+        "double": 23659,
+        "ingredients": 484576,
+        "ingredients_half": 31954,
+        "one_half_plus_half": 125217,
+        "two_plus_half": 411862
+      },
+      "Recipe": {
+        "ID": 47,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          2304,
+          1402,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          8,
+          2
+        ],
+        "Results": [
+          2305
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "制造台 Mk.III"
+      }
+    },
+    {
+      "ID": 2306,
+      "Name": "抽水站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "296",
+        "ingredients": "1570",
+        "ingredients_half": "747/2",
+        "one_half_plus_half": "1575/2",
+        "two_plus_half": "1470"
+      },
+      "ExchangePrices": {
+        "double": 296,
+        "ingredients": 1570,
+        "ingredients_half": 374,
+        "one_half_plus_half": 788,
+        "two_plus_half": 1470
+      },
+      "Recipe": {
+        "ID": 49,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1101,
+          1108,
+          1203,
+          1301
+        ],
+        "ItemCounts": [
+          8,
+          4,
+          4,
+          2
+        ],
+        "Results": [
+          2306
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "抽水站"
+      }
+    },
+    {
+      "ID": 2307,
+      "Name": "原油萃取站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "1176",
+        "ingredients": "4710",
+        "ingredients_half": "1134",
+        "one_half_plus_half": "5271/2",
+        "two_plus_half": "5250"
+      },
+      "ExchangePrices": {
+        "double": 1176,
+        "ingredients": 4710,
+        "ingredients_half": 1134,
+        "one_half_plus_half": 2636,
+        "two_plus_half": 5250
+      },
+      "Recipe": {
+        "ID": 14,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1103,
+          1108,
+          1301,
+          1401
+        ],
+        "ItemCounts": [
+          12,
+          12,
+          6,
+          4
+        ],
+        "Results": [
+          2307
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "原油萃取站"
+      }
+    },
+    {
+      "ID": 2308,
+      "Name": "原油精炼厂",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "1504",
+        "ingredients": "6370",
+        "ingredients_half": "2925/2",
+        "one_half_plus_half": "6965/2",
+        "two_plus_half": "7060"
+      },
+      "ExchangePrices": {
+        "double": 1504,
+        "ingredients": 6370,
+        "ingredients_half": 1463,
+        "one_half_plus_half": 3483,
+        "two_plus_half": 7060
+      },
+      "Recipe": {
+        "ID": 15,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1108,
+          1301,
+          1401
+        ],
+        "ItemCounts": [
+          10,
+          10,
+          6,
+          6
+        ],
+        "Results": [
+          2308
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "原油精炼厂"
+      }
+    },
+    {
+      "ID": 2309,
+      "Name": "化工厂",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "312",
+        "ingredients": "810",
+        "ingredients_half": "297",
+        "one_half_plus_half": "1113/2",
+        "two_plus_half": "930"
+      },
+      "ExchangePrices": {
+        "double": 312,
+        "ingredients": 810,
+        "ingredients_half": 297,
+        "one_half_plus_half": 557,
+        "two_plus_half": 930
+      },
+      "Recipe": {
+        "ID": 22,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1103,
+          1108,
+          1110,
+          1301
+        ],
+        "ItemCounts": [
+          8,
+          8,
+          8,
+          2
+        ],
+        "Results": [
+          2309
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "化工厂"
+      }
+    },
+    {
+      "ID": 2310,
+      "Name": "微型粒子对撞机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "61664",
+        "ingredients": "1137072",
+        "ingredients_half": "479871/4",
+        "one_half_plus_half": "342970",
+        "two_plus_half": "6668595/8"
+      },
+      "ExchangePrices": {
+        "double": 61664,
+        "ingredients": 1137072,
+        "ingredients_half": 119968,
+        "one_half_plus_half": 342970,
+        "two_plus_half": 833575
+      },
+      "Recipe": {
+        "ID": 39,
+        "Type": 4,
+        "TimeSpend": 900,
+        "Items": [
+          1107,
+          1125,
+          1205,
+          1123,
+          1303
+        ],
+        "ItemCounts": [
+          20,
+          20,
+          25,
+          10,
+          8
+        ],
+        "Results": [
+          2310
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "微型粒子对撞机"
+      }
+    },
+    {
+      "ID": 2311,
+      "Name": "电磁轨道弹射器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "12960",
+        "ingredients": "194250",
+        "ingredients_half": "39195/2",
+        "one_half_plus_half": "246855/4",
+        "two_plus_half": "160800"
+      },
+      "ExchangePrices": {
+        "double": 12960,
+        "ingredients": 194250,
+        "ingredients_half": 19598,
+        "one_half_plus_half": 61714,
+        "two_plus_half": 160800
+      },
+      "Recipe": {
+        "ID": 71,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1201,
+          1303,
+          1205
+        ],
+        "ItemCounts": [
+          20,
+          20,
+          5,
+          10
+        ],
+        "Results": [
+          2311
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电磁轨道弹射器"
+      }
+    },
+    {
+      "ID": 2312,
+      "Name": "垂直发射井",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "345440",
+        "ingredients": "13134200",
+        "ingredients_half": "5163285/8",
+        "one_half_plus_half": "11003755/4",
+        "two_plus_half": "19056525/2"
+      },
+      "ExchangePrices": {
+        "double": 345440,
+        "ingredients": 13134200,
+        "ingredients_half": 645411,
+        "one_half_plus_half": 2750939,
+        "two_plus_half": 9528263
+      },
+      "Recipe": {
+        "ID": 82,
+        "Type": 4,
+        "TimeSpend": 1800,
+        "Items": [
+          1107,
+          1125,
+          1209,
+          1305
+        ],
+        "ItemCounts": [
+          80,
+          30,
+          20,
+          10
+        ],
+        "Results": [
+          2312
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "垂直发射井"
+      }
+    },
+    {
+      "ID": 2313,
+      "Name": "喷涂机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "584",
+        "ingredients": "2430",
+        "ingredients_half": "576",
+        "one_half_plus_half": "2681/2",
+        "two_plus_half": "2670"
+      },
+      "ExchangePrices": {
+        "double": 584,
+        "ingredients": 2430,
+        "ingredients_half": 576,
+        "one_half_plus_half": 1341,
+        "two_plus_half": 2670
+      },
+      "Recipe": {
+        "ID": 109,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1103,
+          1401,
+          1301,
+          1302
+        ],
+        "ItemCounts": [
+          4,
+          2,
+          2,
+          2
+        ],
+        "Results": [
+          2313
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "喷涂机"
+      }
+    },
+    {
+      "ID": 2314,
+      "Name": "分馏塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "448",
+        "ingredients": "1770",
+        "ingredients_half": "450",
+        "one_half_plus_half": "3955/4",
+        "two_plus_half": "1890"
+      },
+      "ExchangePrices": {
+        "double": 448,
+        "ingredients": 1770,
+        "ingredients_half": 450,
+        "one_half_plus_half": 989,
+        "two_plus_half": 1890
+      },
+      "Recipe": {
+        "ID": 110,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1103,
+          1108,
+          1110,
+          1303
+        ],
+        "ItemCounts": [
+          8,
+          4,
+          4,
+          1
+        ],
+        "Results": [
+          2314
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "分馏塔"
+      }
+    },
+    {
+      "ID": 2315,
+      "Name": "位面熔炉",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "14190",
+        "ingredients": "274125",
+        "ingredients_half": "395799/16",
+        "one_half_plus_half": "618471/8",
+        "two_plus_half": "829007/4"
+      },
+      "ExchangePrices": {
+        "double": 14190,
+        "ingredients": 274125,
+        "ingredients_half": 24738,
+        "one_half_plus_half": 77309,
+        "two_plus_half": 207252
+      },
+      "Recipe": {
+        "ID": 116,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          2302,
+          1125,
+          1304,
+          1016
+        ],
+        "ItemCounts": [
+          1,
+          5,
+          4,
+          15
+        ],
+        "Results": [
+          2315
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "位面熔炉"
+      }
+    },
+    {
+      "ID": 2316,
+      "Name": "大型采矿机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "59200",
+        "ingredients": "1710576",
+        "ingredients_half": "1841763/16",
+        "one_half_plus_half": "407390",
+        "two_plus_half": "19874079/16"
+      },
+      "ExchangePrices": {
+        "double": 59200,
+        "ingredients": 1710576,
+        "ingredients_half": 115111,
+        "one_half_plus_half": 407390,
+        "two_plus_half": 1242130
+      },
+      "Recipe": {
+        "ID": 119,
+        "Type": 4,
+        "TimeSpend": 1200,
+        "Items": [
+          1107,
+          1125,
+          1205,
+          1305,
+          1014
+        ],
+        "ItemCounts": [
+          20,
+          10,
+          10,
+          4,
+          40
+        ],
+        "Results": [
+          2316
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "大型采矿机"
+      }
+    },
+    {
+      "ID": 2317,
+      "Name": "量子化工厂",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "39912",
+        "ingredients": "1244670",
+        "ingredients_half": "283431/4",
+        "one_half_plus_half": "1135659/4",
+        "two_plus_half": "1866599/2"
+      },
+      "ExchangePrices": {
+        "double": 39912,
+        "ingredients": 1244670,
+        "ingredients_half": 70858,
+        "one_half_plus_half": 283915,
+        "two_plus_half": 933300
+      },
+      "Recipe": {
+        "ID": 124,
+        "Type": 4,
+        "TimeSpend": 600,
+        "Items": [
+          2309,
+          1119,
+          1127,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          10,
+          3,
+          3
+        ],
+        "Results": [
+          2317
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "量子化工厂"
+      }
+    },
+    {
+      "ID": 2318,
+      "Name": "重组式制造台",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "234352/3",
+        "ingredients": "3415960",
+        "ingredients_half": "585621/4",
+        "one_half_plus_half": "1314299/2",
+        "two_plus_half": "4832629/2"
+      },
+      "ExchangePrices": {
+        "double": 78118,
+        "ingredients": 3415960,
+        "ingredients_half": 146406,
+        "one_half_plus_half": 657150,
+        "two_plus_half": 2416315
+      },
+      "Recipe": {
+        "ID": 154,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          2305,
+          5203,
+          5206,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          10,
+          30,
+          4
+        ],
+        "Results": [
+          2318
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "重组式制造台"
+      }
+    },
+    {
+      "ID": 2319,
+      "Name": "负熵熔炉",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "59180",
+        "ingredients": "2363705",
+        "ingredients_half": "1996101/16",
+        "one_half_plus_half": "7831537/16",
+        "two_plus_half": "1597875"
+      },
+      "ExchangePrices": {
+        "double": 59180,
+        "ingredients": 2363705,
+        "ingredients_half": 124757,
+        "one_half_plus_half": 489472,
+        "two_plus_half": 1597875
+      },
+      "Recipe": {
+        "ID": 155,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          2315,
+          5204,
+          5206,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          10,
+          30,
+          4
+        ],
+        "Results": [
+          2319
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "负熵熔炉"
+      }
+    },
+    {
+      "ID": 2401,
+      "Name": "全息信标",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "516",
+        "ingredients": "2160",
+        "ingredients_half": "999/2",
+        "one_half_plus_half": "2373/2",
+        "two_plus_half": "2400"
+      },
+      "ExchangePrices": {
+        "double": 516,
+        "ingredients": 2160,
+        "ingredients_half": 500,
+        "one_half_plus_half": 1187,
+        "two_plus_half": 2400
+      },
+      "Recipe": {
+        "ID": 161,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1101,
+          1111,
+          1401,
+          1301
+        ],
+        "ItemCounts": [
+          3,
+          4,
+          2,
+          2
+        ],
+        "Results": [
+          2401
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "全息信标"
+      }
+    },
+    {
+      "ID": 2901,
+      "Name": "矩阵研究站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "160",
+        "ingredients": "520",
+        "ingredients_half": "180",
+        "one_half_plus_half": "322",
+        "two_plus_half": "520"
+      },
+      "ExchangePrices": {
+        "double": 160,
+        "ingredients": 520,
+        "ingredients_half": 180,
+        "one_half_plus_half": 322,
+        "two_plus_half": 520
+      },
+      "Recipe": {
+        "ID": 10,
+        "Type": 4,
+        "TimeSpend": 180,
+        "Items": [
+          1101,
+          1110,
+          1301,
+          1202
+        ],
+        "ItemCounts": [
+          8,
+          4,
+          4,
+          4
+        ],
+        "Results": [
+          2901
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "矩阵研究站"
+      }
+    },
+    {
+      "ID": 2902,
+      "Name": "自演化研究站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "31100",
+        "ingredients": "995630",
+        "ingredients_half": "51054",
+        "one_half_plus_half": "219982",
+        "two_plus_half": "770908"
+      },
+      "ExchangePrices": {
+        "double": 31100,
+        "ingredients": 995630,
+        "ingredients_half": 51054,
+        "one_half_plus_half": 219982,
+        "two_plus_half": 770908
+      },
+      "Recipe": {
+        "ID": 153,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          2901,
+          5202,
+          5201,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          10,
+          20,
+          4
+        ],
+        "Results": [
+          2902
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "自演化研究站"
+      }
+    },
+    {
+      "ID": 3001,
+      "Name": "高斯机枪塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "168",
+        "ingredients": "510",
+        "ingredients_half": "171",
+        "one_half_plus_half": "651/2",
+        "two_plus_half": "550"
+      },
+      "ExchangePrices": {
+        "double": 168,
+        "ingredients": 510,
+        "ingredients_half": 171,
+        "one_half_plus_half": 326,
+        "two_plus_half": 550
+      },
+      "Recipe": {
+        "ID": 125,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1101,
+          1201,
+          1301,
+          1202
+        ],
+        "ItemCounts": [
+          8,
+          8,
+          2,
+          4
+        ],
+        "Results": [
+          3001
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "高斯机枪塔"
+      }
+    },
+    {
+      "ID": 3002,
+      "Name": "高频激光塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "2520",
+        "ingredients": "10665",
+        "ingredients_half": "9477/4",
+        "one_half_plus_half": "46809/8",
+        "two_plus_half": "12150"
+      },
+      "ExchangePrices": {
+        "double": 2520,
+        "ingredients": 10665,
+        "ingredients_half": 2370,
+        "one_half_plus_half": 5852,
+        "two_plus_half": 12150
+      },
+      "Recipe": {
+        "ID": 126,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1401,
+          1301,
+          1404
+        ],
+        "ItemCounts": [
+          9,
+          6,
+          6,
+          9
+        ],
+        "Results": [
+          3002
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "高频激光塔"
+      }
+    },
+    {
+      "ID": 3003,
+      "Name": "聚爆加农炮",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "3064",
+        "ingredients": "41130",
+        "ingredients_half": "4500",
+        "one_half_plus_half": "27069/2",
+        "two_plus_half": "34310"
+      },
+      "ExchangePrices": {
+        "double": 3064,
+        "ingredients": 41130,
+        "ingredients_half": 4500,
+        "one_half_plus_half": 13535,
+        "two_plus_half": 34310
+      },
+      "Recipe": {
+        "ID": 127,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1103,
+          1203,
+          1301,
+          1205
+        ],
+        "ItemCounts": [
+          10,
+          8,
+          10,
+          2
+        ],
+        "Results": [
+          3003
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "聚爆加农炮"
+      }
+    },
+    {
+      "ID": 3004,
+      "Name": "磁化电浆炮",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "16520",
+        "ingredients": "265620",
+        "ingredients_half": "59185/2",
+        "one_half_plus_half": "84070",
+        "two_plus_half": "205560"
+      },
+      "ExchangePrices": {
+        "double": 16520,
+        "ingredients": 265620,
+        "ingredients_half": 29593,
+        "one_half_plus_half": 84070,
+        "two_plus_half": 205560
+      },
+      "Recipe": {
+        "ID": 128,
+        "Type": 4,
+        "TimeSpend": 600,
+        "Items": [
+          1107,
+          1119,
+          1205,
+          1401,
+          1303
+        ],
+        "ItemCounts": [
+          20,
+          10,
+          10,
+          5,
+          5
+        ],
+        "Results": [
+          3004
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "磁化电浆炮"
+      }
+    },
+    {
+      "ID": 3005,
+      "Name": "导弹防御塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "912",
+        "ingredients": "4230",
+        "ingredients_half": "4131/4",
+        "one_half_plus_half": "8925/4",
+        "two_plus_half": "4200"
+      },
+      "ExchangePrices": {
+        "double": 912,
+        "ingredients": 4230,
+        "ingredients_half": 1033,
+        "one_half_plus_half": 2232,
+        "two_plus_half": 4200
+      },
+      "Recipe": {
+        "ID": 129,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1203,
+          1301,
+          1407
+        ],
+        "ItemCounts": [
+          8,
+          6,
+          12,
+          6
+        ],
+        "Results": [
+          3005
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "导弹防御塔"
+      }
+    },
+    {
+      "ID": 3006,
+      "Name": "干扰塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "2496",
+        "ingredients": "11970",
+        "ingredients_half": "2538",
+        "one_half_plus_half": "24843/4",
+        "two_plus_half": "12840"
+      },
+      "ExchangePrices": {
+        "double": 2496,
+        "ingredients": 11970,
+        "ingredients_half": 2538,
+        "one_half_plus_half": 6211,
+        "two_plus_half": 12840
+      },
+      "Recipe": {
+        "ID": 130,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1104,
+          1401,
+          1112,
+          1303
+        ],
+        "ItemCounts": [
+          12,
+          9,
+          6,
+          3
+        ],
+        "Results": [
+          3006
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "干扰塔"
+      }
+    },
+    {
+      "ID": 3007,
+      "Name": "信号塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "2848",
+        "ingredients": "14664",
+        "ingredients_half": "2310",
+        "one_half_plus_half": "28329/4",
+        "two_plus_half": "70665/4"
+      },
+      "ExchangePrices": {
+        "double": 2848,
+        "ingredients": 14664,
+        "ingredients_half": 2310,
+        "one_half_plus_half": 7083,
+        "two_plus_half": 17667
+      },
+      "Recipe": {
+        "ID": 131,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          2202,
+          1103,
+          1113
+        ],
+        "ItemCounts": [
+          2,
+          12,
+          6
+        ],
+        "Results": [
+          3007
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "信号塔"
+      }
+    },
+    {
+      "ID": 3008,
+      "Name": "行星护盾发生器",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "17960",
+        "ingredients": "243200",
+        "ingredients_half": "53145/2",
+        "one_half_plus_half": "322875/4",
+        "two_plus_half": "408635/2"
+      },
+      "ExchangePrices": {
+        "double": 17960,
+        "ingredients": 243200,
+        "ingredients_half": 26573,
+        "one_half_plus_half": 80719,
+        "two_plus_half": 204318
+      },
+      "Recipe": {
+        "ID": 132,
+        "Type": 4,
+        "TimeSpend": 600,
+        "Items": [
+          1103,
+          1204,
+          1205,
+          1206
+        ],
+        "ItemCounts": [
+          20,
+          20,
+          5,
+          5
+        ],
+        "Results": [
+          3008
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "行星护盾发生器"
+      }
+    },
+    {
+      "ID": 3009,
+      "Name": "战场分析基站",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "1224",
+        "ingredients": "4770",
+        "ingredients_half": "1296",
+        "one_half_plus_half": "2709",
+        "two_plus_half": "4950"
+      },
+      "ExchangePrices": {
+        "double": 1224,
+        "ingredients": 4770,
+        "ingredients_half": 1296,
+        "one_half_plus_half": 2709,
+        "two_plus_half": 4950
+      },
+      "Recipe": {
+        "ID": 152,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1103,
+          1301,
+          1302,
+          1407
+        ],
+        "ItemCounts": [
+          12,
+          18,
+          6,
+          12
+        ],
+        "Results": [
+          3009
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "战场分析基站"
+      }
+    },
+    {
+      "ID": 3010,
+      "Name": "近程电浆塔",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "8000",
+        "ingredients": "104650",
+        "ingredients_half": "22725/2",
+        "one_half_plus_half": "138845/4",
+        "two_plus_half": "88400"
+      },
+      "ExchangePrices": {
+        "double": 8000,
+        "ingredients": 104650,
+        "ingredients_half": 11363,
+        "one_half_plus_half": 34712,
+        "two_plus_half": 88400
+      },
+      "Recipe": {
+        "ID": 157,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1103,
+          1205,
+          1401,
+          1303
+        ],
+        "ItemCounts": [
+          15,
+          5,
+          5,
+          5
+        ],
+        "Results": [
+          3010
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "近程电浆塔"
+      }
+    },
+    {
+      "ID": 5001,
+      "Name": "物流运输机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "676",
+        "ingredients": "2632",
+        "ingredients_half": "2355/4",
+        "one_half_plus_half": "1455",
+        "two_plus_half": "12145/4"
+      },
+      "ExchangePrices": {
+        "double": 676,
+        "ingredients": 2632,
+        "ingredients_half": 589,
+        "one_half_plus_half": 1455,
+        "two_plus_half": 3037
+      },
+      "Recipe": {
+        "ID": 94,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          1101,
+          1303,
+          1405
+        ],
+        "ItemCounts": [
+          5,
+          2,
+          2
+        ],
+        "Results": [
+          5001
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "物流运输机"
+      }
+    },
+    {
+      "ID": 5002,
+      "Name": "星际物流运输船",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "11840",
+        "ingredients": "100640",
+        "ingredients_half": "110175/8",
+        "one_half_plus_half": "39615",
+        "two_plus_half": "97440"
+      },
+      "ExchangePrices": {
+        "double": 11840,
+        "ingredients": 100640,
+        "ingredients_half": 13772,
+        "one_half_plus_half": 39615,
+        "two_plus_half": 97440
+      },
+      "Recipe": {
+        "ID": 96,
+        "Type": 4,
+        "TimeSpend": 360,
+        "Items": [
+          1107,
+          1303,
+          1406
+        ],
+        "ItemCounts": [
+          10,
+          10,
+          2
+        ],
+        "Results": [
+          5002
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "星际物流运输船"
+      }
+    },
+    {
+      "ID": 5003,
+      "Name": "配送运输机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "256",
+        "ingredients": "1108",
+        "ingredients_half": "240",
+        "one_half_plus_half": "2343/4",
+        "two_plus_half": "9695/8"
+      },
+      "ExchangePrices": {
+        "double": 256,
+        "ingredients": 1108,
+        "ingredients_half": 240,
+        "one_half_plus_half": 586,
+        "two_plus_half": 1212
+      },
+      "Recipe": {
+        "ID": 123,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1407,
+          1303
+        ],
+        "ItemCounts": [
+          2,
+          1,
+          1
+        ],
+        "Results": [
+          5003
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "配送运输机"
+      }
+    },
+    {
+      "ID": 5101,
+      "Name": "原型机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "268",
+        "ingredients": "1215",
+        "ingredients_half": "549/2",
+        "one_half_plus_half": "5173/8",
+        "two_plus_half": "1305"
+      },
+      "ExchangePrices": {
+        "double": 268,
+        "ingredients": 1215,
+        "ingredients_half": 275,
+        "one_half_plus_half": 647,
+        "two_plus_half": 1305
+      },
+      "Recipe": {
+        "ID": 147,
+        "Type": 4,
+        "TimeSpend": 120,
+        "Items": [
+          1101,
+          1407,
+          1301,
+          1401
+        ],
+        "ItemCounts": [
+          3,
+          1,
+          2,
+          1
+        ],
+        "Results": [
+          5101
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "原型机"
+      }
+    },
+    {
+      "ID": 5102,
+      "Name": "精准无人机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "1072",
+        "ingredients": "9465",
+        "ingredients_half": "1413",
+        "one_half_plus_half": "60991/16",
+        "two_plus_half": "8640"
+      },
+      "ExchangePrices": {
+        "double": 1072,
+        "ingredients": 9465,
+        "ingredients_half": 1413,
+        "one_half_plus_half": 3812,
+        "two_plus_half": 8640
+      },
+      "Recipe": {
+        "ID": 148,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          5101,
+          1204,
+          1301,
+          1404
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "Results": [
+          5102
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "精准无人机"
+      }
+    },
+    {
+      "ID": 5103,
+      "Name": "攻击无人机",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "2296",
+        "ingredients": "30035",
+        "ingredients_half": "13851/4",
+        "one_half_plus_half": "163163/16",
+        "two_plus_half": "50357/2"
+      },
+      "ExchangePrices": {
+        "double": 2296,
+        "ingredients": 30035,
+        "ingredients_half": 3463,
+        "one_half_plus_half": 10198,
+        "two_plus_half": 25179
+      },
+      "Recipe": {
+        "ID": 149,
+        "Type": 4,
+        "TimeSpend": 240,
+        "Items": [
+          5101,
+          1204,
+          1303,
+          1206
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "Results": [
+          5103
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "攻击无人机"
+      }
+    },
+    {
+      "ID": 5111,
+      "Name": "护卫舰",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "9136",
+        "ingredients": "120830",
+        "ingredients_half": "109899/8",
+        "one_half_plus_half": "162659/4",
+        "two_plus_half": "204111/2"
+      },
+      "ExchangePrices": {
+        "double": 9136,
+        "ingredients": 120830,
+        "ingredients_half": 13738,
+        "one_half_plus_half": 40665,
+        "two_plus_half": 102056
+      },
+      "Recipe": {
+        "ID": 150,
+        "Type": 4,
+        "TimeSpend": 300,
+        "Items": [
+          1107,
+          1406,
+          1303,
+          1206
+        ],
+        "ItemCounts": [
+          5,
+          1,
+          2,
+          3
+        ],
+        "Results": [
+          5111
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "护卫舰"
+      }
+    },
+    {
+      "ID": 5112,
+      "Name": "驱逐舰",
+      "ExchangeEligible": true,
+      "Values": {
+        "double": "51248",
+        "ingredients": "821600",
+        "ingredients_half": "85806",
+        "one_half_plus_half": "252994",
+        "two_plus_half": "1266949/2"
+      },
+      "ExchangePrices": {
+        "double": 51248,
+        "ingredients": 821600,
+        "ingredients_half": 85806,
+        "one_half_plus_half": 252994,
+        "two_plus_half": 633475
+      },
+      "Recipe": {
+        "ID": 151,
+        "Type": 4,
+        "TimeSpend": 480,
+        "Items": [
+          1125,
+          1406,
+          1303,
+          1127
+        ],
+        "ItemCounts": [
+          20,
+          4,
+          4,
+          1
+        ],
+        "Results": [
+          5112
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "驱逐舰"
+      }
+    },
+    {
+      "ID": 5201,
+      "Name": "黑雾矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 5202,
+      "Name": "硅基神经元",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 5203,
+      "Name": "物质重组器",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 5204,
+      "Name": "负熵奇点",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 5205,
+      "Name": "核心素",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 5206,
+      "Name": "能量碎片",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "1",
+        "ingredients": "1",
+        "ingredients_half": "1",
+        "one_half_plus_half": "1",
+        "two_plus_half": "1"
+      },
+      "BaseReason": "黑雾专属掉落"
+    },
+    {
+      "ID": 6001,
+      "Name": "电磁矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "24",
+        "ingredients": "54",
+        "ingredients_half": "18",
+        "one_half_plus_half": "75/2",
+        "two_plus_half": "135/2"
+      },
+      "Recipe": {
+        "ID": 9,
+        "Type": 15,
+        "TimeSpend": 180,
+        "Items": [
+          1202,
+          1301
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          6001
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "电磁矩阵"
+      }
+    },
+    {
+      "ID": 6002,
+      "Name": "能量矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "20",
+        "ingredients": "30",
+        "ingredients_half": "16",
+        "one_half_plus_half": "25",
+        "two_plus_half": "36"
+      },
+      "Recipe": {
+        "ID": 18,
+        "Type": 15,
+        "TimeSpend": 360,
+        "Items": [
+          1109,
+          1120
+        ],
+        "ItemCounts": [
+          2,
+          2
+        ],
+        "Results": [
+          6002
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "能量矩阵"
+      }
+    },
+    {
+      "ID": 6003,
+      "Name": "结构矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "296",
+        "ingredients": "1656",
+        "ingredients_half": "265",
+        "one_half_plus_half": "3055/4",
+        "two_plus_half": "3663/2"
+      },
+      "Recipe": {
+        "ID": 27,
+        "Type": 15,
+        "TimeSpend": 480,
+        "Items": [
+          1112,
+          1118
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          6003
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "结构矩阵"
+      }
+    },
+    {
+      "ID": 6004,
+      "Name": "信息矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "3280/3",
+        "ingredients": "7164",
+        "ingredients_half": "2089/2",
+        "one_half_plus_half": "48495/16",
+        "two_plus_half": "116679/16"
+      },
+      "Recipe": {
+        "ID": 55,
+        "Type": 15,
+        "TimeSpend": 600,
+        "Items": [
+          1303,
+          1402
+        ],
+        "ItemCounts": [
+          2,
+          1
+        ],
+        "Results": [
+          6004
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "信息矩阵"
+      }
+    },
+    {
+      "ID": 6005,
+      "Name": "引力矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "9200",
+        "ingredients": "222858",
+        "ingredients_half": "22531/2",
+        "one_half_plus_half": "435525/8",
+        "two_plus_half": "3265713/16"
+      },
+      "Recipe": {
+        "ID": 102,
+        "Type": 15,
+        "TimeSpend": 1440,
+        "Items": [
+          1209,
+          1305
+        ],
+        "ItemCounts": [
+          1,
+          1
+        ],
+        "Results": [
+          6005
+        ],
+        "ResultCounts": [
+          2
+        ],
+        "Name": "引力矩阵"
+      }
+    },
+    {
+      "ID": 6006,
+      "Name": "宇宙矩阵",
+      "ExchangeEligible": false,
+      "Values": {
+        "double": "63806/3",
+        "ingredients": "1622341",
+        "ingredients_half": "50439",
+        "one_half_plus_half": "8395029/32",
+        "two_plus_half": "4266715/4"
+      },
+      "Recipe": {
+        "ID": 75,
+        "Type": 15,
+        "TimeSpend": 900,
+        "Items": [
+          6001,
+          6002,
+          6003,
+          6004,
+          6005,
+          1122
+        ],
+        "ItemCounts": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "Results": [
+          6006
+        ],
+        "ResultCounts": [
+          1
+        ],
+        "Name": "宇宙矩阵"
+      }
+    }
+  ]
+}
