@@ -301,10 +301,14 @@ internal static class Program
         MarketSession session = Fresh();
         session.Market.Deposit(20);
         session.PreserveForReload();
-        GameMain.gameTick = 351;
+        long quoteBoundary = GameMain.gameTick + MarginMarket.QuoteIntervalTicks * 3;
+        GameMain.gameTick = quoteBoundary - 20;
         session.Tick(); // Periodic cache immediately before the next quote sample.
-        GameMain.gameTick = 371;
+        long previousQuote = session.Market.History[session.Market.History.Count - 1].GameTick;
+        GameMain.gameTick = quoteBoundary;
         session.Tick(); // New quote only 20 ticks later must bypass the 30-tick throttle.
+        Require(session.Market.History[session.Market.History.Count - 1].GameTick > previousQuote,
+            "Quote-boundary regression fixture did not cross a quote boundary.");
         byte[] expected = MarketBytes(session.Market);
         MarketSession reloaded = new MarketSession();
         Equal(expected, MarketBytes(reloaded.Market), "Immediate F6 rolled the just-published quote back.");

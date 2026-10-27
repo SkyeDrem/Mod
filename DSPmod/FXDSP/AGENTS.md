@@ -59,3 +59,7 @@
 - 0.20.1 成就新增英文，名称/描述/页签/状态/达成弹窗跟随游戏语言；中文原文见 docs/acceptance-0.20.1.md，工厂成就名称为“工厂？不需要了！”。盈亏同源和龙虎榜一仅在该账户 TotalWithdrawn==0 时可达成，提取后重新存入不恢复资格；建筑币兑换物品计入该账本提取量，已完成成就不追溯撤销。其余判定与保存格式不变。
 - 0.20.2 用户明确授权全盘检查及准备发布包；233项完整测试、Release双模块构建和原版/定价核验通过。两个模块统一0.20.2；发布源在release/，scripts/package.ps1生成dist/FXDSP-0.20.2.zip与SHA256、文件清单，默认仅打包两份自有DLL和四个元数据文件，不包含依赖/游戏DLL或个人配置。尚未上传，冷启动与UI组合验收由玩家完成，详细报告docs/audit-0.20.2.md。
 - 0.20.2 发布图标已采用经典黄色伊卡洛斯与宇宙矩阵版本；源图和全部中间阶段放在 image/icon/，正式256×256图标为 release/icon.png，render-package-icon.py 从 image/icon/08-icon-final.png 导出。截图位于 image/readme/，玩家README用当前GitHub根目录的图片绝对链接，中英文同步；纯文档/图标修改只核对格式、链接及包内容，不重复全套交易测试。
+- 用户授权直接内置异常判定绕过并先备份旧版。0.20.2 实验分支以 Compatibility/BypassAbnormalityChecks（默认 true）覆盖本地 NothingAbnormal、TriggerAbnormality 和 AbnormalityLogic.GameTick；全局影响异常检测，不伪称只豁免 FXDSP。旧证据、沙盒/账号/元数据资格条件及存档结构保持原样，关闭开关或卸载后恢复原判定；不得承诺未实测的银河系上传结果。当前运行实例归属仍由 OwnsRuntime 控制，F6 旧实例不能继续启用补丁。备份及验收见 docs/acceptance-abnormality-bypass.md；本次不推送。
+- 用户已反馈异常检测兼容测试没有问题，正式迭代为 0.20.3；后续正常递增版本，同步核心、常驻模块、manifest 和 CHANGELOG，不继续覆盖旧版本或使用测试包后缀，除非用户明确要求。备份统一放在本项目 backups/ 内，不放到 D:\Project\Backups 等项目外目录；该目录仅本地保留并由 Git 忽略。旧版备份已迁至 backups/20261027-210241-before-abnormality-bypass/。不沿用前次上传授权推送本轮改动。
+- 2026-10-28 用户要求正式发布 1.0.0 并删除旧 CHANGELOG 记录。两模块与 manifest 统一 1.0.0，CHANGELOG 仅保留本次中英文说明。238 项完整测试和 Release/原版/定价/包内容检查通过；两个旧周期测试夹具改按 QuoteIntervalTicks 计算，不改生产行情。检查报告 docs/audit-1.0.0.md，发布包 dist/FXDSP-1.0.0.zip；本次仍未授权上传。
+- 2026-10-28 用户随后明确授权将当前 1.0.0 源码、文档和发布元数据上传 GitHub。用户将另行提供审核通过的 B 站宣传片链接；届时将 release/README.md 的两处中文视频提及与对应两处英文均配上链接，再重新打包，保持 1.0.0 版本及 CHANGELOG 不变。

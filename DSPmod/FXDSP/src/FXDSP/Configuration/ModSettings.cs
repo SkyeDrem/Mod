@@ -8,9 +8,12 @@ namespace FXDSP.Configuration
         public ConfigEntry<bool> VerboseLogging { get; private set; }
         public ConfigEntry<KeyboardShortcut> WindowKey { get; private set; }
         public ConfigEntry<int> PositionHudMode { get; private set; }
+        public ConfigEntry<bool> BypassAbnormalityChecks { get; private set; }
 
         public ModSettings(ConfigFile config)
         {
+            BypassAbnormalityChecks = config.Bind("Compatibility", "BypassAbnormalityChecks", true,
+                "Bypass local abnormality checks while FXDSP is loaded. Existing abnormality records are retained. Sandbox and account eligibility checks remain unchanged. Disable to restore native checks.");
             VerboseLogging = config.Bind(
                 "Development",
                 "VerboseLogging",

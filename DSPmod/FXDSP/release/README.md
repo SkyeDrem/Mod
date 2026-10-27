@@ -1,6 +1,5 @@
-# English version below: [jump to English](#fxdsp--dsp-trading-system)
-
-# FXDSP — DSP 交易系统
+#
+# FXDSP — DSP 交易系统 English version below: [jump to English](#fxdsp--dsp-trading-system)
 
 **伊卡洛斯，老实铺产线很枯燥吧！**
 
@@ -91,11 +90,13 @@ K线图显示行情、价格刻度和当前持仓的爆仓线。每个物品市�
 
 物品/配方 ID 为 **11702、11703**，科技 ID 为 **1951、7701～7705、7801～7806**；与占用相同 ID 的 Mod 不能共存。建筑兑换使用原版固定目录，不会自动给其它 Mod 的建筑定价。多人账户与库存同步尚未实现。
 
+内置本地异常检测兼容开关，默认开启，用于兼容 Mod 玩法下的成就与上传判定。启用期间对本地异常检测全局生效，旧异常记录仍保留，沙盒与账号资格条件沿用原版。可在 `BepInEx/config/dspfx.mod.cfg` 的 `[Compatibility]` 中将 `BypassAbnormalityChecks` 设为 `false` 恢复检测。
+
 ## 开发与反馈
 
 源码和构建说明：[GitHub · SkyeDrem/Mod — FXDSP](https://github.com/SkyeDrem/Mod/tree/main/DSPmod/FXDSP)。
 
-可在B站视频评论区反馈问题。
+可至 **B站@SkyeDrem** mod宣传片评论区反馈问题或提出建议。
 
 ---
 
@@ -189,8 +190,10 @@ DSPModSave stores trading accounts, expanded delivery inventory and achievement 
 
 Reserved item/recipe IDs are **11702, 11703**; technology IDs are **1951, 7701–7705, 7801–7806**. Mods using the same IDs conflict. Building exchange uses a fixed vanilla catalog and does not automatically price other mods' buildings. Multiplayer account and inventory synchronization is not implemented.
 
+A built-in local abnormality bypass is enabled by default to support achievement and upload eligibility in modded play. It applies globally to local abnormality detection while enabled. Existing evidence is retained, and vanilla sandbox and account eligibility conditions still apply. Set `BypassAbnormalityChecks = false` under `[Compatibility]` in `BepInEx/config/dspfx.mod.cfg` to restore native checks.
+
 ## Development and feedback
 
 Source code and build instructions: [GitHub · SkyeDrem/Mod — FXDSP](https://github.com/SkyeDrem/Mod/tree/main/DSPmod/FXDSP).
 
-Please leave bug reports in the comments on the bilibili video.
+For bug reports or suggestions, please leave a comment on the mod's promotional video on **bilibili @SkyeDrem**.

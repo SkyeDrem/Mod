@@ -37,6 +37,10 @@ namespace FXDSP
         private readonly List<MarketOption> _marketOptions = new List<MarketOption>();
         private readonly Dictionary<int, Core.PositionSettlement> _shownSettlements = new Dictionary<int, Core.PositionSettlement>();
         internal static Plugin Active { get; private set; }
+        internal bool BypassAbnormalityChecks
+        {
+            get { return OwnsRuntime && _settings != null && _settings.BypassAbnormalityChecks.Value; }
+        }
 
         private bool OwnsRuntime
         {
@@ -62,6 +66,7 @@ namespace FXDSP
                 // OnDestroy during reload from removing the new instance's patches.
                 _harmony = new Harmony(PluginInfo.Guid + ".runtime." + Guid.NewGuid().ToString("N"));
                 _harmony.PatchAll(typeof(Plugin).Assembly);
+                Logger.LogInfo("Local abnormality bypass: " + BypassAbnormalityChecks + ". Existing records retained; sandbox/account eligibility unchanged.");
                 TryRegisterSaveHandler();
                 var research = ResearchProgression.Read();
                 _session.SetTradingFeeRate(research.TradingFee);

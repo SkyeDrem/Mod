@@ -9,7 +9,7 @@ using HarmonyLib;
 
 namespace FXDSP.DeliveryBootstrap
 {
-    [BepInPlugin("dspfx.delivery.prototypes", "FXDSP Delivery Buildings", "0.20.2")]
+    [BepInPlugin("dspfx.delivery.prototypes", "FXDSP Delivery Buildings", "1.0.0")]
     [BepInDependency("me.xiaoye97.plugin.Dyson.LDBTool", "3.0.3")]
     public sealed class DeliveryBootstrap : BaseUnityPlugin
     {

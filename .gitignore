@@ -1,6 +1,7 @@
 # Generated output, local tools and caches
 **/artifacts/
 **/dist/
+**/backups/
 **/bin/
 **/obj/
 **/tools/pydeps/

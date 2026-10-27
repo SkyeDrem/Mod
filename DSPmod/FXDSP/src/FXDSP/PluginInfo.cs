@@ -5,6 +5,6 @@ namespace FXDSP
         // Keep the existing identity so the project rename preserves user config.
         public const string Guid = "dspfx.mod";
         public const string Name = "FXDSP";
-        public const string Version = "0.20.2";
+        public const string Version = "1.0.0";
     }
 }

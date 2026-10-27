@@ -143,8 +143,9 @@ internal static class Program
             position.Margin = 0; Require(MoneyDisplay.Percent(position.UnrealizedReturnRatio) == "—");
         });
         Check("holding time snapshots agree and labels switch language without showing units", () => {
-            var market = new FXDSP.Runtime.MarketSnapshot { HasPosition = true, PositionOpenTick = 17, CurrentTick = 197 };
-            var position = new FXDSP.Runtime.PositionSnapshot { OpenTick = 17, CurrentTick = 197 };
+            long currentTick = 17 + MarginMarket.QuoteIntervalTicks * 2;
+            var market = new FXDSP.Runtime.MarketSnapshot { HasPosition = true, PositionOpenTick = 17, CurrentTick = currentTick };
+            var position = new FXDSP.Runtime.PositionSnapshot { OpenTick = 17, CurrentTick = currentTick };
             Require(market.HeldCandles == 2 && position.HeldCandles == 2);
             Require(TextLocalization.Translate("持有时间 2") == "Holding Time 2");
             Require(TextLocalization.Translate("收益率") == "Return");

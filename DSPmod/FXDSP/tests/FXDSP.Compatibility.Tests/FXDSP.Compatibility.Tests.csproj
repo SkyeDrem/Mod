@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework>
+    <RestoreConfigFile>$(MSBuildThisFileDirectory)../../NuGet.Config</RestoreConfigFile>
+    <NuGetAudit>false</NuGetAudit><UseSharedCompilation>false</UseSharedCompilation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../src/FXDSP/Runtime/AbnormalityPatches.cs" Link="Runtime/AbnormalityPatches.cs" />
+  </ItemGroup>
+</Project>
