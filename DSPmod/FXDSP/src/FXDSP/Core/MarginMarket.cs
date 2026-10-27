@@ -65,7 +65,7 @@ namespace FXDSP.Core
             if (ObserveAchievementQuotes && (_position != null || _state.ItemId == MarketCatalog.BuildingCoin))
             { SynchronizeTime(); Observe(AchievementEvent.Quote); }
         }
-        public const long QuoteIntervalTicks = 90; // 1.5 game seconds.
+        public const long QuoteIntervalTicks = 60; // 1 game second.
         private const int Magic = 0x46584D47;
         private const int Version = 2;
         private const decimal HalfSpread = 0.0005m;

@@ -37,10 +37,11 @@ internal static class Program
             var f = Open(); SetMid(f.Market, 1.002m); Require(f.Market.UnrealizedPnL > 0);
             f.Market.Close(); Require(f.Market.LastSettlement.NetPnL < 0 && !f.Has(AchievementId.FirstProfit));
         });
-        Check("quick profit includes 180 ticks and excludes 181", () => {
-            foreach (long tick in new[] { 180L, 181L }) {
+        Check("quick profit includes two candles and excludes the next tick", () => {
+            long boundary = MarginMarket.QuoteIntervalTicks * 2;
+            foreach (long tick in new[] { boundary, boundary + 1 }) {
                 var f = Open(); f.Market.AdvanceTo(tick); SetMid(f.Market, 1.2m); f.Market.Close();
-                Require(f.Has(AchievementId.QuickProfit) == (tick == 180));
+                Require(f.Has(AchievementId.QuickProfit) == (tick == boundary));
             }
         });
         Check("floating loss threshold uses posted margin", () => {
@@ -55,8 +56,8 @@ internal static class Program
             Require(f.Has(AchievementId.FullLeverage));
         });
         Check("patient capital is strictly greater than 1000 candles", () => {
-            var f = Open(); Feed(f.Market).State.LastGameTick = 90000; Quote(f.Market); Require(!f.Has(AchievementId.PatientCapital));
-            Feed(f.Market).State.LastGameTick = 90090; Quote(f.Market); Require(f.Has(AchievementId.PatientCapital));
+            var f = Open(); Feed(f.Market).State.LastGameTick = MarginMarket.QuoteIntervalTicks * 1000; Quote(f.Market); Require(!f.Has(AchievementId.PatientCapital));
+            Feed(f.Market).State.LastGameTick = MarginMarket.QuoteIntervalTicks * 1001; Quote(f.Market); Require(f.Has(AchievementId.PatientCapital));
         });
         Check("value investing uses executable entry and exit", () => {
             var f = new Fixture(); f.Market.Deposit(100); SetMid(f.Market,.799m); f.Market.Open(PositionSide.Long,10,1);
@@ -181,8 +182,8 @@ internal static class Program
             var m=new MarginMarket(); m.AdvanceTo(0); m.Deposit(100); m.Open(PositionSide.Long,10,1);
             int count=0; m.ObserveAchievementQuotes=true;
             m.AchievementObserver=(market,kind,a,b)=> { if(kind==AchievementEvent.Quote) count++; };
-            for(int tick=1;tick<=89;tick++) m.AdvanceTo(tick); Require(count==0);
-            m.AdvanceTo(90); Require(count==1); m.AdvanceTo(270); Require(count==3);
+            for(int tick=1;tick<MarginMarket.QuoteIntervalTicks;tick++) m.AdvanceTo(tick); Require(count==0);
+            m.AdvanceTo(MarginMarket.QuoteIntervalTicks); Require(count==1); m.AdvanceTo(MarginMarket.QuoteIntervalTicks * 3); Require(count==3);
         });
         Console.WriteLine("Achievement checks passed: "+passed);
     }

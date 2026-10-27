@@ -152,11 +152,11 @@ internal static class Program
             Require(m.RecentLogs[m.RecentLogs.Count - 1].Contains("收益率 -110.00%"));
         });
         Check("each quote creates a candle with a body following the price direction", () => {
-            var prices = new[] { Point(0, 1), Point(90, 1.1m), Point(180, .9m), Point(270, 1.05m) };
+            var prices = new[] { Point(0, 1), Point(60, 1.1m), Point(120, .9m), Point(180, 1.05m) };
             var bars = MarketCandles.Build(prices); Require(bars.Count == 4);
             Near(1, bars[0].Open); Near(1, bars[0].Close);
             Near(1, bars[1].Open); Near(1.1m, bars[1].Close); Near(1.1m, bars[1].High);
-            Require(bars[2].StartTick == 180); Near(1.1m, bars[2].Open); Near(.9m, bars[2].Close);
+            Require(bars[2].StartTick == 120); Near(1.1m, bars[2].Open); Near(.9m, bars[2].Close);
             Near(.9m, bars[2].Low); Near(1.1m, bars[2].High);
         });
         Check("candles handle empty single partial and gapped history without synthetic wicks", () => {
@@ -166,12 +166,12 @@ internal static class Program
             Near(1.5m, bars[1].Open);
             Near(.8m, bars[2].Open); Near(.8m, bars[2].High); Near(.8m, bars[2].Low);
         });
-        Check("quotes advance exactly once per 90 game ticks", () => {
+        Check("quotes advance exactly once per 60 game ticks", () => {
             var m = new MarginMarket(); m.AdvanceTo(0); var first = m.MidPrice;
-            m.AdvanceTo(89); Near(first, m.MidPrice); Require(m.History.Count == 1);
-            m.AdvanceTo(90); Require(m.History.Count == 2 && m.MidPrice != first);
-            var second = m.MidPrice; m.AdvanceTo(179); Near(second, m.MidPrice);
-            m.AdvanceTo(180); Require(m.History.Count == 3 && m.MidPrice != second);
+            m.AdvanceTo(59); Near(first, m.MidPrice); Require(m.History.Count == 1);
+            m.AdvanceTo(60); Require(m.History.Count == 2 && m.MidPrice != first);
+            var second = m.MidPrice; m.AdvanceTo(119); Near(second, m.MidPrice);
+            m.AdvanceTo(120); Require(m.History.Count == 3 && m.MidPrice != second);
         });
         Check("legacy five-second margin cadence migrates without retroactive quotes or lost position", () => {
             var old = new MarginMarket(); old.AdvanceTo(0); old.Deposit(100); old.Open(PositionSide.Long, 2, 10);
@@ -181,8 +181,8 @@ internal static class Program
             Near(old.State.Balance, restored.State.Balance); Near(old.MidPrice, restored.MidPrice);
             Require(restored.Position != null && restored.History[0].GameTick == 0);
             Require(restored.History[restored.History.Count - 1].GameTick == 279);
-            restored.AdvanceTo(368); Near(old.MidPrice, restored.MidPrice);
-            restored.AdvanceTo(369); Require(restored.MidPrice != old.MidPrice);
+            restored.AdvanceTo(338); Near(old.MidPrice, restored.MidPrice);
+            restored.AdvanceTo(339); Require(restored.MidPrice != old.MidPrice);
             Require(restored.Position != null); Equal(Bytes(restored), Bytes(Read(Bytes(restored))));
         });
         Check("cosmetic wicks are stable enclose OHLC and never alter trading randomness", () => {
@@ -358,13 +358,14 @@ internal static class Program
         });
         Check("reenabling does not backfill disabled prices and retains the next random draw", () => {
             var book = new MarketBook(true); var copper = book.Get(1002);
-            copper.Deposit(10); copper.AdvanceTo(100); copper.AdvanceTo(190);
-            var control = Read(Bytes(copper)); book.SetResourceEnabled(1002, false, 190);
+            long beforePause = 100 + MarginMarket.QuoteIntervalTicks;
+            copper.Deposit(10); copper.AdvanceTo(100); copper.AdvanceTo(beforePause);
+            var control = Read(Bytes(copper)); book.SetResourceEnabled(1002, false, beforePause);
             decimal price = copper.MidPrice; book.SetResourceEnabled(1002, true, 100000);
             Near(price, copper.MidPrice); Near(10, copper.State.Balance);
-            copper.AdvanceTo(100089); Near(price, copper.MidPrice);
-            copper.AdvanceTo(100090); control.AdvanceTo(280); Near(control.MidPrice, copper.MidPrice);
-            Require(copper.History[copper.History.Count - 1].GameTick == 100090);
+            copper.AdvanceTo(100000 + MarginMarket.QuoteIntervalTicks - 1); Near(price, copper.MidPrice);
+            copper.AdvanceTo(100000 + MarginMarket.QuoteIntervalTicks); control.AdvanceTo(beforePause + MarginMarket.QuoteIntervalTicks); Near(control.MidPrice, copper.MidPrice);
+            Require(copper.History[copper.History.Count - 1].GameTick == 100000 + MarginMarket.QuoteIntervalTicks);
         });
         Check("holding resources cannot be disabled and building currency cannot be toggled", () => {
             var book = new MarketBook(true); var copper = book.Get(1002); copper.AdvanceTo(100); copper.Deposit(100);
