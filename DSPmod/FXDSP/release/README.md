@@ -70,7 +70,7 @@ K线图显示行情、价格刻度和当前持仓的爆仓线。每个物品市�
 ![物流塔交付平台](https://raw.githubusercontent.com/SkyeDrem/Mod/main/DSPmod/FXDSP/image/readme/%E7%89%A9%E6%B5%81%E5%A1%94%E4%BA%A4%E4%BB%98%E5%B9%B3%E5%8F%B0.png)
 
 ## 成就系统
-平台内有独立的交易成就页面，达成后弹窗提示。欢迎来B站视频评论区提供好玩的成就想法。
+平台内有独立的交易成就页面，达成后弹窗提示。欢迎来[B站视频](https://www.bilibili.com/video/BV18ux569EwT/)评论区提供好玩的成就想法。
 
 ![交易平台成就页面](https://raw.githubusercontent.com/SkyeDrem/Mod/main/DSPmod/FXDSP/image/readme/%E6%88%90%E5%B0%B1%E7%B3%BB%E7%BB%9F.png)
 
@@ -96,7 +96,7 @@ K线图显示行情、价格刻度和当前持仓的爆仓线。每个物品市�
 
 源码和构建说明：[GitHub · SkyeDrem/Mod — FXDSP](https://github.com/SkyeDrem/Mod/tree/main/DSPmod/FXDSP)。
 
-可至 **B站@SkyeDrem** mod宣传片评论区反馈问题或提出建议。
+可至 **B站@SkyeDrem** [mod宣传片](https://www.bilibili.com/video/BV18ux569EwT/)评论区反馈问题或提出建议。
 
 ---
 
@@ -170,7 +170,7 @@ Configure an item in a delivery platform to bind its trading account automatical
 
 ## Achievements
 
-The platform has its own trading achievement page, with notifications when achievements are completed. Suggestions for fun new achievements are welcome in the comments on the bilibili video.
+The platform has its own trading achievement page, with notifications when achievements are completed. Suggestions for fun new achievements are welcome in the comments on the [bilibili video](https://www.bilibili.com/video/BV18ux569EwT/).
 
 ![In-platform achievements](https://raw.githubusercontent.com/SkyeDrem/Mod/main/DSPmod/FXDSP/image/readme/%E6%88%90%E5%B0%B1%E7%B3%BB%E7%BB%9FEnglish.png)
 
@@ -196,4 +196,4 @@ A built-in local abnormality bypass is enabled by default to support achievement
 
 Source code and build instructions: [GitHub · SkyeDrem/Mod — FXDSP](https://github.com/SkyeDrem/Mod/tree/main/DSPmod/FXDSP).
 
-For bug reports or suggestions, please leave a comment on the mod's promotional video on **bilibili @SkyeDrem**.
+For bug reports or suggestions, please leave a comment on the [mod's promotional video](https://www.bilibili.com/video/BV18ux569EwT/) on **bilibili @SkyeDrem**.
