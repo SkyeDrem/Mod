@@ -1,6 +1,6 @@
 {
   "name": "FXDSP",
-  "version_number": "1.0.0",
+  "version_number": "1.1.0",
   "website_url": "https://github.com/SkyeDrem/Mod/tree/main/DSPmod/FXDSP",
   "description": "老实铺产线很枯燥吧？成为FX战士伊卡洛斯，进行物品杠杆交易、使用建筑币兑换建筑、获利资源接入工厂流水线，还有成就系统。Tired of laying production lines? Become FX Warrior Icarus: trade items with leverage, exchange Building Coins for buildings, feed profits into your factory, and unlock achievements.",
   "dependencies": [

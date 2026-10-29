@@ -69,6 +69,7 @@ namespace FXDSP.Core
         private readonly IReadOnlyList<string> _logView;
         private readonly decimal _feeRate;
         private uint _randomState;
+        internal void ReseedRandomStream() { _randomState = MarketRandom.NewSeed(_randomState); }
         private decimal _momentum;
         private long _lastPriceTick;
         private long _quoteIntervalTicks = QuoteIntervalTicks;

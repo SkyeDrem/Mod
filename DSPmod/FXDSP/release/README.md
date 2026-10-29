@@ -26,6 +26,8 @@
 
 K线图显示行情、价格刻度和当前持仓的爆仓线。每个物品市场可以持有一笔做多或做空仓位，平仓后才能重新开仓。持有时间以经过的 K线数量显示。
 
+读取存档会保留当时的行情和持仓，但之后的走势会重新随机生成，SL 无法重演固定的未来行情。
+
 - **浮动盈亏**：持仓随行情变化的盈亏，收益率按浮动盈亏除以保证金计算。
 - **累计盈亏**：该物品账户的累计盈亏，收益率按累计盈亏除以净投入计算。净投入为总存入减总提取，非正时显示“—”。
 - **平仓结算**：显示本次扣除开仓费和平仓费后的净盈亏与收益率。
@@ -125,6 +127,8 @@ Go all-in at 100x leverage to **chase short-term rallies**, or practice patient 
 **Allocation** determines how much of your available funds goes into a trade. **Leverage** magnifies both gains and losses from the same price move. Leverage ranges from **1x to 100x**.
 
 The candlestick chart shows prices, price levels and the current position's liquidation line. Each item market supports one long or short position at a time; close it before opening another. Holding time is displayed as the number of elapsed candlesticks.
+
+Loading a save retains its prices and positions, but future price movements are randomized again. Reloading cannot replay a fixed future market sequence.
 
 - **Unrealized P&L** changes with the market while a position is open. Its return is unrealized P&L divided by margin.
 - **Cumulative P&L** is the item's cumulative account result. Its return is cumulative P&L divided by net deposits: total deposits minus total withdrawals. Non-positive net deposits display “—”.

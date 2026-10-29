@@ -15,7 +15,9 @@ internal static class Program
         {
             Run("mid-game first activation cannot silently initialize or save", UnknownAccount);
             Run("explicit new/missing-data callback creates zero account", ZeroAccount);
-            Run("matching world/tick restores every byte of market state", MatchingSnapshot);
+            Run("matching world/tick restores market state and only replaces its random seed", MatchingSnapshot);
+            Run("repeated SL branches future prices while F6 retains the loaded branch", RepeatedLoadBranches);
+            Run("new worlds and newly selected items receive independent initial streams", FreshRandomStreams);
             Run("wrong world locks and preserves original payload and prior assets", WrongWorld);
             Run("wrong save tick locks and preserves original payload", WrongTick);
             Run("corrupt and trailing records lock without clearing prior assets", CorruptSnapshot);
@@ -31,7 +33,7 @@ internal static class Program
             Run("quote boundary between periodic caches survives immediate F6", QuoteBoundaryHandoff);
             Run("leaving game releases the cached GameData reference", MenuReleasesData);
             Run("v0.2 sidecar and live handoff migrate to copper margin once", LegacySnapshotAndHandoff);
-            Run("three market snapshots preserve balances positions and random streams", ThreeMarketSnapshot);
+            Run("all market snapshots preserve accounts and reseed their future streams", ThreeMarketSnapshot);
             Run("F6 preserves all three markets and switching saves clears each account", ThreeMarketHandoff);
             Run("v0.4 active copper handoff adds empty plastic and matrix accounts", MarginLegacyHandoff);
             Run("resource selection and frozen assets survive live F6 and disk reload", ResourceSelectionPersistence);
@@ -122,7 +124,55 @@ internal static class Program
         MarketSession second = new MarketSession();
         Load(second, snapshot);
         Require(second.CanTrade && second.CanSave, "Matching snapshot must restore authority.");
-        Equal(market, MarketBytes(second.Market), "Market round trip lost account/history/random state.");
+        OnlyRandomChanged(market, second.Market);
+    }
+
+    private static void RepeatedLoadBranches()
+    {
+        var first = Fresh(); first.Market.Deposit(100);
+        first.Market.Open(PositionSide.Long, 10, 2);
+        GameMain.gameTick += MarginMarket.QuoteIntervalTicks * 7; first.Tick();
+        long savedTick = GameMain.gameTick;
+        byte[] payload = Save(first), savedMarket = MarketBytes(first.Market);
+        ClearHandoff(); var left = new MarketSession(); Load(left, payload);
+        OnlyRandomChanged(savedMarket, left.Market);
+        byte[] loaded = MarketBytes(left.Market);
+        var leftPrices = new decimal[8];
+        for (int i = 0; i < leftPrices.Length; i++)
+        {
+            GameMain.gameTick += MarginMarket.QuoteIntervalTicks;
+            left.Tick(); leftPrices[i] = left.Market.MidPrice;
+        }
+
+        GameMain.gameTick = savedTick; ClearHandoff();
+        var right = new MarketSession(); Load(right, payload);
+        OnlyRandomChanged(savedMarket, right.Market);
+        // Compare seeds too: prices are rounded, so two distinct seeds could
+        // theoretically produce the same first displayed price.
+        uint leftSeed = RandomState(ReadMarket(loaded));
+        uint rightSeed = RandomState(right.Market);
+        Require(leftSeed != rightSeed, "Repeated load reused the previous load's random stream.");
+        var control = ReadMarket(MarketBytes(right.Market));
+        var hot = new MarketSession();
+        Equal(MarketBytes(control), MarketBytes(hot.Market), "F6 reseeded a freshly loaded branch.");
+        bool differentPrice = false;
+        for (int i = 0; i < 8; i++)
+        {
+            GameMain.gameTick += MarginMarket.QuoteIntervalTicks;
+            hot.Tick(); control.AdvanceTo(GameMain.gameTick);
+            differentPrice |= hot.Market.MidPrice != leftPrices[i];
+            Equal(MarketBytes(control), MarketBytes(hot.Market), "F6 changed future prices after SL.");
+        }
+        Require(differentPrice, "SL did not change future prices.");
+    }
+
+    private static void FreshRandomStreams()
+    {
+        var first = Fresh(); first.SetResourceEnabled(1001, true);
+        uint copper = RandomState(first.Market), iron = RandomState(first.GetMarket(1001));
+        first.IntoOtherSave(); first.SetResourceEnabled(1001, true);
+        Require(copper != RandomState(first.Market) || iron != RandomState(first.GetMarket(1001)),
+            "New world reused fixed per-item seeds.");
     }
 
     private static void WrongWorld()
@@ -380,12 +430,15 @@ internal static class Program
         ClearHandoff(); var restored = new MarketSession(); Load(restored, payload);
         Require(restored.CanTrade, "Three-market snapshot did not restore.");
         foreach (var market in first.Markets)
-            Equal(MarketBytes(market), MarketBytes(restored.GetMarket(market.State.ItemId)), "An item account changed during disk restore.");
-        GameMain.gameTick += 450;
-        foreach (var market in first.Markets) market.AdvanceTo(GameMain.gameTick);
-        restored.Tick();
+            OnlyRandomChanged(MarketBytes(market), restored.GetMarket(market.State.ItemId));
+        byte[] savedAgain = Save(restored);
+        var hot = new MarketSession();
         foreach (var market in first.Markets)
-            Equal(MarketBytes(market), MarketBytes(restored.GetMarket(market.State.ItemId)), "An item's future prices changed after restore.");
+            Equal(MarketBytes(restored.GetMarket(market.State.ItemId)), MarketBytes(hot.GetMarket(market.State.ItemId)),
+                "F6 failed to retain a reseeded market.");
+        ClearHandoff(); var disk = new MarketSession(); Load(disk, savedAgain);
+        foreach (var market in hot.Markets)
+            OnlyRandomChanged(MarketBytes(market), disk.GetMarket(market.State.ItemId));
     }
 
     private static void ThreeMarketHandoff()
@@ -436,7 +489,11 @@ internal static class Program
         Require(live.GetMarket(1001).State.Balance == 50 && live.FindMarket(1003) == null, "F6 created or lost resource accounts.");
         byte[] snapshot = Save(live); ClearHandoff(); var disk = new MarketSession(); Load(disk, snapshot);
         Require(disk.CanTrade && !disk.IsMarketEnabled(1002) && disk.IsMarketEnabled(1001), "Disk load lost selection.");
-        Equal(frozen, MarketBytes(disk.Market), "Disk load changed dormant account.");
+        OnlyRandomChanged(frozen, disk.Market);
+        byte[] reseeded = MarketBytes(disk.Market);
+        var hotAfterLoad = new MarketSession();
+        Equal(reseeded, MarketBytes(hotAfterLoad.Market), "Dormant export cache lost its new random seed.");
+        disk = hotAfterLoad;
         decimal price = disk.Market.MidPrice; disk.SetResourceEnabled(1002, true);
         Require(disk.Market.MidPrice == price && disk.Market.State.Balance == 100, "Resuming backfilled disabled prices or lost money.");
     }
@@ -451,7 +508,7 @@ internal static class Program
         Equal(frozen, MarketBytes(live.GetMarket(6006)), "F6 changed frozen matrix assets/history.");
         var snapshot = Save(live); ClearHandoff(); var disk = new MarketSession(); Load(disk, snapshot);
         Require(disk.CanTrade && !disk.IsMarketEnabled(6006), "Disk load lost matrix selection.");
-        Equal(frozen, MarketBytes(disk.GetMarket(6006)), "Disk load changed frozen matrix assets/history.");
+        OnlyRandomChanged(frozen, disk.GetMarket(6006));
         var price = disk.GetMarket(6006).MidPrice; disk.SetResourceEnabled(6006, true);
         Require(disk.GetMarket(6006).MidPrice == price && disk.GetMarket(6006).State.Balance == 120, "Matrix resume changed price or funds.");
     }
@@ -561,6 +618,36 @@ internal static class Program
             market.Export(writer);
             return stream.ToArray();
         }
+    }
+
+    private static MarginMarket ReadMarket(byte[] bytes)
+    {
+        using (var stream = new MemoryStream(bytes))
+        using (var reader = new BinaryReader(stream)) return MarginMarket.Import(reader);
+    }
+
+    private static SpotMarket Feed(MarginMarket market)
+    {
+        return (SpotMarket)typeof(MarginMarket).GetField("_feed",
+            System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic).GetValue(market);
+    }
+
+    private static System.Reflection.FieldInfo RandomField
+    {
+        get { return typeof(SpotMarket).GetField("_randomState",
+            System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic); }
+    }
+
+    private static uint RandomState(MarginMarket market) { return (uint)RandomField.GetValue(Feed(market)); }
+
+    private static void OnlyRandomChanged(byte[] before, MarginMarket after)
+    {
+        var original = ReadMarket(before);
+        uint oldSeed = RandomState(original), newSeed = RandomState(after);
+        Require(newSeed != 0 && newSeed != oldSeed, "Disk load did not replace the random seed.");
+        var normalized = ReadMarket(MarketBytes(after));
+        RandomField.SetValue(Feed(normalized), oldSeed);
+        Equal(before, MarketBytes(normalized), "Disk load changed more than the random seed.");
     }
 
     private static void Require(bool condition, string message)

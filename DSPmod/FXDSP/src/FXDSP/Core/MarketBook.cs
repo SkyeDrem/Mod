@@ -122,8 +122,18 @@ namespace FXDSP.Core
 
         private MarginMarket Create(int id)
         {
-            uint seed = id == MarketCatalog.Copper ? 0x9E3779B9u : unchecked(0x9E3779B9u ^ ((uint)id * 0x85EBCA6Bu));
-            return new MarginMarket(id, feeRate: _feeRate, seed: seed == 0 ? 1u : seed);
+            return new MarginMarket(id, feeRate: _feeRate, seed: MarketRandom.NewSeed());
+        }
+
+        internal void ReseedRandomStreams()
+        {
+            foreach (var market in _markets)
+            {
+                market.ReseedRandomStream();
+                // Dormant accounts export cached bytes; refresh them as well so
+                // the new seed survives saving and F6 without advancing prices.
+                if (!IsEnabled(market.State.ItemId)) CacheInactive(market);
+            }
         }
         public bool SetTradingFeeRate(decimal rate)
         {

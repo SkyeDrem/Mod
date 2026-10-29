@@ -300,6 +300,9 @@ namespace FXDSP.Persistence
             }
 
             _book = snapshot.Book;
+            // Only a validated disk load starts a new future. Raw deserialization
+            // and same-session F6 handoff must retain the exact random stream.
+            _book.ReseedRandomStreams();
             Delivery = snapshot.Delivery;
             Achievements = snapshot.Achievements;
             _achievementTracker = new AchievementTracker(_book, Achievements);

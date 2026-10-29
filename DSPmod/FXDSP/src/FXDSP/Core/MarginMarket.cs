@@ -73,6 +73,7 @@ namespace FXDSP.Core
         private const decimal Scale = 1000000m;
         private static readonly Encoding Utf8 = new UTF8Encoding(false, true);
         private readonly SpotMarket _feed;
+        internal void ReseedRandomStream() { _feed.ReseedRandomStream(); }
         private readonly MarginAccountState _state;
         private decimal _feeRate;
         private readonly List<string> _logs = new List<string>();
