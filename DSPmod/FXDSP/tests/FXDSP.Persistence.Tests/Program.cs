@@ -117,6 +117,8 @@ internal static class Program
         MarketSession first = Fresh();
         first.Market.Deposit(100);
         first.Market.Open(PositionSide.Long, 10m, 5);
+        first.Market.AddMargin(7m);
+        first.Market.AddPosition(5m);
         first.PreserveForReload();
         byte[] snapshot = Save(first);
         byte[] market = MarketBytes(first.Market);
@@ -256,8 +258,10 @@ internal static class Program
         MarketSession first = Fresh();
         first.Market.Deposit(100);
         first.Market.Open(PositionSide.Long, 10m, 5);
+        first.Market.AddMargin(7m);
         GameMain.gameTick = 1000;
         first.Tick();
+        first.Market.AddPosition(5m);
         first.PreserveForReload();
         byte[] expected = MarketBytes(first.Market);
         MarketSession second = new MarketSession();

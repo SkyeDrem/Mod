@@ -14,11 +14,13 @@ namespace FXDSP.Core
         public bool Liquidated { get; internal set; }
         public PositionSide Side { get; internal set; }
         public int Leverage { get; internal set; }
+        public decimal EffectiveLeverage { get; internal set; }
         public decimal Margin { get; internal set; }
         public decimal NetPnL { get; internal set; }
         public decimal Fees { get; internal set; }
         public decimal Returned { get; internal set; }
         public decimal EntryPrice { get; internal set; }
+        public decimal FirstEntryPrice { get; internal set; }
         public decimal ExitPrice { get; internal set; }
         public long OpenTick { get; internal set; }
         public long CloseTick { get; internal set; }
@@ -29,11 +31,15 @@ namespace FXDSP.Core
     {
         public PositionSide Side { get; internal set; }
         public decimal Margin { get; internal set; }
+        // Collateral committed by trades. Margin also includes collateral-only top-ups.
+        public decimal OpeningMargin { get; internal set; }
         public int Leverage { get; internal set; }
         public decimal EntryPrice { get; internal set; }
+        public decimal FirstEntryPrice { get; internal set; }
         public long OpenTick { get; internal set; }
         public decimal OpeningFee { get; internal set; }
-        public decimal Notional { get { return checked(Margin * Leverage); } }
+        public decimal Notional { get { return checked(OpeningMargin * Leverage); } }
+        public decimal EffectiveLeverage { get { return Notional / Margin; } }
     }
 
     public sealed class MarginAccountState
@@ -67,7 +73,7 @@ namespace FXDSP.Core
         }
         public const long QuoteIntervalTicks = 60; // 1 game second.
         private const int Magic = 0x46584D47;
-        private const int Version = 2;
+        private const int Version = 4;
         private const decimal HalfSpread = 0.0005m;
         private const decimal MaintenanceRate = 0.05m;
         private const decimal Scale = 1000000m;
@@ -80,7 +86,7 @@ namespace FXDSP.Core
         private readonly List<PricePoint> _history = new List<PricePoint>();
         private readonly IReadOnlyList<PricePoint> _historyView;
         private MarginPosition _position;
-        private decimal _liquidationPrice;
+        private decimal? _liquidationPrice;
 
         public MarginAccountState State { get { SynchronizeTime(); return _state; } }
         public MarginPosition Position { get { return _position; } }
@@ -94,7 +100,7 @@ namespace FXDSP.Core
         {
             if (rate < 0m || rate >= 1m) throw new InvalidOperationException("手续费率无效。");
             if (_feeRate == rate) return false;
-            _feeRate = rate; _liquidationPrice = 0m;
+            _feeRate = rate; _liquidationPrice = null;
             return true;
         }
         public decimal UsedMargin { get { return _position == null ? 0m : _position.Margin; } }
@@ -107,11 +113,17 @@ namespace FXDSP.Core
             get
             {
                 if (_position == null) return 0m;
-                if (_liquidationPrice > 0m) return _liquidationPrice;
+                if (_liquidationPrice.HasValue) return _liquidationPrice.Value;
                 // Solve against the very same executable bid/ask, fee rounding
                 // and maintenance rule used by TryLiquidate, on the chart's mid axis.
                 decimal low = 0m, high = _position.EntryPrice * (2m / (1m - _feeRate));
                 bool longSide = _position.Side == PositionSide.Long;
+                if (!longSide && !WouldLiquidate(high)) high = Math.Max(high, SpotMarket.MaxMidPrice);
+                if (longSide ? !WouldLiquidate(low) : !WouldLiquidate(high))
+                {
+                    _liquidationPrice = 0m;
+                    return 0m;
+                }
                 for (int i = 0; i < 96 && high - low > .0000000001m; i++)
                 {
                     decimal mid = low + (high - low) / 2m;
@@ -119,7 +131,7 @@ namespace FXDSP.Core
                     else high = mid;
                 }
                 _liquidationPrice = low + (high - low) / 2m;
-                return _liquidationPrice;
+                return _liquidationPrice.Value;
             }
         }
         public IReadOnlyList<string> RecentLogs { get { return _logs.AsReadOnly(); } }
@@ -178,6 +190,14 @@ namespace FXDSP.Core
             return Fee(checked(margin * leverage));
         }
 
+        public decimal MarginAdditionForAllocation(int percentage)
+        {
+            if (percentage < 1 || percentage > 100) throw new InvalidOperationException("仓位比例无效。");
+            if (percentage == 100) return _state.Balance;
+            decimal budget = _state.Balance / 100m * percentage;
+            return budget - budget % (1m / Scale);
+        }
+
         public decimal OpenCost(decimal margin, int leverage)
         {
             return checked(margin + OpenFee(margin, leverage));
@@ -192,25 +212,74 @@ namespace FXDSP.Core
                 throw new InvalidOperationException("仓位方向无效。");
             if (_position != null) throw new InvalidOperationException("请先平掉现有仓位，再开新仓。");
             decimal fee = OpenFee(margin, leverage);
+            decimal entryPrice = side == PositionSide.Long ? Ask : Bid;
+            var position = new MarginPosition { Side = side, Margin = margin, OpeningMargin = margin, Leverage = leverage,
+                EntryPrice = entryPrice, FirstEntryPrice = entryPrice, OpenTick = _feed.State.LastGameTick, OpeningFee = fee };
+            ReserveEntryFunds(position, margin, fee);
+            string message = Log((side == PositionSide.Long ? "开多" : "开空") + Money(margin) + "保证金");
+            Observe(AchievementEvent.Opened, allocationPercent);
+            TryLiquidate();
+            return message;
+        }
+
+        public string AddPosition(decimal margin)
+        {
+            var existing = _position;
+            if (existing == null) throw new InvalidOperationException("当前没有持仓。");
+            if (WouldLiquidate(MidPrice)) throw new InvalidOperationException("持仓已触发强平。");
+            decimal fee = OpenFee(margin, existing.Leverage);
+            decimal executionPrice = existing.Side == PositionSide.Long ? Ask : Bid;
+            decimal addedNotional = checked(margin * existing.Leverage);
+            // Price is weighted by units, including units already merged into this position.
+            decimal entryPrice = existing.EntryPrice == executionPrice ? executionPrice
+                : checked((existing.Notional + addedNotional) /
+                    (existing.Notional / existing.EntryPrice + addedNotional / executionPrice));
+            var position = new MarginPosition
+            {
+                Side = existing.Side,
+                Leverage = existing.Leverage,
+                EntryPrice = entryPrice,
+                FirstEntryPrice = existing.FirstEntryPrice,
+                OpenTick = existing.OpenTick,
+                OpeningFee = checked(existing.OpeningFee + fee),
+                OpeningMargin = checked(existing.OpeningMargin + margin),
+                Margin = checked(existing.Margin + margin)
+            };
+            ReserveEntryFunds(position, margin, fee);
+            string message = Log("已加仓 " + Money(margin) + " 保证金，手续费 " + Money(fee));
+            Observe(AchievementEvent.FundsChanged);
+            TryLiquidate();
+            return message;
+        }
+
+        private void ReserveEntryFunds(MarginPosition position, decimal margin, decimal fee)
+        {
             decimal cost = checked(margin + fee);
             if (_state.Balance < cost)
                 throw new InvalidOperationException("可用余额不足以支付保证金和开仓费。");
             var nextRealized = checked(_state.RealizedPnL - fee);
             var nextFees = checked(_state.FeesPaid + fee);
-            var position = new MarginPosition { Side = side, Margin = margin, Leverage = leverage,
-                EntryPrice = side == PositionSide.Long ? Ask : Bid, OpenTick = _feed.State.LastGameTick };
             // Preflight valuation before reserving any funds.
             PnL(position);
             _state.Balance -= cost;
             _state.RealizedPnL = nextRealized;
             _state.FeesPaid = nextFees;
             _position = position;
-            _position.OpeningFee = fee;
-            _liquidationPrice = 0m;
-            string message = Log((side == PositionSide.Long ? "开多" : "开空") + Money(margin) + "保证金");
-            Observe(AchievementEvent.Opened, allocationPercent);
-            TryLiquidate();
-            return message;
+            _liquidationPrice = null;
+        }
+
+        public string AddMargin(decimal amount)
+        {
+            if (_position == null) throw new InvalidOperationException("当前没有持仓。");
+            if (amount <= 0m) throw new InvalidOperationException("保证金必须大于零。");
+            if (_state.Balance < amount) throw new InvalidOperationException("可用余额不足。");
+            if (WouldLiquidate(MidPrice)) throw new InvalidOperationException("持仓已触发强平。");
+
+            decimal margin = checked(_position.Margin + amount);
+            _state.Balance -= amount;
+            _position.Margin = margin;
+            _liquidationPrice = null;
+            return Log("已追加保证金 " + Money(amount));
         }
 
         public string Close()
@@ -335,7 +404,7 @@ namespace FXDSP.Core
                 ? decimal.Floor(mid * (1m - HalfSpread) * Scale) / Scale
                 : decimal.Ceiling(mid * (1m + HalfSpread) * Scale) / Scale;
             return checked(_position.Margin + PnL(_position, exit))
-                <= checked(_position.Margin * MaintenanceRate + ExitFee(_position, exit));
+                <= checked(_position.OpeningMargin * MaintenanceRate + ExitFee(_position, exit));
         }
 
         private void TryLiquidate()
@@ -361,9 +430,10 @@ namespace FXDSP.Core
             decimal entryFee = _position.OpeningFee;
             return new PositionSettlement {
                 ItemId = _state.ItemId, Liquidated = liquidation, Side = _position.Side, Leverage = _position.Leverage,
-                Margin = _position.Margin, NetPnL = realizedDelta - entryFee,
+                Margin = _position.Margin, EffectiveLeverage = _position.EffectiveLeverage, NetPnL = realizedDelta - entryFee,
                 Fees = entryFee + paidFee, Returned = returned,
-                EntryPrice = _position.EntryPrice, ExitPrice = _position.Side == PositionSide.Long ? Bid : Ask,
+                EntryPrice = _position.EntryPrice, FirstEntryPrice = _position.FirstEntryPrice,
+                ExitPrice = _position.Side == PositionSide.Long ? Bid : Ask,
                 OpenTick = _position.OpenTick, CloseTick = _feed.State.LastGameTick
             };
         }
@@ -395,6 +465,8 @@ namespace FXDSP.Core
                 writer.Write((int)_position.Side); writer.Write(_position.Margin);
                 writer.Write(_position.Leverage); writer.Write(_position.EntryPrice); writer.Write(_position.OpenTick);
                 writer.Write(_position.OpeningFee);
+                writer.Write(_position.OpeningMargin);
+                writer.Write(_position.FirstEntryPrice);
             }
             _feed.Export(writer);
             writer.Write(_logs.Count);
@@ -418,7 +490,7 @@ namespace FXDSP.Core
                     return FromLegacy(SpotMarket.Import(reader));
                 }
                 int version = reader.ReadInt32();
-                if (magic != Magic || (version != 1 && version != Version))
+                if (magic != Magic || version < 1 || version > Version)
                     throw new InvalidDataException("不支持的铜本位账户格式。");
                 decimal balance = reader.ReadDecimal(), realized = reader.ReadDecimal(), fees = reader.ReadDecimal();
                 long deposited = reader.ReadInt64(), withdrawn = reader.ReadInt64();
@@ -432,9 +504,13 @@ namespace FXDSP.Core
                         EntryPrice = reader.ReadDecimal(), OpenTick = reader.ReadInt64() };
                     position.OpeningFee = version >= 2 ? reader.ReadDecimal()
                         : decimal.Ceiling(position.Margin * position.Leverage * rate * Scale) / Scale;
-                    ValidateOrder(position.Margin, position.Leverage);
+                    position.OpeningMargin = version >= 3 ? reader.ReadDecimal() : position.Margin;
+                    position.FirstEntryPrice = version >= 4 ? reader.ReadDecimal() : position.EntryPrice;
+                    ValidateOrder(position.OpeningMargin, position.Leverage);
                     if ((position.Side != PositionSide.Long && position.Side != PositionSide.Short)
-                        || position.EntryPrice <= 0m || position.OpenTick < 0 || position.OpeningFee < 0m || position.OpeningFee > fees)
+                        || position.Margin < position.OpeningMargin
+                        || position.EntryPrice <= 0m || position.FirstEntryPrice <= 0m || position.OpenTick < 0
+                        || position.OpeningFee < 0m || position.OpeningFee > fees)
                         throw new InvalidDataException("仓位数据无效。");
                 }
                 var feed = SpotMarket.Import(reader);

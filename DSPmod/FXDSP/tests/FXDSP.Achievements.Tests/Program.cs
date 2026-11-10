@@ -65,6 +65,18 @@ internal static class Program
             var g = new Fixture(); g.Market.Deposit(100); SetMid(g.Market,.8m); g.Market.Open(PositionSide.Long,10,1);
             SetMid(g.Market,1.1m); g.Market.Close(); Require(!g.Has(AchievementId.ValueInvesting));
         });
+        Check("adding to a position keeps the original entry for value investing", () => {
+            foreach (bool qualifies in new[] { true, false }) {
+                var f = new Fixture(); f.Market.Deposit(100);
+                SetMid(f.Market, qualifies ? .79m : .90m);
+                f.Market.Open(PositionSide.Long, 10, 1);
+                SetMid(f.Market, qualifies ? 1.05m : .65m);
+                f.Market.AddPosition(30);
+                Require((f.Market.Position.EntryPrice <= .8m) != qualifies);
+                SetMid(f.Market, 1.10m); f.Market.Close();
+                Require(f.Has(AchievementId.ValueInvesting) == qualifies);
+            }
+        });
         Check("full liquidation uses original allocation flag", () => {
             foreach(int allocation in new[] {99,100}) {
                 var f = new Fixture(); f.Market.Deposit(100);

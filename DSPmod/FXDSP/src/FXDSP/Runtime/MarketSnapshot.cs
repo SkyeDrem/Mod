@@ -7,14 +7,14 @@ namespace FXDSP.Runtime
 {
     internal enum MarketCommand { Deposit, Withdraw, OpenLong, OpenShort, ClosePosition, ChangeLeverage, SelectMarket,
         SelectExchangeItem, BuyBuilding, SellBuilding, CloseMarketPosition, CloseAllPositions,
-        EnableResource, DisableResource, CloseHudPosition, SelectExchangeTier, UseBackpack, UseDelivery }
+        EnableResource, DisableResource, CloseHudPosition, SelectExchangeTier, UseBackpack, UseDelivery, AddMargin, AddPosition }
 
     internal sealed class PositionSnapshot
     {
         public int ItemId;
         public string Name, Direction;
         public Sprite Icon;
-        public int Leverage;
+        public decimal Leverage;
         public decimal Margin, EntryPrice, CurrentPrice, LiquidationPrice, UnrealizedPnL;
         public decimal? UnrealizedReturnRatio { get { return AccountPerformance.UnrealizedReturnRatio(UnrealizedPnL, Margin); } }
         public long OpenTick, CurrentTick;
@@ -69,12 +69,15 @@ namespace FXDSP.Runtime
         public decimal OpenCost;
         public decimal OpenFee;
         public decimal OrderMargin;
+        public decimal AdditionalMargin;
         public int SelectedLeverage = 5;
         public bool HasPosition;
         public string PositionDirection = "";
-        public int PositionLeverage;
+        public decimal PositionLeverage;
+        public int PositionOpeningLeverage;
         public decimal EntryPrice;
         public decimal PositionMargin;
+        public decimal PositionNotional;
         public long PositionOpenTick, CurrentTick;
         public long? HeldCandles { get { return HasPosition ? (long?)AccountPerformance.HeldCandles(PositionOpenTick, CurrentTick) : null; } }
         public decimal? UnrealizedReturnRatio

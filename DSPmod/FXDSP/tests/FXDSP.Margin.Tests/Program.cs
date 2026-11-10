@@ -48,6 +48,124 @@ internal static class Program
             SetMid(m, 1.5m); Require(m.Equity > 10m); Reject(() => m.Withdraw(10));
             m.Withdraw(8); Near(.995m, m.State.Balance);
         });
+        Check("top-ups move the liquidation threshold without changing exposure, P&L or fees", () => {
+            foreach (var side in new[] { PositionSide.Long, PositionSide.Short }) {
+                var m = new MarginMarket(); m.AdvanceTo(101); m.Deposit(100); m.Open(side, 10, 10);
+                var control = Read(Bytes(m));
+                decimal line = m.LiquidationPrice, free = m.State.Balance;
+                m.AddMargin(3); m.AddMargin(2);
+                Near(free - 5, m.State.Balance); Near(15, m.Position.Margin);
+                Near(100m / 15m, m.Position.EffectiveLeverage); Near(100, m.Position.Notional);
+                Near(control.Equity, m.Equity); Near(control.UnrealizedPnL, m.UnrealizedPnL);
+                Near(control.State.FeesPaid, m.State.FeesPaid);
+                Require(m.State.TotalDeposited == 100 && m.State.TotalWithdrawn == 0);
+                Require(m.Position.OpenTick == 101 && m.Position.Side == side && m.Position.EntryPrice == control.Position.EntryPrice);
+                decimal newLine = m.LiquidationPrice;
+                Require(side == PositionSide.Long ? newLine < line : newLine > line);
+                var restored = Read(Bytes(m)); Equal(Bytes(m), Bytes(restored));
+                Near(newLine, restored.LiquidationPrice);
+                var breached = Read(Bytes(m));
+                SetMid(breached, newLine + (side == PositionSide.Long ? -.000002m : .000002m));
+                byte[] beforeRejected = Bytes(breached);
+                Reject(() => breached.AddMargin(1)); Equal(beforeRejected, Bytes(breached));
+                breached.AdvanceTo(101);
+                Require(breached.Position == null && breached.LastSettlement.Liquidated);
+                Near(15, breached.LastSettlement.Margin);
+                var price = side == PositionSide.Long ? 1.02m : .98m;
+                SetMid(control, price); SetMid(restored, price);
+                control.Close(); restored.Close();
+                Near(control.State.Balance, restored.State.Balance);
+                Near(control.LastSettlement.NetPnL, restored.LastSettlement.NetPnL);
+                Near(control.LastSettlement.Fees, restored.LastSettlement.Fees);
+                Near(restored.LastSettlement.NetPnL / 15m, restored.LastSettlement.ReturnRatio.Value);
+            }
+        });
+        Check("top-ups reject invalid amounts and can use the entire remaining balance", () => {
+            var m = new MarginMarket(); m.Deposit(100);
+            var empty = Bytes(m); Reject(() => m.AddMargin(1)); Equal(empty, Bytes(m));
+            m.Open(PositionSide.Long, 10, 1);
+            var active = Bytes(m);
+            foreach (var amount in new[] { -1m, 0m, 100m }) {
+                Reject(() => m.AddMargin(amount)); Equal(active, Bytes(m));
+            }
+            Near(44.995m, m.MarginAdditionForAllocation(50));
+            m.AddMargin(m.MarginAdditionForAllocation(100));
+            Near(0, m.State.Balance); Near(99.99m, m.UsedMargin); Near(0, m.LiquidationPrice);
+        });
+        Check("short top-ups extend the liquidation search past the original upper bracket", () => {
+            var m = new MarginMarket(); m.Deposit(100); m.Open(PositionSide.Short, 10, 1);
+            m.AddMargin(20);
+            decimal line = m.LiquidationPrice;
+            Require(line > 3m && line < 5m);
+            SetMid(m, line - .000002m); m.AdvanceTo(0); Require(m.Position != null);
+            SetMid(m, line + .000002m); m.AdvanceTo(0); Require(m.LastSettlement.Liquidated);
+            var collateralized = new MarginMarket(); collateralized.Deposit(100);
+            collateralized.Open(PositionSide.Short, 10, 1);
+            collateralized.AddMargin(50); Near(0, collateralized.LiquidationPrice);
+            SetMid(collateralized, 5m); collateralized.AdvanceTo(0); Require(collateralized.Position != null);
+        });
+        Check("additions merge long and short fills by quantity and charge only the new fill", () => {
+            foreach (var side in new[] { PositionSide.Long, PositionSide.Short }) {
+                var m = new MarginMarket(feeRate: .003m); m.Deposit(100); m.Open(side, 10, 10);
+                var original = m.Position;
+                m.AddMargin(5);
+                decimal mid = side == PositionSide.Long ? .96m : 1.04m;
+                SetMid(m, mid); m.SetFeeRate(.002m);
+                var fill = new MarginMarket(feeRate: .002m); fill.Deposit(100);
+                SetMid(fill, mid); fill.Open(side, 20, 10);
+                decimal pnl = m.UnrealizedPnL + fill.UnrealizedPnL;
+                decimal fees = m.State.FeesPaid + fill.State.FeesPaid;
+                decimal cash = m.State.Balance, oldLine = m.LiquidationPrice;
+                m.AddPosition(20); m.AdvanceTo(101);
+                Near(35, m.UsedMargin); Near(300, m.Position.Notional);
+                Near(300m / 35m, m.Position.EffectiveLeverage);
+                Near(cash - 20 - fill.State.FeesPaid, m.State.Balance);
+                Near(pnl, m.UnrealizedPnL); Near(fees, m.State.FeesPaid);
+                Near(-fees, m.State.RealizedPnL); Near(fees, m.Position.OpeningFee);
+                Require(m.Position.Side == side && m.Position.OpenTick == original.OpenTick);
+                Require(m.Position.FirstEntryPrice == original.EntryPrice);
+                Require(side == PositionSide.Long ? m.Position.EntryPrice < original.EntryPrice : m.Position.EntryPrice > original.EntryPrice);
+                Require(oldLine != m.LiquidationPrice);
+                var restored = Read(Bytes(m)); Equal(Bytes(m), Bytes(restored));
+                var crossed = Read(Bytes(m));
+                SetMid(crossed, m.LiquidationPrice + (side == PositionSide.Long ? -.000002m : .000002m));
+                crossed.AdvanceTo(101); Require(crossed.LastSettlement.Liquidated);
+                decimal exit = side == PositionSide.Long ? restored.Bid : restored.Ask;
+                decimal exitFee = decimal.Ceiling(300m * exit / restored.Position.EntryPrice * .002m * 1000000m) / 1000000m;
+                restored.Close();
+                Near(pnl - fees - exitFee, restored.LastSettlement.NetPnL);
+                Near(fees + exitFee, restored.LastSettlement.Fees);
+                Near(restored.State.Balance - 100, restored.LastSettlement.NetPnL);
+            }
+        });
+        Check("additions reserve fees from available cash and reject stale or invalid orders atomically", () => {
+            var m = new MarginMarket(feeRate: .003m); m.Deposit(100);
+            byte[] empty = Bytes(m); Reject(() => m.AddPosition(10)); Equal(empty, Bytes(m));
+            m.Open(PositionSide.Long, 10, 10);
+            byte[] active = Bytes(m);
+            Reject(() => m.AddPosition(0)); Reject(() => m.AddPosition(m.State.Balance)); Equal(active, Bytes(m));
+            decimal originalEntry = m.Position.EntryPrice;
+            m.AddPosition(m.MarginForAllocation(100, m.Position.Leverage));
+            Require(m.State.Balance >= 0 && m.State.Balance < .000002m);
+            Near(10, m.Position.EffectiveLeverage); Near(originalEntry, m.Position.EntryPrice);
+            m.Deposit(10); SetMid(m, .2m);
+            byte[] breached = Bytes(m); Reject(() => m.AddPosition(1)); Equal(breached, Bytes(m));
+        });
+        Check("previous position records recover opening margin and first entry price", () => {
+            var m = new MarginMarket(); m.AdvanceTo(101); m.Deposit(100); m.Open(PositionSide.Long, 10, 10);
+            byte[] current = Bytes(m);
+            const int feedOffset = 186; // v4 prefix through position.FirstEntryPrice.
+            foreach (int version in new[] { 1, 2, 3 }) {
+                int removed = (4 - version) * 16;
+                byte[] previous = new byte[current.Length - removed];
+                Array.Copy(current, previous, feedOffset - removed);
+                Array.Copy(current, feedOffset, previous, feedOffset - removed, current.Length - feedOffset);
+                Array.Copy(BitConverter.GetBytes(version), 0, previous, 4, 4);
+                var restored = Read(previous);
+                Equal(current, Bytes(restored));
+                restored.AddMargin(5); Near(100, restored.Position.Notional);
+            }
+        });
         Check("gap liquidation cannot debit uncommitted copper", () => {
             var m = new MarginMarket(); m.Deposit(100); m.Open(PositionSide.Long, 10, 50);
             decimal free = m.State.Balance; SetMid(m, .2m); m.AdvanceTo(0);

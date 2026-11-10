@@ -65,6 +65,8 @@
 游戏时间不能为负。	Game time cannot be negative.
 持仓中的资源不能暂停行情。	A market with an open position cannot be paused.
 当前没有持仓。	No open position.
+持仓已触发强平。	The position has reached liquidation.
+仓位比例无效。	Invalid allocation.
 爆仓结算	Liquidated
 已平仓	Closed
 ：本次 	: Net P&L 
@@ -250,6 +252,7 @@ FXDSP市场存档包含无效数据。	The FXDSP market save contains invalid da
 伊卡洛斯，老实铺产线很枯燥吧！除了扩大生产，你现在还可以通过交易获取物资。\n\n	Icarus, laying out production lines the honest way gets dull, doesn't it? Alongside expanding production, you can now obtain supplies through trading.\n\n
 选择交易品种、存入对应物品，即可使用该物品作为保证金，<color=#D45954>开多</color>(预测<color=#D45954>上涨</color>)或<color=#52BA80>开空</color>(预测<color=#52BA80>下跌</color>)。各品种账户<color=#69CCD6>独立</color>，收益可直接提取为同种物资。\n\n	Select a market and deposit its item as collateral. Open a <color=#D45954>long</color> position if you expect prices to <color=#D45954>rise</color>, or a <color=#52BA80>short</color> if you expect them to <color=#52BA80>fall</color>. Each item account is <color=#69CCD6>independent</color>, and profits can be withdrawn as the same item.\n\n
 <color=#69CCD6>仓位</color>比例决定投入的保证金，<color=#69CCD6>杠杆</color>放大收益与亏损。判断失误、亏损过大超过爆仓线时，持仓将被强制平仓。\n\n	Your <color=#69CCD6>position allocation</color> determines the margin you commit. <color=#69CCD6>Leverage</color> magnifies both gains and losses. If losses cross the liquidation threshold, your position is automatically closed.\n\n
+持仓期间，可以追加保证金或者加仓。\n<color=#69CCD6>追加保证金：</color>把余额转入现有仓位作为额外抵押，同样的价格变动带来的盈亏金额一样，但会降低杠杆，让爆仓线离当前价格更远。\n<color=#69CCD6>加仓：</color>用原多空方向与杠杆同时增加保证金与仓位。\n\n	While a position is open, you can add margin or increase the position.\n<color=#69CCD6>Add margin:</color> Transfer available funds into the position as extra collateral. The same price move produces the same profit or loss, but leverage falls and the liquidation threshold moves farther from the current price.\n<color=#69CCD6>Increase position:</color> Add margin and increase the position size in the original direction and at the original leverage.\n\n
 特殊的<color=#D9B76B>建筑币</color>可按固定价格双向兑换各种建筑与运输、战斗单位，如果你足够厉害或幸运，或许可以实现建筑自由。如果不想投机，可能也可以寻找一个性价比高的建筑量产建筑币，并兑换其它建筑作为超市使用。\n\n	Special <color=#D9B76B>Building Coins</color> can be exchanged at fixed prices for buildings, logistics units and combat units, in both directions. With enough skill or luck, you might achieve building freedom. If speculation is not your thing, try mass-producing a cost-effective building for coins, then exchange them for other buildings to run your own supermarket.\n\n
 按 <color=#69CCD6>F8</color> 打开或关闭交易界面，右上角持仓面板可随时查看浮动盈亏、平仓或进入兑换。\n\n	Press <color=#69CCD6>F8</color> to open or close the trading interface. The top-right positions panel lets you monitor unrealized P&L, close positions, or open building exchange.\n\n
 解锁科技建造<color=#69CCD6>物流塔交付平台</color>绑定物品，可将交易账户连接到工厂物流网络，让盈利物资直接投入生产。\n\n	Research and build <color=#69CCD6>logistics delivery platforms</color>, then assign items to connect your trading accounts to the factory logistics network. Put your trading profits straight into production.\n\n
@@ -294,6 +297,19 @@ DSP 交易平台	DSP Trading Platform
      卖出 	     Sell 
      费率 	     Fee 
 仓位比例   	Allocation  
+追加比例	Top-up allocation
+追加保证金	Add margin
+追加金额	Additional margin
+追加后保证金	Margin after top-up
+已追加保证金	Margin added
+本次预算	Budget
+加仓	Increase position
+已加仓	Position increased
+新增仓位	Added notional
+加仓费	Trade fee
+加仓杠杆	Order leverage
+均价	Avg. entry
+仓位金额	Notional
 杠杆   	Leverage  
 保证金  	Margin  
 开仓费 	Opening fee 

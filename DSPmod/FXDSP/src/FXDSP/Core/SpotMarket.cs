@@ -53,7 +53,7 @@ namespace FXDSP.Core
         private const int MaxLogBytes = 1024;
         private const long MaxCatchUpSteps = 2880; // Four game hours at 60 ticks/s.
         private const decimal MinMidPrice = 0.20m;
-        private const decimal MaxMidPrice = 5.00m;
+        internal const decimal MaxMidPrice = 5.00m;
         private const decimal HalfSpread = 0.005m;
         private const decimal FeeScale = 1000000m;
         // Use the same quote and fee grid. Every integer quantity's notional is

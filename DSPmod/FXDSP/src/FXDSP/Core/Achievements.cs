@@ -163,7 +163,7 @@ namespace FXDSP.Core
                     State.Award(AchievementId.FirstProfit);
                     if (closed.CloseTick - closed.OpenTick <= MarginMarket.QuoteIntervalTicks * 2) State.Award(AchievementId.QuickProfit);
                 }
-                if (!closed.Liquidated && closed.Side == PositionSide.Long && closed.EntryPrice <= .8m && closed.ExitPrice >= 1m) State.Award(AchievementId.ValueInvesting);
+                if (!closed.Liquidated && closed.Side == PositionSide.Long && closed.FirstEntryPrice <= .8m && closed.ExitPrice >= 1m) State.Award(AchievementId.ValueInvesting);
                 long fullTick;
                 if (closed.Liquidated && State.FullPositions.TryGetValue(item, out fullTick) && fullTick == closed.OpenTick) State.Award(AchievementId.FullLiquidation);
                 State.FullPositions.Remove(item);

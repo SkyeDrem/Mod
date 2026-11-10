@@ -13,14 +13,14 @@ $taskEngine=[Reflection.Assembly]::LoadFrom((Join-Path $taskConfig.GameManagedDi
 $taskUi=[Reflection.Assembly]::LoadFrom((Join-Path $taskConfig.GameManagedDir 'UnityEngine.UI.dll'))
 $taskParser=$taskUi.GetType('UnityEngine.UI.Youthcat.TextGenerator',$true).GetMethod('ReadRichTextColor',[Reflection.BindingFlags]'Static,Public,NonPublic')
 $taskMatches=[regex]::Matches($taskBody,'<color=#([0-9A-F]{6})>(.*?)</color>')
-$taskExpected=@('开多','上涨','开空','下跌','独立','仓位','杠杆','建筑币','F8','物流塔交付平台','科技升级','FX战士伊卡洛斯')
+$taskExpected=@('开多','上涨','开空','下跌','独立','仓位','杠杆','追加保证金：','加仓：','建筑币','F8','物流塔交付平台','科技升级','FX战士伊卡洛斯')
 if ($English) {
     $taskCore=[Reflection.Assembly]::LoadFrom((Get-FxDspOutput -Configuration $Configuration))
     $taskLocalization=$taskCore.GetType('FXDSP.Core.TextLocalization',$true)
     $taskLocalization.GetProperty('English').SetValue($null,$true)
     $taskBody=$taskLocalization.GetMethod('Translate').Invoke($null,[object[]]@($taskBody))
     $taskMatches=[regex]::Matches($taskBody,'<color=#([0-9A-F]{6})>(.*?)</color>')
-    $taskExpected=@('long','rise','short','fall','independent','position allocation','leverage','Building Coins','F8','logistics delivery platforms','technology upgrades','FX Warrior Icarus')
+    $taskExpected=@('long','rise','short','fall','independent','position allocation','leverage','Add margin:','Increase position:','Building Coins','F8','logistics delivery platforms','technology upgrades','FX Warrior Icarus')
 }
 if ($taskMatches.Count -ne $taskExpected.Count) { throw 'Missing introduction emphasis.' }
 for ($taskIndex=0; $taskIndex -lt $taskMatches.Count; $taskIndex++) {
@@ -40,5 +40,5 @@ for ($taskIndex=0; $taskIndex -lt $taskMatches.Count; $taskIndex++) {
     if ($taskIndex -ge 2 -and $taskIndex -lt 4 -and $taskHex -ne '52BA80') { throw 'Short/fall must remain green.' }
 }
 $taskPlain=[regex]::Replace($taskBody,'</?color(?:=#[0-9A-F]{6})?>','')
-if ($taskPlain -match '<[^>]+>|\*\*' -or ($taskPlain -split "`n`n").Count -ne 9) { throw 'Unsupported literal tags or missing paragraphs.' }
-Write-Output 'All 12 emphasis tags accepted by the actual native color parser; no unsupported bold/Markdown tags; all nine paragraphs retained.'
+if ($taskPlain -match '<[^>]+>|\*\*' -or ($taskPlain -split "`n`n").Count -ne 10) { throw 'Unsupported literal tags or missing paragraphs.' }
+Write-Output 'All 14 emphasis tags accepted by the native color parser, with ten paragraphs and no unsupported tags.'

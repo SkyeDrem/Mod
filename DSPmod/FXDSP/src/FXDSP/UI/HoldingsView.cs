@@ -89,11 +89,11 @@ namespace FXDSP.UI
                 row.Icon.sprite = position.Icon; row.Icon.enabled = position.Icon != null;
                 row.Name.text = position.Name;
                 ((RectTransform)row.Name.transform).anchoredPosition = new Vector2(position.Icon == null ? 10 : 44, 0);
-                row.Direction.text = NativeUiFactory.DirectionText(position.Direction) + " " + position.Leverage + "×";
+                row.Direction.text = NativeUiFactory.DirectionText(position.Direction) + " " + MoneyDisplay.Leverage(position.Leverage);
                 row.Margin.text = position.Margin.ToString("#,0.00");
                 row.Entry.text = position.EntryPrice.ToString("0.0000");
                 row.Current.text = position.CurrentPrice.ToString("0.0000");
-                row.Liquidation.text = position.LiquidationPrice.ToString("0.0000");
+                row.Liquidation.text = position.LiquidationPrice > 0m ? position.LiquidationPrice.ToString("0.0000") : "—";
                 row.PnL.text = MoneyDisplay.Signed(position.UnrealizedPnL);
                 row.PnL.color = position.UnrealizedPnL > 0 ? MarketCandleGraphic.Rising : position.UnrealizedPnL < 0 ? MarketCandleGraphic.Falling : new Color(.6f, .72f, .78f, 1);
                 row.Return.text = MoneyDisplay.Percent(position.UnrealizedReturnRatio);

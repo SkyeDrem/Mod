@@ -47,10 +47,11 @@ internal static class Program
             foreach (string log in market.RecentLogs) Require(!Chinese(TextLocalization.Translate(TradingLogDisplay.Format(log))));
             Require(before.SequenceEqual(Bytes(market)));
         });
-        Check("welcome preserves nine paragraphs and all twelve native-safe emphasis tags", () => {
+        Check("welcome preserves all ten paragraphs and fourteen native-safe emphasis tags", () => {
             string body = TextLocalization.Translate(IntroductionCopy.Body);
-            Require(!Chinese(body) && body.Split(new[] { "\n\n" }, StringSplitOptions.None).Length == 9);
-            Require(Regex.Matches(body, "<color=").Count == 12 && Regex.Matches(body, "</color>").Count == 12);
+            Require(!Chinese(body) && body.Split(new[] { "\n\n" }, StringSplitOptions.None).Length == 10);
+            Require(Regex.Matches(body, "<color=").Count == 14 && Regex.Matches(body, "</color>").Count == 14);
+            Require(body.Contains("<color=#69CCD6>Add margin:</color>") && body.Contains("<color=#69CCD6>Increase position:</color>"));
             Require(body.Contains("<color=#D45954>long</color>") && body.Contains("<color=#52BA80>short</color>"));
             Require(!body.Contains("<b>") && !body.Contains("**") && body.Contains("<color=#69CCD6>F8</color>"));
             Require(body.Contains("FX Warrior Icarus"));

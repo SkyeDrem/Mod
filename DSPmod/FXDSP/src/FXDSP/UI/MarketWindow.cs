@@ -70,14 +70,16 @@ namespace FXDSP.UI
         private NativeUiFactory _ui;
         private InputField _depositInput, _withdrawInput;
         private Slider _allocationSlider, _leverageSlider;
+        private RectTransform _leverageControls;
         private Slider _depositSlider, _withdrawSlider;
         private Text _assets, _floating, _floatingReturn, _realized, _returnRate, _positionText, _quote, _preview;
         private Text _backpack, _withdrawable, _status, _events, _chartRange;
         private Text _chartTitle, _transferTitle, _liquidationLabel;
         private Image _liquidationBackground;
         private Text _allocationLabel, _leverageLabel;
+        private Text _addMarginPreview, _addPositionPreview;
         private MarketCandleGraphic _chart;
-        private Button _long, _short, _deposit, _withdraw, _closePosition;
+        private Button _long, _short, _addMargin, _addPosition, _deposit, _withdraw, _closePosition;
         private GameObject _modal;
         private PositionSettlement _pendingSettlement;
         private string _depositValue = "10", _withdrawValue = "10";
@@ -240,6 +242,7 @@ namespace FXDSP.UI
             _exchangeQuantitySlider = null;
             _depositInput = _withdrawInput = null;
             _allocationSlider = _leverageSlider = null;
+            _leverageControls = null;
             _depositSlider = _withdrawSlider = null;
             _chart = null;
             _assets = _floating = _floatingReturn = _realized = _returnRate = _positionText = _quote = _preview = null;
@@ -247,7 +250,8 @@ namespace FXDSP.UI
             _chartTitle = _transferTitle = _liquidationLabel = null;
             _liquidationBackground = null;
             _allocationLabel = _leverageLabel = null;
-            _long = _short = _deposit = _withdraw = _closePosition = null;
+            _addMarginPreview = _addPositionPreview = null;
+            _long = _short = _addMargin = _addPosition = _deposit = _withdraw = _closePosition = null;
             _clearSelection = false;
             _localError = "";
         }
@@ -372,19 +376,33 @@ namespace FXDSP.UI
                 _allocationButtons.Add(AddButton("allocation-" + percent, 816 + i * 73, 375, 65, 26, percent + "%",
                     delegate { _allocationSlider.value = percent; ClearInputSelection(); _dirty = true; }, null, parent));
             }
-            _leverageLabel = _ui.Text("leverage-label", parent, 816, 407, 288, 24, "", 16, null, TextAnchor.MiddleLeft);
-            _leverageSlider = _ui.Slider("leverage", parent, 818, 438, 282, 24, 1, 100, _selectedLeverage,
+            _leverageControls = _ui.Container("leverage-controls", parent, 0, 0, Width, Height);
+            _leverageLabel = _ui.Text("leverage-label", _leverageControls, 816, 407, 288, 24, "", 16, null, TextAnchor.MiddleLeft);
+            _leverageSlider = _ui.Slider("leverage", _leverageControls, 818, 438, 282, 24, 1, 100, _selectedLeverage,
                 delegate(float value) { _selectedLeverage = Mathf.RoundToInt(value); _execute(MarketCommand.ChangeLeverage, _selectedLeverage); _localError = ""; _dirty = true; });
             int[] leverages = { 2, 5, 10, 50 };
             for (int i = 0; i < leverages.Length; i++)
             {
                 int leverage = leverages[i];
                 AddButton("leverage-" + leverage, 816 + i * 73, 470, 65, 26, leverage + "×",
-                    delegate { _leverageSlider.value = leverage; ClearInputSelection(); _dirty = true; }, null, parent);
+                    delegate { _leverageSlider.value = leverage; ClearInputSelection(); _dirty = true; }, null, _leverageControls);
             }
             _preview = _ui.Text("order-preview", parent, 816, 500, 288, 19, "", 12, Muted);
             _long = AddButton("long", 816, 521, 136, 28, "做多 / 开多", delegate { Execute(MarketCommand.OpenLong); }, new Color(.45f, .22f, .22f, 1), parent);
             _short = AddButton("short", 966, 521, 138, 28, "做空 / 开空", delegate { Execute(MarketCommand.OpenShort); }, new Color(.18f, .39f, .28f, 1), parent);
+            _addMarginPreview = _ui.Text("add-margin-preview", parent, 816, 413, 136, 100, "", 13, Muted, TextAnchor.UpperLeft);
+            _addPositionPreview = _ui.Text("add-position-preview", parent, 966, 413, 138, 100, "", 13, Muted, TextAnchor.UpperLeft);
+            foreach (var preview in new[] { _addMarginPreview, _addPositionPreview })
+            {
+                preview.resizeTextForBestFit = true;
+                preview.resizeTextMinSize = 10;
+                preview.resizeTextMaxSize = 13;
+                preview.gameObject.SetActive(false);
+            }
+            _addMargin = AddButton("add-margin", 816, 521, 136, 28, "追加保证金", delegate { Execute(MarketCommand.AddMargin); }, null, parent);
+            _addPosition = AddButton("add-position", 966, 521, 138, 28, "加仓", delegate { Execute(MarketCommand.AddPosition); }, null, parent);
+            _addMargin.gameObject.SetActive(false);
+            _addPosition.gameObject.SetActive(false);
 
             _transferRoot = _ui.Container("item-transfers", parent, 0, 0, Width, Height);
             Panel("transfer", 204, 574, 580, 154, _transferRoot);
@@ -543,16 +561,33 @@ namespace FXDSP.UI
             _returnRate.color = state.ReturnRatio.HasValue ? PnLColor(state.ReturnRatio.Value) : Muted;
             _quote.text = "买入 " + Price(state.Ask) + "     卖出 " + Price(state.Bid)
                 + "     费率 " + (state.FeeRate * 100m).ToString("0.00") + "%";
-            _allocationLabel.text = "仓位比例   " + _allocation + "%";
+            _allocationLabel.text = (state.HasPosition ? "追加比例   " : "仓位比例   ") + _allocation + "%";
             _selectedLeverage = state.SelectedLeverage;
             _leverageLabel.text = "杠杆   " + _selectedLeverage + "×";
             _leverageSlider.SetValueWithoutNotify(_selectedLeverage);
-            _marginPreview.text = "保证金  " + Amount(state.OrderMargin);
+            _marginPreview.text = state.HasPosition ? "本次预算  " + Amount(state.AdditionalMargin) : "保证金  " + Amount(state.OrderMargin);
             _preview.text = "开仓费 " + Amount(state.OpenFee);
+            _preview.gameObject.SetActive(!state.HasPosition);
+            _leverageControls.gameObject.SetActive(!state.HasPosition);
+            _long.gameObject.SetActive(!state.HasPosition);
+            _short.gameObject.SetActive(!state.HasPosition);
+            _addMargin.gameObject.SetActive(state.HasPosition);
+            _addPosition.gameObject.SetActive(state.HasPosition);
+            _addMarginPreview.gameObject.SetActive(state.HasPosition);
+            _addPositionPreview.gameObject.SetActive(state.HasPosition);
+            if (state.HasPosition)
+            {
+                _addMarginPreview.text = "追加金额 " + Amount(state.AdditionalMargin)
+                    + "\n追加后保证金 " + Amount(state.PositionMargin + state.AdditionalMargin) + "\n手续费 0.00";
+                _addPositionPreview.text = "保证金 +" + Amount(state.OrderMargin)
+                    + "\n新增仓位 " + Amount(state.OrderMargin * state.PositionOpeningLeverage)
+                    + "\n加仓费 " + Amount(state.OpenFee) + "\n加仓杠杆 " + MoneyDisplay.Leverage(state.PositionOpeningLeverage);
+            }
             _positionText.text = state.HasPosition
-                ? NativeUiFactory.DirectionText(state.PositionDirection) + "  " + state.PositionLeverage + "×   入场 " + Price(state.EntryPrice)
-                    + "\n保证金 " + Amount(state.PositionMargin) + "    爆仓价 " + Price(state.LiquidationPrice)
+                ? NativeUiFactory.DirectionText(state.PositionDirection) + "  " + MoneyDisplay.Leverage(state.PositionLeverage) + "   均价 " + Price(state.EntryPrice)
+                    + "\n保证金 " + Amount(state.PositionMargin) + "    爆仓价 " + (state.LiquidationPrice > 0m ? Price(state.LiquidationPrice) : "—")
                     + "\n持有时间 " + state.HeldCandles.Value.ToString("N0", CultureInfo.InvariantCulture)
+                    + "    仓位金额 " + Amount(state.PositionNotional)
                 : "空仓";
             _backpack.text = state.TransferAvailable.ToString("N0");
             _inventoryLabel.text = state.ItemId == 1099 ? "沙土可用" : state.UseDelivery ? (state.DeliveryBound ? "平台可用 · " + state.DeliveryName : "请在交付塔中设置该物品") : "背包可用";
@@ -587,8 +622,8 @@ namespace FXDSP.UI
                 _priceAxis[i].text = state.Candles.Count == 0 ? "" : Price((decimal)Mathf.Lerp(_chart.Maximum, _chart.Minimum, i / 3f));
             _chartRange.text = state.Candles == null || state.Candles.Count == 0 ? ""
                 : "最新 " + Price(state.Candles[state.Candles.Count - 1].Close);
-            _liquidationBackground.gameObject.SetActive(state.HasPosition);
-            if (state.HasPosition)
+            _liquidationBackground.gameObject.SetActive(state.LiquidationPrice > 0m);
+            if (state.LiquidationPrice > 0m)
             {
                 float ratio = _chart.LiquidationRatio;
                 _liquidationLabel.text = "爆仓价 " + Price(state.LiquidationPrice) + (ratio < 0 ? " ↓" : ratio > 1 ? " ↑" : "");
@@ -599,10 +634,12 @@ namespace FXDSP.UI
                 ((RectTransform)_liquidationBackground.transform).anchoredPosition = new Vector2(6, -tagY);
             }
             int deposit, withdraw;
-            bool canOpen = state.Ready && !state.HasPosition && state.OrderMargin > 0 && state.AvailableBalance >= state.OpenCost;
-            SetCommandsEnabled(canOpen,
+            bool canTradeSize = state.Ready && state.OrderMargin > 0 && state.AvailableBalance >= state.OpenCost;
+            SetCommandsEnabled(canTradeSize && !state.HasPosition,
                 state.Ready && TryTransfer(_depositInput, out deposit) && state.TransferAvailable >= deposit,
-                state.Ready && (!state.UseDelivery || state.DeliveryBound) && TryTransfer(_withdrawInput, out withdraw) && state.AvailableBalance >= withdraw);
+                state.Ready && (!state.UseDelivery || state.DeliveryBound) && TryTransfer(_withdrawInput, out withdraw) && state.AvailableBalance >= withdraw,
+                state.Ready && state.HasPosition && state.AdditionalMargin > 0m,
+                canTradeSize && state.HasPosition);
             _closePosition.interactable = state.Ready && state.HasPosition;
             _allocationSlider.interactable = state.Ready;
             _leverageSlider.interactable = state.Ready;
@@ -735,7 +772,7 @@ namespace FXDSP.UI
             _ui.Text("heading", card.transform, 24, 18, 452, 48,
                 liquidated ? "持仓已爆仓" : "平仓结算", 24, accent, TextAnchor.MiddleCenter);
             _ui.Text("direction", card.transform, 24, 68, 452, 30,
-                unit + "    " + (result.Side == PositionSide.Long ? "做多" : "做空") + "  " + result.Leverage + "×", 14, Muted, TextAnchor.MiddleCenter);
+                unit + "    " + (result.Side == PositionSide.Long ? "做多" : "做空") + "  " + MoneyDisplay.Leverage(result.EffectiveLeverage), 14, Muted, TextAnchor.MiddleCenter);
             _ui.Image("pnl-area", card.transform, 24, 112, 452, 112,
                 liquidated ? new Color(.20f, .115f, .065f, 1) : new Color(.065f, .12f, .145f, 1));
             _ui.Text("pnl-label", card.transform, 36, 120, 428, 26, liquidated ? "爆仓净损益" : "本次净盈亏", 13, Muted, TextAnchor.MiddleCenter);
@@ -874,10 +911,12 @@ namespace FXDSP.UI
             _modal = null;
         }
 
-        private void SetCommandsEnabled(bool open, bool deposit, bool withdraw)
+        private void SetCommandsEnabled(bool open, bool deposit, bool withdraw, bool addMargin = false, bool addPosition = false)
         {
             if (_long != null) _long.interactable = open;
             if (_short != null) _short.interactable = open;
+            if (_addMargin != null) _addMargin.interactable = addMargin;
+            if (_addPosition != null) _addPosition.interactable = addPosition;
             if (_deposit != null) _deposit.interactable = deposit;
             if (_withdraw != null) _withdraw.interactable = withdraw;
 

@@ -24,6 +24,10 @@
 
 **仓位比例**决定这笔交易投入多少可用资金，**杠杆** 放大同一段价格变化带来的收益与亏损。支持**1～100**倍杠杆。
 
+持仓期间，滑条切换为 **追加比例**。选择同品种可用余额的比例，再点 **追加保证金**。追加可以重复操作且免费，仓位规模和入场价保持原值，实际杠杆降低，爆仓线远离入场价。浮动与结算收益率按投入的全部保证金计算。
+
+也可以在同一面板点 **加仓**。新订单沿原方向成交，按原开仓杠杆放大新增保证金，费用从所选余额预算中预留。成交后，仓位金额增加，入场均价按成交数量重新计算，爆仓线随合并仓位更新。持有时间从首次开仓算起。
+
 K线图显示行情、价格刻度和当前持仓的爆仓线。每个物品市场可以持有一笔做多或做空仓位，平仓后才能重新开仓。持有时间以经过的 K线数量显示。
 
 读取存档会保留当时的行情和持仓，但之后的走势会重新随机生成，SL 无法重演固定的未来行情。
@@ -88,7 +92,7 @@ K线图显示行情、价格刻度和当前持仓的爆仓线。每个物品市�
 
 ## 存档与兼容性
 
-交易账户、交付扩展库存和成就进度由 DSPModSave 保存。备份或传递存档时，请同时保留游戏存档和对应的 `.moddsv` 旁档；存档中存在交付平台时，应保留本 Mod 再读取。
+交易账户、交付扩展库存和成就进度由 DSPModSave 保存。备份或传递存档时，请同时保留游戏存档和对应的 `.moddsv` 旁档；存档中存在交付平台时，应保留本 Mod 再读取。新版支持读取旧存档，重新保存后请用 1.3.0 或更高版本读取交易数据。
 
 物品/配方 ID 为 **11702、11703**，科技 ID 为 **1951、7701～7705、7801～7806**；与占用相同 ID 的 Mod 不能共存。建筑兑换使用原版固定目录，不会自动给其它 Mod 的建筑定价。多人账户与库存同步尚未实现。
 
@@ -125,6 +129,10 @@ Go all-in at 100x leverage to **chase short-term rallies**, or practice patient 
 ## Allocation, leverage and liquidation
 
 **Allocation** determines how much of your available funds goes into a trade. **Leverage** magnifies both gains and losses from the same price move. Leverage ranges from **1x to 100x**.
+
+While a position is open, use the **Top-up allocation** slider to choose a share of that market's available balance, then select **Add margin**. You can top up repeatedly for free. The position keeps its original size and entry price, effective leverage falls, and the liquidation threshold moves farther from the entry price. Unrealized and settlement returns use the total margin committed.
+
+Select **Increase position** on the same panel to trade in the existing direction at its original order leverage. The selected budget covers both the new margin and the trading fee. The fill increases the position's size, updates the quantity-weighted average entry, and recalculates the liquidation threshold. Holding time starts at the first fill.
 
 The candlestick chart shows prices, price levels and the current position's liquidation line. Each item market supports one long or short position at a time; close it before opening another. Holding time is displayed as the number of elapsed candlesticks.
 
@@ -190,7 +198,7 @@ For manual installation, install those dependencies first, then copy `plugins/FX
 
 ## Saves and compatibility
 
-DSPModSave stores trading accounts, expanded delivery inventory and achievement progress. Keep game saves together with their matching `.moddsv` sidecars when backing up or sharing them. Keep this mod installed when loading saves containing delivery platforms.
+DSPModSave stores trading accounts, expanded delivery inventory and achievement progress. Keep game saves together with their matching `.moddsv` sidecars when backing up or sharing them. Keep this mod installed when loading saves containing delivery platforms. This release can read older saves. After saving with this release, use version 1.3.0 or later to read the trading data.
 
 Reserved item/recipe IDs are **11702, 11703**; technology IDs are **1951, 7701–7705, 7801–7806**. Mods using the same IDs conflict. Building exchange uses a fixed vanilla catalog and does not automatically price other mods' buildings. Multiplayer account and inventory synchronization is not implemented.
 

@@ -237,20 +237,24 @@ namespace FXDSP
             if (position != null)
             {
                 snapshot.PositionDirection = position.Side == Core.PositionSide.Long ? "做多" : "做空";
-                snapshot.PositionLeverage = position.Leverage;
+                snapshot.PositionLeverage = position.EffectiveLeverage;
+                snapshot.PositionOpeningLeverage = position.Leverage;
                 snapshot.EntryPrice = position.EntryPrice;
                 snapshot.PositionMargin = position.Margin;
+                snapshot.PositionNotional = position.Notional;
                 snapshot.PositionOpenTick = position.OpenTick;
                 snapshot.CurrentTick = GameMain.gameTick;
                 snapshot.LiquidationPrice = market.LiquidationPrice;
             }
             if (snapshot.MarketEnabled && quantity >= 1 && quantity <= 100)
             {
-                snapshot.OrderMargin = market.MarginForAllocation(quantity, _selectedLeverage);
+                if (position != null) snapshot.AdditionalMargin = market.MarginAdditionForAllocation(quantity);
+                int leverage = position == null ? _selectedLeverage : position.Leverage;
+                snapshot.OrderMargin = market.MarginForAllocation(quantity, leverage);
                 if (snapshot.OrderMargin > 0m)
                 {
-                    snapshot.OpenCost = market.OpenCost(snapshot.OrderMargin, _selectedLeverage);
-                    snapshot.OpenFee = market.OpenFee(snapshot.OrderMargin, _selectedLeverage);
+                    snapshot.OpenFee = market.OpenFee(snapshot.OrderMargin, leverage);
+                    snapshot.OpenCost = snapshot.OrderMargin + snapshot.OpenFee;
                 }
             }
             return snapshot;
@@ -294,7 +298,8 @@ namespace FXDSP
                 _session.SetTradingFeeRate(research.TradingFee);
                 var market = _session.GetMarket(_selectedItemId);
                 if ((command == MarketCommand.Deposit || command == MarketCommand.Withdraw || command == MarketCommand.OpenLong
-                    || command == MarketCommand.OpenShort) && !_session.IsMarketEnabled(_selectedItemId))
+                    || command == MarketCommand.OpenShort || command == MarketCommand.AddMargin
+                    || command == MarketCommand.AddPosition) && !_session.IsMarketEnabled(_selectedItemId))
                     throw new InvalidOperationException("请先启用该市场。");
                 switch (command)
                 {
@@ -310,6 +315,16 @@ namespace FXDSP
                         market.MarginForAllocation(quantity, _selectedLeverage), _selectedLeverage, quantity); break;
                     case MarketCommand.OpenShort: _notice = market.Open(Core.PositionSide.Short,
                         market.MarginForAllocation(quantity, _selectedLeverage), _selectedLeverage, quantity); break;
+                    case MarketCommand.AddMargin:
+                        _session.Tick();
+                        _notice = market.AddMargin(market.MarginAdditionForAllocation(quantity));
+                        break;
+                    case MarketCommand.AddPosition:
+                        _session.Tick();
+                        var position = market.Position;
+                        if (position == null) throw new InvalidOperationException("当前没有持仓。");
+                        _notice = market.AddPosition(market.MarginForAllocation(quantity, position.Leverage));
+                        break;
                     case MarketCommand.ClosePosition: _notice = market.Close(); break;
                     case MarketCommand.CloseMarketPosition:
                     case MarketCommand.CloseHudPosition:
@@ -364,7 +379,7 @@ namespace FXDSP
                 var item = id == Core.MarketCatalog.BuildingCoin || LDB.items == null ? null : LDB.items.Select(id);
                 positions.Add(new PositionSnapshot { ItemId = id, Name = Core.MarketCatalog.Name(id),
                     Icon = item == null ? null : item.iconSprite, Direction = position.Side == Core.PositionSide.Long ? "做多" : "做空",
-                    Leverage = position.Leverage, Margin = position.Margin, EntryPrice = position.EntryPrice,
+                    Leverage = position.EffectiveLeverage, Margin = position.Margin, EntryPrice = position.EntryPrice,
                     CurrentPrice = market.MidPrice, LiquidationPrice = market.LiquidationPrice, UnrealizedPnL = market.UnrealizedPnL,
                     OpenTick = position.OpenTick, CurrentTick = GameMain.gameTick });
             }
